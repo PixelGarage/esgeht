@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Pacifico';
+    src: url('fonts/Pacifico.eot');
+    src: url('fonts/Pacifico.eot') format('embedded-opentype'),
+         url('fonts/Pacifico.woff2') format('woff2'),
+         url('fonts/Pacifico.woff') format('woff'),
+         url('fonts/Pacifico.ttf') format('truetype'),
+         url('fonts/Pacifico.svg#Pacifico') format('svg');
+}

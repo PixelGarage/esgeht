@@ -1,0 +1,253 @@
+/*
+ *  Header section (navigation)
+ * --------------------------------------------------*/
+
+// Variables
+// -------------------------
+
+// Mixins
+// -------------------------
+
+
+
+// Main settings
+// -------------------------
+header#navbar {
+  margin: 0;
+  border-bottom: none;
+  background: @pxl-color-blue none;
+  #pxl-mixins.box-shadow(0 4px 3px -4px gray);
+
+  .navbar-top-container > .container {
+    position: relative;
+    padding: 0 @grid-gutter-width / 2;
+    height: auto;
+
+    .navbar-meta {
+      position: relative;
+      z-index: 10;
+
+      .block-locale {
+        position: absolute;
+        right: 0;
+        top: @grid-gutter-width / 2;
+
+        // see block-language.less
+
+      }
+    }
+
+    .navbar-header {
+      position: relative;
+      float: none;
+      margin: 0;
+      text-align: left;
+
+      // header (branding)
+      a.logo {
+        display: inline-block;
+        margin: 10px 0;
+        padding: 0;
+        outline: none;
+
+        img {
+          margin: 0;
+          width: 100px;
+          height: auto;
+          max-width: 100%;
+          max-height: none;
+
+          @media @narrow {
+            width: 200px;
+          }
+          @media @tablet {
+            width: 300px;
+          }
+          @media @normal {
+            width: 400px;
+          }
+        }
+      }
+
+      .region-navigation {
+        display: inline-block;
+        position: static;
+        margin-left: 10px;
+        vertical-align: middle;
+
+        @media @tablet {
+          position: absolute;
+          right: 0;
+          bottom: 10px;
+          margin: 0;
+        }
+        @media @normal {
+          bottom: 20px;
+        }
+
+        // SPECIAL MENU: Image upload
+        ul.menu {
+          float: none;
+          margin: 0 auto;
+          padding: 0;
+          line-height: 1;
+
+          >li {
+            display: inline-block;
+            float: none;
+            padding: 0;
+            line-height: 1;
+
+            a, span {
+              cursor: pointer;
+              display: inline-block;
+              padding: 0 5px;
+              font-family: @pxl-text-font-bold;
+              #pxl-mixins.font-size-responsive(25px, 14px);
+              line-height: 1.25;
+              letter-spacing: 1px;
+              color: white;
+              outline: none;
+              border: 1px solid white;
+              #pxl-mixins.border-radius(3px);
+              background: none;
+
+              &:hover, &.active, &.checked {
+                color: @pxl-color-main;
+                background: white;
+              }
+
+              @media @mobile {
+                font-size: 14px;
+              }
+              @media @tablet {
+                padding: 0 15px;
+                font-size: 25px;
+                border: 2px solid white;
+              }
+              @media @normal {
+                font-size: 25px;
+              }
+              @media @wide {
+                font-size: 27px;
+              }
+
+            }
+
+          }
+        }
+      }
+
+      .navbar-toggle {
+        // navbar toggle with burger
+        float: none;
+        #pxl-mixins.center-vertically(absolute);
+        right: 0;
+        margin: 0;
+        padding: 0;
+        font-size: 30px;
+        color: #fff;
+        border: none;
+        background: none;
+        opacity: 1.0;
+
+        &:hover {
+          opacity: 0.6;
+        }
+      }
+
+    }
+
+    // collapse part
+    .navbar-collapse {
+      padding: 5px 0;
+      background: none;
+
+      nav {
+        text-align: center;
+        width: 100%;
+
+        ul.menu {
+          display: inline-block;
+          float: none;
+          margin: 0 auto;
+          padding: 0;
+          width: auto;
+          line-height: 1;
+
+          >li {
+            display: block;
+            float: none;
+            padding: 0;
+            line-height: 1;
+
+            a, span {
+              cursor: pointer;
+              display: inline-block;
+              padding: 15px 20px ;
+              font-family: @pxl-text-font-light;
+              font-size: 40px;
+              line-height: 1;
+              letter-spacing: 1.8px;
+              color: #fff;
+              outline: none;
+
+              &:hover, &.active, &.checked {
+                font-family: @pxl-text-font-bold;
+                letter-spacing: 1px;
+                background: none;
+              }
+            }
+          }
+        }
+      }
+
+      @media @tablet {
+        #pxl-mixins.center-vertically(absolute);
+        right: @grid-gutter-width / 2;
+        padding: 0;
+        width: 54%;
+
+        nav {
+          text-align: right;
+
+          ul.menu {
+            width: 100%;
+            text-align: justify;
+
+            &:after {
+              // justify's last line is not justified, therefore add one
+              content: '';
+              display: inline-block;
+              width: 100%;
+            }
+
+            li {
+              display: inline-block;
+              a, span {
+                padding: 3px 0;
+                font-size: 16px;
+              }
+            }
+          }
+        }
+      }
+      @media @normal {
+        nav {
+          ul.menu {
+            li {
+              a, span {
+                padding: 3px 0;
+                font-size: 22px;
+              }
+            }
+          }
+        }
+      }
+      @media @wide {
+        width: 45%;
+      }
+    }
+  }
+}
+

@@ -1,0 +1,255 @@
+/*
+ *  Posting view component
+ * --------------------------------------------------*/
+
+// Variables
+// -------------------------
+@grid-gutter-dist: 3%;  // in %
+
+
+// Mixins
+// -------------------------
+
+
+
+// General settings
+// -------------------------
+.view-post-grid {
+  margin: 0 auto;
+  width: 100%;
+
+  .views-exposed-form {
+    padding: 0;
+    width: 100%;
+
+    .views-exposed-widgets {
+      margin: 0 auto;
+      padding: 10px 0;
+
+      @media @narrow {
+        padding: 15px 0;
+      }
+      @media @normal {
+        padding: 20px 0;
+      }
+
+      .views-exposed-widget {
+        display: inline-block;
+        float: none;
+        padding: 0;
+        vertical-align: top;
+        text-align: center;
+
+        &.views-widget-filter-combine {
+          > label {
+            display: none;
+          }
+
+          .views-widget {
+            .form-item {
+              input.form-text {
+                padding: 0 10px;
+                height: 24px;
+                max-width: 150px;
+                font-family: @pxl-text-font-light;
+                font-size: 12px;
+                line-height: 12px;
+                color: @text-color;
+                .placeholder(@text-color-field);
+                #pxl-mixins.border-radius(@border-radius-base);
+                .border-right-radius(0);
+                border: 1px solid @pxl-color-green-light;
+                background-color: @pxl-color-green-light;
+                #pxl-mixins.box-shadow(none);
+
+                &:focus {
+                  border: 1px solid @pxl-color-green;
+                  #pxl-mixins.box-shadow(0 0 2px @pxl-color-green inset);
+                }
+
+                @media @narrow {
+                  height: 28px;
+                  font-size: 14px;
+                  line-height: 14px;
+                }
+                @media @normal {
+                  height: 32px;
+                  font-size: 17px;
+                  line-height: 17px;
+                }
+              }
+            }
+          }
+        }
+
+        &.views-submit-button {
+          margin: 0 0 0 -4px;
+          padding: 0;
+
+          button {
+            display: inline-block;
+            margin: 0;
+            padding: 0 10px;
+            height: 24px;
+            font-family: @pxl-text-font-bold;
+            font-size: 12px;
+            line-height: 12px;
+            letter-spacing: 1.5px;
+            text-transform: lowercase;
+            color: #fff;
+            outline: none;
+            #pxl-mixins.border-radius(@border-radius-base);
+            .border-left-radius(0);
+            border: 1px solid @pxl-color-green;
+            background-color: @pxl-color-green;
+            opacity: 1.0;
+
+            @media @narrow {
+              padding: 0 12px;
+              height: 28px;
+              font-size: 14px;
+              line-height: 14px;
+            }
+            @media @normal {
+              padding: 0 15px;
+              height: 32px;
+              font-size: 17px;
+              line-height: 17px;
+            }
+
+            &:hover {
+              opacity: 0.6;
+            }
+          }
+        }
+
+        &.views-total-rows {
+          height: 24px;
+          padding: 3px 0 0 10px;
+          font-family: @pxl-text-font-light;
+          font-size: 12px;
+
+          @media @narrow {
+            padding: 6px 0 0 10px;
+            height: 28px;
+            font-size: 14px;
+          }
+          @media @normal {
+            padding: 6px 0 0 10px;
+            height: 32px;
+            font-size: 17px;
+          }
+
+          em {
+            font-style: normal;
+          }
+        }
+      }
+    }
+  }
+
+  .view-content {
+    > .pe-container {
+      width: 100%;
+
+      .grid-sizer, .pe-item {
+        width: 100%;
+      }
+
+      .gutter-sizer {
+        width: 0;
+      }
+
+      @media @narrow {
+        .grid-sizer, .pe-item {
+          width: (50% - @grid-gutter-dist/2);
+        }
+
+        .gutter-sizer {
+          width: @grid-gutter-dist;
+        }
+      }
+
+      @media @tablet {
+        .grid-sizer, .pe-item {
+          width: 31.33333%;
+        }
+      }
+
+      .pe-item {
+        display: block;
+        overflow: hidden;
+        margin: 0 0 @grid-gutter-dist !important;
+        opacity: 0.9;
+        #pxl-mixins.transition(opacity 1s);
+
+        &.shown {
+          opacity: 1.0;
+        }
+
+        &.pe-item-ajax, &.pe-item-no-ajax, &.pe-item-linked {
+          cursor: pointer;
+          // see nodes styling (posts, testimonials, SoMe etc.)
+        }
+      }
+
+      // modal dialog
+      .modal {
+        #pxl-mixins.modal();
+      }
+    }
+  }
+
+  //
+  // view pager
+  #pxl-mixins.view-pager(16px, @text-color, @text-color);
+
+  ul.pagination {
+    li {
+      &:hover, &:focus, &.active {
+        a, span {
+          font-family: @pxl-text-font-bold;
+          text-decoration: none;
+          font-size: 20px;
+          background: none;
+        }
+      }
+
+      &.pager-first,
+      &.pager-last,
+      &.prev, &.pager-previous,
+      &.next, &.pager-next {
+        &:hover, &:focus, &.active {
+          a, span {
+            font-family: @pxl-text-font;
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+
+  //
+  // infinite scrolling pager
+  .pager.pager--infinite-scroll {
+    .pager__item {
+      a {
+        display: inline-block;
+        padding: 8px 20px 10px;
+        font-family: @pxl-text-font;
+        font-size: 16px;
+        line-height: 1;
+        color: @text-color;
+        #pxl-mixins.border-radius(3px);
+        border: 1px solid @text-color;
+        background-color: #fff;
+
+        &:hover, &.active {
+          color: #fff;
+          background-color: @text-color;
+        }
+      }
+    }
+  }
+}
+

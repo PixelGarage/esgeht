@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<svg width="324" height="40" viewBox="0 0 324 40" xmlns="http://www.w3.org/2000/svg">
+ <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
+ <defs>
+    <linearGradient y2="1" x2="0" y1="0" x1="0" id="svg_5">
+    <stop offset="0" stop-opacity="0.5" stop-color="#000000"/>
+    <stop offset="1" stop-opacity="0" stop-color="#000000"/>
+    </linearGradient>
+ </defs>
+ <g>
+  <title>background</title>
+  <rect fill="url(#svg_5)" id="canvas_background" height="42" width="326" y="-1" x="-1"/>
+  <g display="none" overflow="visible" y="0" x="0" height="100%" width="100%" id="canvasGrid">
+   <rect fill="url(#gridpattern)" stroke-width="0" y="0" x="0" height="100%" width="100%"/>
+  </g>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <text style="cursor: move;" stroke="#000" font-weight="900" xml:space="preserve" text-anchor="start" alignment-baseline="middle" font-family="MuseoSans, sans-serif" font-size="25" id="svg_2" y="28.75" x="45.28125" stroke-width="0" fill="#ffffff">Nachhaltig bis 2050</text>
+  <line stroke="#ffffff" stroke-width="3" id="svg_3" y2="21" x2="33" y1="21" x1="12.5" fill="none"/>
+  <line stroke="#ffffff" stroke-width="3" id="svg_4" y2="21" x2="311" y1="21" x1="290.5" fill="none"/>
+ </g>
+</svg>

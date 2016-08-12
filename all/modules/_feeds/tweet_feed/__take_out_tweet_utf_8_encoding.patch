@@ -1,0 +1,16 @@
+Index: all/modules/_feeds/tweet_feed/tweet_feed.module
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- all/modules/_feeds/tweet_feed/tweet_feed.module	(revision f23a01a9efd008612a3bec945ac2a2f12991d109)
++++ all/modules/_feeds/tweet_feed/tweet_feed.module	(revision )
+@@ -783,7 +783,7 @@
+ 
+   // The tweet itself goes into the tweet contents field
+   $node->field_tweet_contents[$node->language][0] = array(
+-    'value' => utf8_encode(htmlspecialchars_decode($tweet_html)),
++    'value' => htmlspecialchars_decode($tweet_html),
+     'format' => 'full_html',
+   );
+ 

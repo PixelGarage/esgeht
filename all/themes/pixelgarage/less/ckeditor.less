@@ -1,0 +1,117 @@
+/*
+ *  CKEditor styles
+ * --------------------------------------------------*/
+
+// Variables
+// -------------------------
+@pxl-text-font: 'MuseoSans_700', sans-serif;
+@pxl-text-font-light: 'MuseoSans_300', sans-serif;
+@pxl-text-font-medium: 'MuseoSans_700', sans-serif;
+@pxl-text-font-bold: 'MuseoSans_900', sans-serif;
+@pxl-text-font-italic: 'MuseoSans_700', sans-serif;
+@pxl-text-font-light-italic: 'MuseoSans_300', sans-serif;
+@pxl-text-font-bold-italics: 'MuseoSans_900_Italic', sans-serif;
+
+@text-color: #444;
+@pxl-color-green: #79B731;
+
+@narrow: ~"screen and (min-width: 480px)";
+@tablet: ~"screen and (min-width: 768px)";
+
+// Mixins
+// -------------------------
+.font-size-responsive(@max-size: @resp-font-size-max; @min-size: @resp-font-size-min) {
+  font-size: max(@min-size, @max-size*5/8) !important; // min = 480 / 768 * max
+
+  @media @narrow {
+    font-size: max(unit(@max-size/7.68, vw), unit(@min-size/4.8, vw)) !important;
+  }
+  @media @tablet {
+    font-size: @max-size !important;
+  }
+}
+
+.border-radius(@radius: 0) {
+  -moz-border-radius: @radius;
+  -webkit-border-radius: @radius;
+  border-radius: @radius;
+}
+
+.no-list-style() {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+// Main settings
+// -------------------------
+.green-title {
+  margin-bottom: 10px;
+  font-family: @pxl-text-font-bold !important;
+  .font-size-responsive(25px, 18px);
+  line-height: 30px;
+  text-align: left;
+  color: @pxl-color-green;
+}
+
+.green-text-block {
+  margin: 20px auto;
+  padding: 15px 30px;
+  width: 80%;
+  font-family: @pxl-text-font-bold !important;
+  .font-size-responsive(25px, 22px);
+  line-height: 30px !important;
+  text-align: center;
+  color: #fff;
+  border: 1px solid @pxl-color-green;
+  .border-radius(5px);
+  background-color: @pxl-color-green;
+}
+
+.green-numbered-list {
+  .no-list-style;
+
+  li {
+    .no-list-style;
+
+    &:before {
+      display: inline-block;
+      vertical-align: text-top;
+      width: 32px;
+      height: 32px;
+      line-height: 32px;
+      padding: 0 0 0 8px;
+      .font-size-responsive(25px, 18px);
+      color: #fff;
+      border: 1px solid @pxl-color-green;
+      .border-radius(50%);
+      background-color: @pxl-color-green;
+    }
+
+    p {
+      display: inline-block;
+      vertical-align: text-top;
+      margin-left: 10px;
+      width: 90%;
+    }
+
+    &:first-child:before {
+      content: '1';
+    }
+    &:nth-child(2):before {
+      content: '2';
+    }
+    &:nth-child(3):before {
+      content: '3';
+    }
+    &:nth-child(4):before {
+      content: '4';
+    }
+    &:nth-child(5):before {
+      content: '5';
+    }
+  }
+
+}

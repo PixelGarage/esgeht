@@ -47,6 +47,18 @@ function pixelgarage_preprocess_views_exposed_form(&$vars) {
 
 
 /* =============================================================================
+ *      Rating widget
+ * ========================================================================== */
+
+function pixelgarage_preprocess_rate_template_thumbs_up(&$vars) {
+  $results = $vars['results'];
+  $vars['score'] = $results['rating'];
+  $vars['info'] = null;
+}
+
+
+
+/* =============================================================================
  *      Front Masonry
  * ========================================================================== */
 /**

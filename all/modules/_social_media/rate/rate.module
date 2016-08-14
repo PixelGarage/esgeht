@@ -460,7 +460,7 @@ function _rate_get_source_translation($entity_type, $entity_id) {
     }
     else {
       // We are not on the node page. Do not use node_load to prevent executing many useless queries.
-      $result = db_select('node', 'n')->fields('n', array('tnid, nid'))->condition('n.nid', $entity_id)->execute()->fetchAssoc();
+      $result = db_select('node', 'n')->fields('n', array('tnid', 'nid'))->condition('n.nid', $entity_id)->execute()->fetchAssoc();
       $entity_id = $result['tnid'] ? $result['tnid'] : $result['nid'];
     }
   }

@@ -79,7 +79,7 @@
   width: 100%;
   height: 0;
   overflow: hidden;
-  background-color: @pxl-color-green;
+  background-color: white;
 
   div.row {
     margin: 0;
@@ -95,34 +95,6 @@
         }
       }
 
-      .field-name-field-name {
-        position: absolute;
-        top: 69.5%;
-        left: 50%;
-        #pxl-mixins.transform(translate(-50%) rotate(-2deg));
-        z-index: 10;
-
-        .field-item {
-          font-family: @pxl-text-font-handwriter;
-          #pxl-mixins.font-size-responsive(20px, 15px);
-          text-align: center;
-          letter-spacing: 1px;
-          line-height: 1.1;
-          color: @pxl-color-green;
-          white-space: nowrap;
-
-          @media @mobile {
-            font-size: 6.5vw;
-          }
-          @media @normal {
-            font-size: 25px;
-          }
-          @media @wide {
-            font-size: 28px;
-          }
-        }
-      }
-
       .field-name-field-your-name {
         position: absolute;
         bottom: 3%;
@@ -135,7 +107,7 @@
           #pxl-mixins.font-size-responsive(14px, 11px);
           letter-spacing: 1px;
           line-height: 1.1;
-          color: white;
+          color: @text-color;
           white-space: nowrap;
 
           @media @mobile {
@@ -166,7 +138,7 @@
         .field-item {
           font-family: @pxl-text-font-bold;
           #pxl-mixins.font-size-responsive(15px, 10px);
-          color: white;
+          color: @text-color;
           line-height: 1.1;
           text-align: center;
           #pxl-mixins.hyphenate(auto);
@@ -184,6 +156,13 @@
             font-size: 17px;
           }
         }
+      }
+
+      .field-name-rate-integration-1 {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        z-index: 100;
       }
 
       .slogan-wrapper {
@@ -211,17 +190,6 @@
           font-size: 28px;
         }
       }
-
-      .banner-wrapper {
-        img {
-          position: absolute;
-          top: 56%;
-          left: 5%;
-          width: 90%;
-          height: auto;
-        }
-      }
-
     }
   }
 
@@ -231,14 +199,6 @@
   &.view-mode-full {
     div.row {
       div.col-sm-12 {
-        .field-name-field-name {
-          .field-item {
-            @media @narrow {
-              font-size: 35px;
-            }
-          }
-        }
-
         .field-name-field-your-name {
           .field-item {
             @media @narrow {

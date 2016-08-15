@@ -10,13 +10,13 @@
 
 // label colors
 @webform-color-label: @text-color;
-@webform-color-required: @pxl-color-green;
+@webform-color-required: @pxl-color-main;
 
 // field colors
 @webform-color-input: @text-color;
-@webform-color-input-bg: @pxl-color-blue-light;
-@webform-color-border: @pxl-color-blue-light;
-@webform-color-border-active: @pxl-color-blue;
+@webform-color-input-bg: white;
+@webform-color-border: @pxl-color-main;
+@webform-color-border-active: @pxl-color-main;
 
 // field box
 @webform-control-height: 30px;
@@ -25,7 +25,7 @@
 
 // button colors
 @webform-color-submit: white;
-@webform-color-submit-bg: @pxl-color-green;
+@webform-color-submit-bg: @pxl-color-main;
 
 
 // Mixins
@@ -133,42 +133,6 @@ form.webform-client-form {
             margin-top: 30px;
           }
         }
-      }
-
-      // add more buttons
-      .btn.btn-success, .btn.btn-danger {
-        display: inline-block;
-        vertical-align: middle;
-        margin: 0;
-        padding: 0 20px 0 0;
-        font-family: @pxl-text-font;
-        #pxl-mixins.font-size-responsive(19px, 14px);
-        letter-spacing: normal;
-        text-align: left;
-        text-transform: none;
-        color: @pxl-color-green;
-        border: none;
-        background: none;
-        opacity: 1.0;
-
-        &:hover, &:focus {
-          opacity: 0.6;
-        }
-
-        &:before {
-          display: inline-block;
-          vertical-align: middle;
-          padding-right: 10px;
-          font-family: @pxl-icon-font;
-          font-size: 30px;
-          color: @pxl-color-green;
-        }
-      }
-      .btn.btn-success:before {
-        content: '\f0fe';
-      }
-      .btn.btn-danger:before {
-        content: '\f146';
       }
 
     }
@@ -347,7 +311,7 @@ form.webform-client-form {
         right: 5px;
         bottom: 0;
         font-family: @pxl-icon-font;
-        color: @pxl-color-green;
+        color: @pxl-color-main;
         line-height: @webform-control-height;
         pointer-events: none; // let mouse clicks through
       }
@@ -499,7 +463,7 @@ form.webform-client-form {
     a.done-link {
       .resp-submit-button(@text-color);
       #pxl-mixins.font-size-responsive(24px, 18px);
-      color: @pxl-color-green;
+      color: @webform-color-submit-bg;
       padding-left: 0;
       border: none;
       background: none;

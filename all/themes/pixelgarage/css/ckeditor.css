@@ -1,60 +1,60 @@
 /*
  *  CKEditor styles
  * --------------------------------------------------*/
-.green-title {
+.colored-title {
   margin-bottom: 10px;
-  font-family: 'MuseoSans_900', sans-serif !important;
+  font-family: 'Catamaran-ExtraBold', sans-serif !important;
   font-size: 18px !important;
   line-height: 30px;
   text-align: left;
-  color: #79b731;
+  color: #ff0000;
 }
 @media screen and (min-width: 480px) {
-  .green-title {
+  .colored-title {
     font-size: 3.75vw !important;
   }
 }
 @media screen and (min-width: 768px) {
-  .green-title {
+  .colored-title {
     font-size: 25px !important;
   }
 }
-.green-text-block {
+.colored-text-block {
   margin: 20px auto;
   padding: 15px 30px;
   width: 80%;
-  font-family: 'MuseoSans_900', sans-serif !important;
+  font-family: 'Catamaran-ExtraBold', sans-serif !important;
   font-size: 22px !important;
   line-height: 30px !important;
   text-align: center;
   color: #fff;
-  border: 1px solid #79b731;
+  border: 1px solid #ff0000;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
   border-radius: 5px;
-  background-color: #79b731;
+  background-color: #ff0000;
 }
 @media screen and (min-width: 480px) {
-  .green-text-block {
+  .colored-text-block {
     font-size: 4.58333333vw !important;
   }
 }
 @media screen and (min-width: 768px) {
-  .green-text-block {
+  .colored-text-block {
     font-size: 25px !important;
   }
 }
-.green-numbered-list {
+.colored-numbered-list {
   list-style: none;
   margin: 0;
   padding: 0;
 }
-.green-numbered-list li {
+.colored-numbered-list li {
   list-style: none;
   margin: 0;
   padding: 0;
 }
-.green-numbered-list li:before {
+.colored-numbered-list li:before {
   display: inline-block;
   vertical-align: text-top;
   width: 32px;
@@ -63,40 +63,40 @@
   padding: 0 0 0 8px;
   font-size: 18px !important;
   color: #fff;
-  border: 1px solid #79b731;
+  border: 1px solid #ff0000;
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
   border-radius: 50%;
-  background-color: #79b731;
+  background-color: #ff0000;
 }
 @media screen and (min-width: 480px) {
-  .green-numbered-list li:before {
+  .colored-numbered-list li:before {
     font-size: 3.75vw !important;
   }
 }
 @media screen and (min-width: 768px) {
-  .green-numbered-list li:before {
+  .colored-numbered-list li:before {
     font-size: 25px !important;
   }
 }
-.green-numbered-list li p {
+.colored-numbered-list li p {
   display: inline-block;
   vertical-align: text-top;
   margin-left: 10px;
   width: 90%;
 }
-.green-numbered-list li:first-child:before {
+.colored-numbered-list li:first-child:before {
   content: '1';
 }
-.green-numbered-list li:nth-child(2):before {
+.colored-numbered-list li:nth-child(2):before {
   content: '2';
 }
-.green-numbered-list li:nth-child(3):before {
+.colored-numbered-list li:nth-child(3):before {
   content: '3';
 }
-.green-numbered-list li:nth-child(4):before {
+.colored-numbered-list li:nth-child(4):before {
   content: '4';
 }
-.green-numbered-list li:nth-child(5):before {
+.colored-numbered-list li:nth-child(5):before {
   content: '5';
 }

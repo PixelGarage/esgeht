@@ -7,14 +7,17 @@
 
 //== Colors
 //
-@pxl-color-blue: #3b7da9;
-@pxl-color-blue-light: #ebf0f8;
-@pxl-color-green: #9bc31b;
-@pxl-color-green-light: #edf3da;
+@pxl-color-red: #ff0000;
+@pxl-color-yellow: #ffff00;
+@pxl-color-black: #000000;
+
+@pxl-color-main: @pxl-color-red;
+@pxl-color-second: @pxl-color-black;
 
 @pxl-color-border: #5f5e5e;
-@pxl-color-border-active: @pxl-color-blue;
-@pxl-color-main: @pxl-color-blue;
+@pxl-color-border-active: @pxl-color-main;
+
+@pxl-color-box-bg: @pxl-color-red;
 
 
 @gray-base:              #000;
@@ -24,18 +27,17 @@
 @gray-light:             lighten(@gray-base, 46.7%); // #777
 @gray-lighter:           lighten(@gray-base, 93.5%); // #eee
 
-@brand-primary:         @pxl-color-blue; // #337ab7
-@brand-success:         @pxl-color-green-light;
-@brand-info:            @pxl-color-blue-light;
+@brand-primary:         #337ab7;
+@brand-success:         #5cb85c;
+@brand-info:            #5bc0de;
 @brand-warning:         #f0ad4e;
 @brand-danger:          #d9534f;
 
-
 //== Scaffolding
 //
-@link-color:            darken(@gray-darker, 15%);
+@link-color:            @pxl-color-black;
 //** Link hover color set via `darken()` function.
-@link-hover-color:      @pxl-color-green;
+@link-hover-color:      @pxl-color-red;
 //** Link hover decoration.
 @link-hover-decoration: underline;
 
@@ -46,7 +48,7 @@
 //== Typography
 //
 //## Font, line-height, and color for body text, headings, and more.
-@text-color:            #444;
+@text-color:            @pxl-color-black;
 @text-color-disabled:   @gray-lighter;
 @text-color-field: #5f5e5e;
 

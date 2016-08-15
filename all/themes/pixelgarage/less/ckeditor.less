@@ -4,16 +4,17 @@
 
 // Variables
 // -------------------------
-@pxl-text-font: 'MuseoSans_700', sans-serif;
-@pxl-text-font-light: 'MuseoSans_300', sans-serif;
-@pxl-text-font-medium: 'MuseoSans_700', sans-serif;
-@pxl-text-font-bold: 'MuseoSans_900', sans-serif;
-@pxl-text-font-italic: 'MuseoSans_700', sans-serif;
-@pxl-text-font-light-italic: 'MuseoSans_300', sans-serif;
-@pxl-text-font-bold-italics: 'MuseoSans_900_Italic', sans-serif;
+@pxl-text-font: 'Catamaran-ExtraBold', sans-serif;
+@pxl-text-font-light: 'Catamaran-Light', sans-serif;
+@pxl-text-font-medium: 'Catamaran-ExtraBold', sans-serif;
+@pxl-text-font-bold: 'Catamaran-ExtraBold', sans-serif;
+@pxl-text-font-italic: 'Catamaran-ExtraBold', sans-serif;
+@pxl-text-font-light-italic: 'Catamaran-Light', sans-serif;
+@pxl-text-font-bold-italics: 'Catamaran-ExtraBold', sans-serif;
 
-@text-color: #444;
-@pxl-color-green: #79B731;
+@pxl-color-red: #ff0000;
+@text-color: #000;
+@pxl-colored-color: @pxl-color-red;
 
 @narrow: ~"screen and (min-width: 480px)";
 @tablet: ~"screen and (min-width: 768px)";
@@ -47,16 +48,16 @@
 
 // Main settings
 // -------------------------
-.green-title {
+.colored-title {
   margin-bottom: 10px;
   font-family: @pxl-text-font-bold !important;
   .font-size-responsive(25px, 18px);
   line-height: 30px;
   text-align: left;
-  color: @pxl-color-green;
+  color: @pxl-colored-color;
 }
 
-.green-text-block {
+.colored-text-block {
   margin: 20px auto;
   padding: 15px 30px;
   width: 80%;
@@ -65,12 +66,12 @@
   line-height: 30px !important;
   text-align: center;
   color: #fff;
-  border: 1px solid @pxl-color-green;
+  border: 1px solid @pxl-colored-color;
   .border-radius(5px);
-  background-color: @pxl-color-green;
+  background-color: @pxl-colored-color;
 }
 
-.green-numbered-list {
+.colored-numbered-list {
   .no-list-style;
 
   li {
@@ -85,9 +86,9 @@
       padding: 0 0 0 8px;
       .font-size-responsive(25px, 18px);
       color: #fff;
-      border: 1px solid @pxl-color-green;
+      border: 1px solid @pxl-colored-color;
       .border-radius(50%);
-      background-color: @pxl-color-green;
+      background-color: @pxl-colored-color;
     }
 
     p {

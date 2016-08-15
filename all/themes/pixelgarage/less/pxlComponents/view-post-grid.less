@@ -58,13 +58,13 @@
                 .placeholder(@text-color-field);
                 #pxl-mixins.border-radius(@border-radius-base);
                 .border-right-radius(0);
-                border: 1px solid @pxl-color-green-light;
-                background-color: @pxl-color-green-light;
+                border: 1px solid @pxl-color-main;
+                background-color: @pxl-color-main;
                 #pxl-mixins.box-shadow(none);
 
                 &:focus {
-                  border: 1px solid @pxl-color-green;
-                  #pxl-mixins.box-shadow(0 0 2px @pxl-color-green inset);
+                  border: 1px solid @pxl-color-main;
+                  #pxl-mixins.box-shadow(0 0 2px @pxl-color-main inset);
                 }
 
                 @media @narrow {
@@ -100,8 +100,8 @@
             outline: none;
             #pxl-mixins.border-radius(@border-radius-base);
             .border-left-radius(0);
-            border: 1px solid @pxl-color-green;
-            background-color: @pxl-color-green;
+            border: 1px solid @pxl-color-main;
+            background-color: @pxl-color-main;
             opacity: 1.0;
 
             @media @narrow {

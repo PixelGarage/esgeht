@@ -11,20 +11,20 @@ if(typeof(CKEDITOR) !== 'undefined') {
     CKEDITOR.addStylesSet( 'drupal',
     [
             /* Kulturfolger styles */
-            { name : 'Green title',
+            { name : 'Colored title',
                     element : 'p',
                     attributes : {
-                            'class' : 'green-title' }
+                            'class' : 'colored-title' }
             },
-            { name : 'Green text block',
+            { name : 'Colored text block',
                     element : 'p',
                     attributes : {
-                            'class' : 'green-text-block' }
+                            'class' : 'colored-text-block' }
             },
-            { name : 'Green numbered list',
+            { name : 'Colored numbered list',
                     element : 'ol',
                     attributes : {
-                            'class' : 'green-numbered-list' }
+                            'class' : 'colored-numbered-list' }
             }
 
             /* Block Styles */

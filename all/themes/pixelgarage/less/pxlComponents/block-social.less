@@ -8,9 +8,9 @@
 @ss-sub-font: "Circle"; // supported sub-fonts are "Circle" and "Regular"
 @ss-sub-font-hover: "Regular";
 
-@pxl-share-color: @text-color;
+@pxl-share-color: @pxl-color-red;
 @pxl-share-align: left;
-@pxl-follow-color: @text-color;
+@pxl-follow-color: @pxl-color-red;
 
 @pxl-share-icon-size: 40px;
 
@@ -91,7 +91,7 @@
       width: @pxl-share-icon-size;
       height: @pxl-share-icon-size;
       font-size: (@pxl-share-icon-size - 4px);
-      color: @pxl-color-green;
+      color: @pxl-share-color;
       text-align: center;
       line-height: @pxl-share-icon-size;
       background: none !important;
@@ -175,7 +175,7 @@
         .ss-social(@ss-sub-font);
         font-size: 30px;
         line-height: 30px;
-        color: white;
+        color: @pxl-follow-color;
         background: none !important;
 
         &:hover {

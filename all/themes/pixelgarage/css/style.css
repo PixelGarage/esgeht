@@ -1,5 +1,6 @@
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 @import "../css/ckeditor.css";
+@import 'https://fonts.googleapis.com/css?family=Catamaran:300,800';
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -1061,10 +1062,10 @@ html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 body {
-  font-family: 'MuseoSans_700', sans-serif;
+  font-family: 'Catamaran-ExtraBold', sans-serif;
   font-size: 16px;
   line-height: 1.42857143;
-  color: #444;
+  color: #000000;
   background-color: #fff;
 }
 input,
@@ -1081,7 +1082,7 @@ a {
 }
 a:hover,
 a:focus {
-  color: #9bc31b;
+  color: #ff0000;
   text-decoration: underline;
 }
 a:focus {
@@ -1314,10 +1315,10 @@ mark,
   color: #777777;
 }
 .text-primary {
-  color: #3b7da9;
+  color: #337ab7;
 }
 a.text-primary:hover {
-  color: #2e6183;
+  color: #285f8f;
 }
 .text-success {
   color: #3c763d;
@@ -1345,10 +1346,10 @@ a.text-danger:hover {
 }
 .bg-primary {
   color: #fff;
-  background-color: #3b7da9;
+  background-color: #337ab7;
 }
 a.bg-primary:hover {
-  background-color: #2e6183;
+  background-color: #285f8f;
 }
 .bg-success {
   background-color: #dff0d8;
@@ -2861,7 +2862,7 @@ select[multiple].form-group-lg .form-control {
   display: block;
   margin-top: 5px;
   margin-bottom: 10px;
-  color: #848484;
+  color: #404040;
 }
 @media (min-width: 48em) {
   .form-inline .form-group {
@@ -3049,8 +3050,8 @@ fieldset[disabled] .btn-default.active {
 }
 .btn-primary {
   color: #fff;
-  background-color: #3b7da9;
-  border-color: #346f96;
+  background-color: #337ab7;
+  border-color: #2d6da3;
 }
 .btn-primary:hover,
 .btn-primary:focus,
@@ -3059,8 +3060,8 @@ fieldset[disabled] .btn-default.active {
 .btn-primary.active,
 .open > .dropdown-toggle.btn-primary {
   color: #fff;
-  background-color: #2e6183;
-  border-color: #254d69;
+  background-color: #285f8f;
+  border-color: #204d73;
 }
 .btn-primary:active,
 .btn-primary.active,
@@ -3085,17 +3086,17 @@ fieldset[disabled] .btn-primary:active,
 .btn-primary.disabled.active,
 .btn-primary[disabled].active,
 fieldset[disabled] .btn-primary.active {
-  background-color: #3b7da9;
-  border-color: #346f96;
+  background-color: #337ab7;
+  border-color: #2d6da3;
 }
 .btn-primary .badge {
-  color: #3b7da9;
+  color: #337ab7;
   background-color: #fff;
 }
 .btn-success {
   color: #fff;
-  background-color: #edf3da;
-  border-color: #e4edc7;
+  background-color: #5cb85c;
+  border-color: #4cae4c;
 }
 .btn-success:hover,
 .btn-success:focus,
@@ -3104,8 +3105,8 @@ fieldset[disabled] .btn-primary.active {
 .btn-success.active,
 .open > .dropdown-toggle.btn-success {
   color: #fff;
-  background-color: #dae7b3;
-  border-color: #cdde99;
+  background-color: #449d44;
+  border-color: #398439;
 }
 .btn-success:active,
 .btn-success.active,
@@ -3130,17 +3131,17 @@ fieldset[disabled] .btn-success:active,
 .btn-success.disabled.active,
 .btn-success[disabled].active,
 fieldset[disabled] .btn-success.active {
-  background-color: #edf3da;
-  border-color: #e4edc7;
+  background-color: #5cb85c;
+  border-color: #4cae4c;
 }
 .btn-success .badge {
-  color: #edf3da;
+  color: #5cb85c;
   background-color: #fff;
 }
 .btn-info {
   color: #fff;
-  background-color: #ebf0f8;
-  border-color: #d8e2f1;
+  background-color: #5bc0de;
+  border-color: #46b8da;
 }
 .btn-info:hover,
 .btn-info:focus,
@@ -3149,8 +3150,8 @@ fieldset[disabled] .btn-success.active {
 .btn-info.active,
 .open > .dropdown-toggle.btn-info {
   color: #fff;
-  background-color: #c5d4eb;
-  border-color: #abc0e2;
+  background-color: #31b0d5;
+  border-color: #269abc;
 }
 .btn-info:active,
 .btn-info.active,
@@ -3175,11 +3176,11 @@ fieldset[disabled] .btn-info:active,
 .btn-info.disabled.active,
 .btn-info[disabled].active,
 fieldset[disabled] .btn-info.active {
-  background-color: #ebf0f8;
-  border-color: #d8e2f1;
+  background-color: #5bc0de;
+  border-color: #46b8da;
 }
 .btn-info .badge {
-  color: #ebf0f8;
+  color: #5bc0de;
   background-color: #fff;
 }
 .btn-warning {
@@ -3294,7 +3295,7 @@ fieldset[disabled] .btn-link {
 }
 .btn-link:hover,
 .btn-link:focus {
-  color: #9bc31b;
+  color: #ff0000;
   text-decoration: underline;
   background-color: transparent;
 }
@@ -3441,7 +3442,7 @@ tbody.collapse.in {
   color: #fff;
   text-decoration: none;
   outline: 0;
-  background-color: #3b7da9;
+  background-color: #337ab7;
 }
 .dropdown-menu > .disabled > a,
 .dropdown-menu > .disabled > a:hover,
@@ -3960,7 +3961,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .nav-pills > li.active > a:hover,
 .nav-pills > li.active > a:focus {
   color: #fff;
-  background-color: #3b7da9;
+  background-color: #337ab7;
 }
 .nav-stacked > li {
   float: none;
@@ -4609,7 +4610,7 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 .pagination > li > span:hover,
 .pagination > li > a:focus,
 .pagination > li > span:focus {
-  color: #3b7da9;
+  color: #ff0000;
   background-color: #eeeeee;
   border-color: #ddd;
 }
@@ -4620,9 +4621,9 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 .pagination > .active > a:focus,
 .pagination > .active > span:focus {
   z-index: 2;
-  color: #3b7da9;
-  background-color: #3b7da9;
-  border-color: #3b7da9;
+  color: #ff0000;
+  background-color: #337ab7;
+  border-color: #337ab7;
   cursor: default;
 }
 .pagination > .disabled > span,
@@ -4737,25 +4738,25 @@ a.label:focus {
   background-color: #5e5e5e;
 }
 .label-primary {
-  background-color: #3b7da9;
+  background-color: #337ab7;
 }
 .label-primary[href]:hover,
 .label-primary[href]:focus {
-  background-color: #2e6183;
+  background-color: #285f8f;
 }
 .label-success {
-  background-color: #edf3da;
+  background-color: #5cb85c;
 }
 .label-success[href]:hover,
 .label-success[href]:focus {
-  background-color: #dae7b3;
+  background-color: #449d44;
 }
 .label-info {
-  background-color: #ebf0f8;
+  background-color: #5bc0de;
 }
 .label-info[href]:hover,
 .label-info[href]:focus {
-  background-color: #c5d4eb;
+  background-color: #31b0d5;
 }
 .label-warning {
   background-color: #f0ad4e;
@@ -4879,7 +4880,7 @@ a.thumbnail.active {
 }
 .thumbnail .caption {
   padding: 9px;
-  color: #444;
+  color: #000000;
 }
 .alert {
   padding: 15px;
@@ -4989,7 +4990,7 @@ a.thumbnail.active {
   line-height: 22px;
   color: #fff;
   text-align: center;
-  background-color: #3b7da9;
+  background-color: #337ab7;
   -webkit-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
   box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
   -webkit-transition: width 0.6s ease;
@@ -5010,7 +5011,7 @@ a.thumbnail.active {
   animation: progress-bar-stripes 2s linear infinite;
 }
 .progress-bar-success {
-  background-color: #edf3da;
+  background-color: #5cb85c;
 }
 .progress-striped .progress-bar-success {
   background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
@@ -5018,7 +5019,7 @@ a.thumbnail.active {
   background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
 }
 .progress-bar-info {
-  background-color: #ebf0f8;
+  background-color: #5bc0de;
 }
 .progress-striped .progress-bar-info {
   background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
@@ -5141,8 +5142,8 @@ a.list-group-item:focus {
 .list-group-item.active:focus {
   z-index: 2;
   color: #fff;
-  background-color: #3b7da9;
-  border-color: #3b7da9;
+  background-color: #337ab7;
+  border-color: #337ab7;
 }
 .list-group-item.active .list-group-item-heading,
 .list-group-item.active:hover .list-group-item-heading,
@@ -5158,7 +5159,7 @@ a.list-group-item:focus {
 .list-group-item.active .list-group-item-text,
 .list-group-item.active:hover .list-group-item-text,
 .list-group-item.active:focus .list-group-item-text {
-  color: #c5dceb;
+  color: #c7ddef;
 }
 .list-group-item-success {
   color: #3c763d;
@@ -5506,22 +5507,22 @@ a.list-group-item-danger.active:focus {
   border-bottom-color: #ddd;
 }
 .panel-primary {
-  border-color: #3b7da9;
+  border-color: #337ab7;
 }
 .panel-primary > .panel-heading {
   color: #fff;
-  background-color: #3b7da9;
-  border-color: #3b7da9;
+  background-color: #337ab7;
+  border-color: #337ab7;
 }
 .panel-primary > .panel-heading + .panel-collapse > .panel-body {
-  border-top-color: #3b7da9;
+  border-top-color: #337ab7;
 }
 .panel-primary > .panel-heading .badge {
-  color: #3b7da9;
+  color: #337ab7;
   background-color: #fff;
 }
 .panel-primary > .panel-footer + .panel-collapse > .panel-body {
-  border-bottom-color: #3b7da9;
+  border-bottom-color: #337ab7;
 }
 .panel-success {
   border-color: #d6e9c6;
@@ -5795,7 +5796,7 @@ button.close {
   z-index: 1070;
   display: block;
   visibility: visible;
-  font-family: 'MuseoSans_700', sans-serif;
+  font-family: 'Catamaran-ExtraBold', sans-serif;
   font-size: 14px;
   font-weight: normal;
   line-height: 1.4;
@@ -5902,7 +5903,7 @@ button.close {
   display: none;
   max-width: 276px;
   padding: 1px;
-  font-family: 'MuseoSans_700', sans-serif;
+  font-family: 'Catamaran-ExtraBold', sans-serif;
   font-size: 16px;
   font-weight: normal;
   line-height: 1.42857143;
@@ -6951,7 +6952,7 @@ ul.pagination li > a.progress-disabled {
   font-size: 120%;
 }
 .form-autocomplete .glyphicon.glyphicon-spin {
-  color: #3b7da9;
+  color: #337ab7;
 }
 .form-autocomplete .input-group-addon {
   background-color: #ffffff;
@@ -8652,31 +8653,6 @@ body.navbar-tray-open.navbar-vertical.navbar-fixed {
 .fa-plus-square-o:before {
   content: "\f196";
 }
-@font-face {
-  font-family: 'MuseoSans_300';
-  src: url('../fonts/MuseoSans_300/MuseoSans_300.eot');
-  src: url('../fonts/MuseoSans_300/MuseoSans_300.eot') format('embedded-opentype'), url('../fonts/MuseoSans_300/MuseoSans_300.woff2') format('woff2'), url('../fonts/MuseoSans_300/MuseoSans_300.woff') format('woff'), url('../fonts/MuseoSans_300/MuseoSans_300.ttf') format('truetype'), url('../fonts/MuseoSans_300/MuseoSans_300.svg#MuseoSans_300') format('svg');
-}
-@font-face {
-  font-family: 'MuseoSans_700';
-  src: url('../fonts/MuseoSans_700/MuseoSans_700.eot');
-  src: url('../fonts/MuseoSans_700/MuseoSans_700.eot') format('embedded-opentype'), url('../fonts/MuseoSans_700/MuseoSans_700.woff2') format('woff2'), url('../fonts/MuseoSans_700/MuseoSans_700.woff') format('woff'), url('../fonts/MuseoSans_700/MuseoSans_700.ttf') format('truetype'), url('../fonts/MuseoSans_700/MuseoSans_700.svg#MuseoSans_700') format('svg');
-}
-@font-face {
-  font-family: 'MuseoSans_900';
-  src: url('../fonts/MuseoSans_900/MuseoSans_900.eot');
-  src: url('../fonts/MuseoSans_900/MuseoSans_900.eot') format('embedded-opentype'), url('../fonts/MuseoSans_900/MuseoSans_900.woff2') format('woff2'), url('../fonts/MuseoSans_900/MuseoSans_900.woff') format('woff'), url('../fonts/MuseoSans_900/MuseoSans_900.ttf') format('truetype'), url('../fonts/MuseoSans_900/MuseoSans_900.svg#MuseoSans_900') format('svg');
-}
-@font-face {
-  font-family: 'MuseoSans_900_Italic';
-  src: url('../fonts/MuseoSans_900_Italic/MuseoSans_900_Italic.eot');
-  src: url('../fonts/MuseoSans_900_Italic/MuseoSans_900_Italic.eot') format('embedded-opentype'), url('../fonts/MuseoSans_900_Italic/MuseoSans_900_Italic.woff2') format('woff2'), url('../fonts/MuseoSans_900_Italic/MuseoSans_900_Italic.woff') format('woff'), url('../fonts/MuseoSans_900_Italic/MuseoSans_900_Italic.ttf') format('truetype'), url('../fonts/MuseoSans_900_Italic/MuseoSans_900_Italic.svg#MuseoSans_900_Italic') format('svg');
-}
-@font-face {
-  font-family: 'Pacifico';
-  src: url('../fonts/Pacifico/Pacifico.eot');
-  src: url('../fonts/Pacifico/Pacifico.eot') format('embedded-opentype'), url('../fonts/Pacifico/Pacifico.woff2') format('woff2'), url('../fonts/Pacifico/Pacifico.woff') format('woff'), url('../fonts/Pacifico/Pacifico.ttf') format('truetype'), url('../fonts/Pacifico/Pacifico.svg#Pacifico') format('svg');
-}
 /* --------------------------------------------------
  * Pixelgarage Mixins library
  *
@@ -8738,9 +8714,9 @@ body.navbar-tray-open.navbar-vertical.navbar-fixed {
 #user_login_form textarea:focus,
 #user-create-account textarea:focus,
 #user_pass_form textarea:focus {
-  border: 1px solid #3b7da9;
-  -webkit-box-shadow: 0 0 3px #3b7da9;
-  box-shadow: 0 0 3px #3b7da9;
+  border: 1px solid #ff0000;
+  -webkit-box-shadow: 0 0 3px #ff0000;
+  box-shadow: 0 0 3px #ff0000;
 }
 /* User login page */
 form#user-login {
@@ -8767,7 +8743,7 @@ form#user-login {
 }
 #user-create-account .login-register {
   padding: 3px 8px;
-  font-family: 'MuseoSans_900', sans-serif;
+  font-family: 'Catamaran-ExtraBold', sans-serif;
   font-size: 12px;
   line-height: 1;
   letter-spacing: 1.5px;
@@ -8777,8 +8753,8 @@ form#user-login {
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
   border-radius: 4px;
-  border: 1px solid #346f96;
-  background-color: #3b7da9;
+  border: 1px solid #e60000;
+  background-color: #ff0000;
   display: inline-block;
   position: absolute;
   right: 0;
@@ -8798,7 +8774,7 @@ form#user-login {
   }
 }
 #user-create-account .login-register:hover {
-  color: #3b7da9;
+  color: #ff0000;
   background: none;
 }
 /* user login form */
@@ -8833,7 +8809,7 @@ form#user-login {
   display: inline-block;
   margin: 0;
   padding: 3px 8px;
-  font-family: 'MuseoSans_900', sans-serif;
+  font-family: 'Catamaran-ExtraBold', sans-serif;
   font-size: 12px;
   line-height: 1;
   letter-spacing: 1.5px;
@@ -8843,8 +8819,8 @@ form#user-login {
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
   border-radius: 4px;
-  border: 1px solid #346f96;
-  background-color: #3b7da9;
+  border: 1px solid #e60000;
+  background-color: #ff0000;
 }
 @media screen and (min-width: 48em) {
   #user_login_form .form-actions-wrapper .form-actions .btn {
@@ -8859,16 +8835,16 @@ form#user-login {
   }
 }
 #user_login_form .form-actions-wrapper .form-actions .btn:hover {
-  color: #3b7da9;
+  color: #ff0000;
   background: none;
 }
 #user_login_form .form-actions-wrapper .login-password {
   display: inline-block;
   margin: 0.5em 0;
-  color: #3b7da9;
+  color: #ff0000;
 }
 #user_login_form .form-actions-wrapper .login-password:hover {
-  color: #3b7da9;
+  color: #ff0000;
   text-decoration: underline;
 }
 /* User register / password forms */
@@ -8892,11 +8868,11 @@ form#user-login {
 #user-pass .form-actions .back-to-login .login-account {
   display: inline-block;
   margin-top: 0.5em;
-  color: #3b7da9;
+  color: #ff0000;
 }
 #user-register-form .form-actions .back-to-login .login-account:hover,
 #user-pass .form-actions .back-to-login .login-account:hover {
-  color: #3b7da9;
+  color: #ff0000;
   text-decoration: underline;
 }
 #user-register-form .form-actions .back-to-login:before,
@@ -8904,7 +8880,7 @@ form#user-login {
   display: inline;
   font-family: "fontawesome";
   content: '\f112';
-  color: #3b7da9;
+  color: #ff0000;
   text-align: center;
   padding: 0.3em;
 }
@@ -8913,7 +8889,7 @@ form#user-login {
   display: inline-block;
   margin: 0;
   padding: 3px 8px;
-  font-family: 'MuseoSans_900', sans-serif;
+  font-family: 'Catamaran-ExtraBold', sans-serif;
   font-size: 12px;
   line-height: 1;
   letter-spacing: 1.5px;
@@ -8923,8 +8899,8 @@ form#user-login {
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
   border-radius: 4px;
-  border: 1px solid #346f96;
-  background-color: #3b7da9;
+  border: 1px solid #e60000;
+  background-color: #ff0000;
   float: right;
 }
 @media screen and (min-width: 48em) {
@@ -8943,7 +8919,7 @@ form#user-login {
 }
 #user-register-form .form-actions .btn:hover,
 #user-pass .form-actions .btn:hover {
-  color: #3b7da9;
+  color: #ff0000;
   background: none;
 }
 /*
@@ -9007,7 +8983,7 @@ form#user-login {
   width: 40px;
   height: 40px;
   font-size: 36px;
-  color: #9bc31b;
+  color: #ff0000;
   text-align: center;
   line-height: 40px;
   background: none !important;
@@ -9054,7 +9030,7 @@ form#user-login {
   display: none;
   margin: 0;
   vertical-align: middle;
-  font-family: 'MuseoSans_900', sans-serif;
+  font-family: 'Catamaran-ExtraBold', sans-serif;
   font-size: 18px;
   line-height: 18px;
   color: white;
@@ -9096,7 +9072,7 @@ form#user-login {
   -webkit-font-smoothing: antialiased;
   font-size: 30px;
   line-height: 30px;
-  color: white;
+  color: #ff0000;
   background: none !important;
 }
 #block-follow-site .follow-links .follow-link-wrapper a.follow-link:hover {
@@ -9146,7 +9122,7 @@ ul.language-switcher-locale-url > li {
 ul.language-switcher-locale-url > li a.language-link {
   display: inline-block;
   padding: 0 5px;
-  font-family: 'MuseoSans_300', sans-serif;
+  font-family: 'Catamaran-Light', sans-serif;
   font-size: 18px;
   line-height: 18px;
   text-transform: uppercase;
@@ -9158,7 +9134,7 @@ ul.language-switcher-locale-url > li a.language-link {
 }
 ul.language-switcher-locale-url > li a.language-link.active,
 ul.language-switcher-locale-url > li a.language-link:hover {
-  font-family: 'MuseoSans_900', sans-serif;
+  font-family: 'Catamaran-ExtraBold', sans-serif;
   letter-spacing: 1px;
 }
 @media screen and (min-width: 48em) {
@@ -9188,17 +9164,17 @@ ul.language-switcher-locale-url > li span.locale-untranslated {
 }
 .node-post-page-wrapper .node-post-header .post-title {
   margin-bottom: 10px;
-  font-family: 'MuseoSans_900', sans-serif;
+  font-family: 'Catamaran-ExtraBold', sans-serif;
   font-size: 30px;
-  color: #444;
+  color: #000000;
   line-height: 1.1;
   text-align: center;
 }
 .node-post-page-wrapper .node-post-header .post-heading {
   margin-bottom: 10px;
-  font-family: 'MuseoSans_700', sans-serif;
+  font-family: 'Catamaran-ExtraBold', sans-serif;
   font-size: 17px;
-  color: #444;
+  color: #000000;
   line-height: 1.1;
   text-align: center;
 }
@@ -9225,7 +9201,7 @@ ul.language-switcher-locale-url > li span.locale-untranslated {
   width: 100%;
   height: 0;
   overflow: hidden;
-  background-color: #9bc31b;
+  background-color: white;
 }
 .node.node-post div.row {
   margin: 0;
@@ -9238,51 +9214,6 @@ ul.language-switcher-locale-url > li span.locale-untranslated {
   width: 100%;
   height: auto;
 }
-.node.node-post div.row div.col-sm-12 .field-name-field-name {
-  position: absolute;
-  top: 69.5%;
-  left: 50%;
-  -webkit-transform: translate(-50%) rotate(-2deg);
-  -moz-transform: translate(-50%) rotate(-2deg);
-  -ms-transform: translate(-50%) rotate(-2deg);
-  -o-transform: translate(-50%) rotate(-2deg);
-  transform: translate(-50%) rotate(-2deg);
-  z-index: 10;
-}
-.node.node-post div.row div.col-sm-12 .field-name-field-name .field-item {
-  font-family: 'Pacifico', cursive;
-  font-size: 15px;
-  text-align: center;
-  letter-spacing: 1px;
-  line-height: 1.1;
-  color: #9bc31b;
-  white-space: nowrap;
-}
-@media screen and (min-width: 30em) {
-  .node.node-post div.row div.col-sm-12 .field-name-field-name .field-item {
-    font-size: 3.125vw;
-  }
-}
-@media screen and (min-width: 48em) {
-  .node.node-post div.row div.col-sm-12 .field-name-field-name .field-item {
-    font-size: 20px;
-  }
-}
-@media screen and (max-width: 29.9375em) {
-  .node.node-post div.row div.col-sm-12 .field-name-field-name .field-item {
-    font-size: 6.5vw;
-  }
-}
-@media screen and (min-width: 64em) {
-  .node.node-post div.row div.col-sm-12 .field-name-field-name .field-item {
-    font-size: 25px;
-  }
-}
-@media screen and (min-width: 80em) {
-  .node.node-post div.row div.col-sm-12 .field-name-field-name .field-item {
-    font-size: 28px;
-  }
-}
 .node.node-post div.row div.col-sm-12 .field-name-field-your-name {
   position: absolute;
   bottom: 3%;
@@ -9294,11 +9225,11 @@ ul.language-switcher-locale-url > li span.locale-untranslated {
 }
 .node.node-post div.row div.col-sm-12 .field-name-field-your-name .field-item {
   width: auto;
-  font-family: 'MuseoSans_300', sans-serif;
+  font-family: 'Catamaran-Light', sans-serif;
   font-size: 11px;
   letter-spacing: 1px;
   line-height: 1.1;
-  color: white;
+  color: #000000;
   white-space: nowrap;
 }
 @media screen and (min-width: 30em) {
@@ -9340,9 +9271,9 @@ ul.language-switcher-locale-url > li span.locale-untranslated {
   height: auto;
 }
 .node.node-post div.row div.col-sm-12 .field-name-field-quote .field-item {
-  font-family: 'MuseoSans_900', sans-serif;
+  font-family: 'Catamaran-ExtraBold', sans-serif;
   font-size: 10px;
-  color: white;
+  color: #000000;
   line-height: 1.1;
   text-align: center;
   -ms-word-break: break-all;
@@ -9383,12 +9314,18 @@ ul.language-switcher-locale-url > li span.locale-untranslated {
     font-size: 17px;
   }
 }
+.node.node-post div.row div.col-sm-12 .field-name-rate-integration-1 {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 100;
+}
 .node.node-post div.row div.col-sm-12 .slogan-wrapper {
   position: absolute;
   top: 0;
   width: 100%;
   padding: 10px;
-  font-family: 'MuseoSans_900', sans-serif;
+  font-family: 'Catamaran-ExtraBold', sans-serif;
   font-size: 17px;
   color: white;
   line-height: 1.1;
@@ -9429,18 +9366,6 @@ ul.language-switcher-locale-url > li span.locale-untranslated {
     font-size: 28px;
   }
 }
-.node.node-post div.row div.col-sm-12 .banner-wrapper img {
-  position: absolute;
-  top: 56%;
-  left: 5%;
-  width: 90%;
-  height: auto;
-}
-@media screen and (min-width: 30em) {
-  .node.node-post.view-mode-full div.row div.col-sm-12 .field-name-field-name .field-item {
-    font-size: 35px;
-  }
-}
 @media screen and (min-width: 30em) {
   .node.node-post.view-mode-full div.row div.col-sm-12 .field-name-field-your-name .field-item {
     font-size: 18px;
@@ -9473,11 +9398,11 @@ ul.language-switcher-locale-url > li span.locale-untranslated {
 }
 .node.node-webform .row .col-sm-12 .field-name-title h2,
 .node.node-webform .row .col-sm-6 .field-name-title h2 {
-  font-family: 'MuseoSans_900', sans-serif;
+  font-family: 'Catamaran-ExtraBold', sans-serif;
   font-size: 22px;
   letter-spacing: normal;
   text-transform: none;
-  color: #444;
+  color: #000000;
 }
 @media screen and (min-width: 30em) {
   .node.node-webform .row .col-sm-12 .field-name-title h2,
@@ -9517,7 +9442,7 @@ ul.language-switcher-locale-url > li span.locale-untranslated {
 .node.node-webform .row .col-sm-6 .field-name-body h5,
 .node.node-webform .row .col-sm-12 .field-name-body h6,
 .node.node-webform .row .col-sm-6 .field-name-body h6 {
-  font-family: 'MuseoSans_900', sans-serif;
+  font-family: 'Catamaran-ExtraBold', sans-serif;
   font-weight: bold;
   font-size: 18px;
 }
@@ -9585,7 +9510,7 @@ ul.language-switcher-locale-url > li span.locale-untranslated {
 .node.node-webform .row .col-sm-6 .field-name-body p,
 .node.node-webform .row .col-sm-12 .field-name-body tbody td,
 .node.node-webform .row .col-sm-6 .field-name-body tbody td {
-  font-family: 'MuseoSans_700', sans-serif;
+  font-family: 'Catamaran-ExtraBold', sans-serif;
   font-size: 12px;
   -ms-word-break: break-all;
   word-break: break-word;
@@ -9613,7 +9538,7 @@ ul.language-switcher-locale-url > li span.locale-untranslated {
 }
 .node.node-webform .row .col-sm-12 .field-name-body a,
 .node.node-webform .row .col-sm-6 .field-name-body a {
-  font-family: 'MuseoSans_700', sans-serif;
+  font-family: 'Catamaran-ExtraBold', sans-serif;
   font-size: 12px;
 }
 @media screen and (min-width: 30em) {
@@ -9632,7 +9557,7 @@ ul.language-switcher-locale-url > li span.locale-untranslated {
 .node.node-webform .row .col-sm-6 .field-name-body a:hover,
 .node.node-webform .row .col-sm-12 .field-name-body a:focus,
 .node.node-webform .row .col-sm-6 .field-name-body a:focus {
-  color: #9bc31b;
+  color: #ff0000;
   text-decoration: none;
   background: none;
 }
@@ -9640,7 +9565,7 @@ ul.language-switcher-locale-url > li span.locale-untranslated {
 .node.node-webform .row .col-sm-6 .field-name-body pre,
 .node.node-webform .row .col-sm-12 .field-name-body address,
 .node.node-webform .row .col-sm-6 .field-name-body address {
-  font-family: 'MuseoSans_700', sans-serif;
+  font-family: 'Catamaran-ExtraBold', sans-serif;
   font-size: 12px;
 }
 @media screen and (min-width: 30em) {
@@ -9661,7 +9586,7 @@ ul.language-switcher-locale-url > li span.locale-untranslated {
 }
 .node.node-webform .row .col-sm-12 .field-name-body strong,
 .node.node-webform .row .col-sm-6 .field-name-body strong {
-  font-family: 'MuseoSans_900', sans-serif;
+  font-family: 'Catamaran-ExtraBold', sans-serif;
   font-size: 16px;
 }
 @media screen and (min-width: 30em) {
@@ -9679,7 +9604,7 @@ ul.language-switcher-locale-url > li span.locale-untranslated {
 .node.node-webform .row .col-sm-12 .field-name-body hr,
 .node.node-webform .row .col-sm-6 .field-name-body hr {
   border: 0;
-  border-bottom: 2px solid #444;
+  border-bottom: 2px solid #000000;
   background: none;
 }
 .node.node-webform .row .col-sm-12 .field-name-body img,
@@ -9745,11 +9670,11 @@ ul.language-switcher-locale-url > li span.locale-untranslated {
 }
 .node-page .row div.col-sm-12 .field-name-title h2,
 .node-page .row .col-sm-6 .field-name-title h2 {
-  font-family: 'MuseoSans_900', sans-serif;
+  font-family: 'Catamaran-ExtraBold', sans-serif;
   font-size: 22px;
   letter-spacing: normal;
   text-transform: none;
-  color: #444;
+  color: #000000;
 }
 @media screen and (min-width: 30em) {
   .node-page .row div.col-sm-12 .field-name-title h2,
@@ -9775,7 +9700,7 @@ ul.language-switcher-locale-url > li span.locale-untranslated {
 .node-page .row .col-sm-6 .field-name-body h5,
 .node-page .row div.col-sm-12 .field-name-body h6,
 .node-page .row .col-sm-6 .field-name-body h6 {
-  font-family: 'MuseoSans_900', sans-serif;
+  font-family: 'Catamaran-ExtraBold', sans-serif;
   font-weight: bold;
   font-size: 18px;
 }
@@ -9843,7 +9768,7 @@ ul.language-switcher-locale-url > li span.locale-untranslated {
 .node-page .row .col-sm-6 .field-name-body p,
 .node-page .row div.col-sm-12 .field-name-body tbody td,
 .node-page .row .col-sm-6 .field-name-body tbody td {
-  font-family: 'MuseoSans_700', sans-serif;
+  font-family: 'Catamaran-ExtraBold', sans-serif;
   font-size: 12px;
   -ms-word-break: break-all;
   word-break: break-word;
@@ -9871,7 +9796,7 @@ ul.language-switcher-locale-url > li span.locale-untranslated {
 }
 .node-page .row div.col-sm-12 .field-name-body a,
 .node-page .row .col-sm-6 .field-name-body a {
-  font-family: 'MuseoSans_700', sans-serif;
+  font-family: 'Catamaran-ExtraBold', sans-serif;
   font-size: 12px;
 }
 @media screen and (min-width: 30em) {
@@ -9890,7 +9815,7 @@ ul.language-switcher-locale-url > li span.locale-untranslated {
 .node-page .row .col-sm-6 .field-name-body a:hover,
 .node-page .row div.col-sm-12 .field-name-body a:focus,
 .node-page .row .col-sm-6 .field-name-body a:focus {
-  color: #9bc31b;
+  color: #ff0000;
   text-decoration: none;
   background: none;
 }
@@ -9898,7 +9823,7 @@ ul.language-switcher-locale-url > li span.locale-untranslated {
 .node-page .row .col-sm-6 .field-name-body pre,
 .node-page .row div.col-sm-12 .field-name-body address,
 .node-page .row .col-sm-6 .field-name-body address {
-  font-family: 'MuseoSans_700', sans-serif;
+  font-family: 'Catamaran-ExtraBold', sans-serif;
   font-size: 12px;
 }
 @media screen and (min-width: 30em) {
@@ -9919,7 +9844,7 @@ ul.language-switcher-locale-url > li span.locale-untranslated {
 }
 .node-page .row div.col-sm-12 .field-name-body strong,
 .node-page .row .col-sm-6 .field-name-body strong {
-  font-family: 'MuseoSans_900', sans-serif;
+  font-family: 'Catamaran-ExtraBold', sans-serif;
   font-size: 16px;
 }
 @media screen and (min-width: 30em) {
@@ -9937,7 +9862,7 @@ ul.language-switcher-locale-url > li span.locale-untranslated {
 .node-page .row div.col-sm-12 .field-name-body hr,
 .node-page .row .col-sm-6 .field-name-body hr {
   border: 0;
-  border-bottom: 2px solid #444;
+  border-bottom: 2px solid #000000;
   background: none;
 }
 .node-page .row div.col-sm-12 .field-name-body img,
@@ -9973,14 +9898,14 @@ ul.language-switcher-locale-url > li span.locale-untranslated {
 }
 .node-page .row div.col-sm-12 .field-name-body a,
 .node-page .row .col-sm-6 .field-name-body a {
-  font-family: 'MuseoSans_900', sans-serif;
-  color: #444;
+  font-family: 'Catamaran-ExtraBold', sans-serif;
+  color: #000000;
 }
 .node-page .row div.col-sm-12 .field-name-body a:focus,
 .node-page .row .col-sm-6 .field-name-body a:focus,
 .node-page .row div.col-sm-12 .field-name-body a:hover,
 .node-page .row .col-sm-6 .field-name-body a:hover {
-  color: #9bc31b;
+  color: #ff0000;
 }
 /*
  *  Footer node component
@@ -9994,11 +9919,11 @@ ul.language-switcher-locale-url > li span.locale-untranslated {
 }
 .node.node-footer div.col-sm-12 .field-name-title h2,
 .node.node-footer .col-sm-6 .field-name-title h2 {
-  font-family: 'MuseoSans_900', sans-serif;
+  font-family: 'Catamaran-ExtraBold', sans-serif;
   font-size: 21.25px;
   letter-spacing: 1.2px;
   text-transform: uppercase;
-  color: #444;
+  color: #000000;
 }
 @media screen and (min-width: 30em) {
   .node.node-footer div.col-sm-12 .field-name-title h2,
@@ -10079,7 +10004,7 @@ ul.language-switcher-locale-url > li span.locale-untranslated {
 }
 .node.node-footer div.col-sm-12 .field-name-newsletter .field-item .block-title,
 .node.node-footer .col-sm-6 .field-name-newsletter .field-item .block-title {
-  font-family: 'MuseoSans_900', sans-serif;
+  font-family: 'Catamaran-ExtraBold', sans-serif;
   font-size: 15px;
   line-height: 15px;
   color: white;
@@ -10100,17 +10025,17 @@ ul.language-switcher-locale-url > li span.locale-untranslated {
   padding: 0 10px;
   height: 24px;
   width: 100%;
-  font-family: 'MuseoSans_300', sans-serif;
+  font-family: 'Catamaran-Light', sans-serif;
   font-size: 12px;
   line-height: 12px;
-  color: #444;
+  color: #000000;
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
   border-radius: 4px;
   border-bottom-right-radius: 0;
   border-top-right-radius: 0;
-  border: 1px solid #edf3da;
-  background-color: #edf3da;
+  border: 1px solid #ff0000;
+  background-color: #ff0000;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
@@ -10130,10 +10055,10 @@ ul.language-switcher-locale-url > li span.locale-untranslated {
 }
 .node.node-footer div.col-sm-12 .field-name-newsletter .field-item .webform-client-form input.email:focus,
 .node.node-footer .col-sm-6 .field-name-newsletter .field-item .webform-client-form input.email:focus {
-  border: 1px solid #9bc31b;
-  -webkit-box-shadow: 0 0 2px #9bc31b inset;
-  -moz-box-shadow: 0 0 2px #9bc31b inset;
-  box-shadow: 0 0 2px #9bc31b inset;
+  border: 1px solid #ff0000;
+  -webkit-box-shadow: 0 0 2px #ff0000 inset;
+  -moz-box-shadow: 0 0 2px #ff0000 inset;
+  box-shadow: 0 0 2px #ff0000 inset;
 }
 @media screen and (min-width: 30em) {
   .node.node-footer div.col-sm-12 .field-name-newsletter .field-item .webform-client-form input.email,
@@ -10163,7 +10088,7 @@ ul.language-switcher-locale-url > li span.locale-untranslated {
   margin: 0;
   padding: 3px 10px 0;
   height: 24px;
-  font-family: 'MuseoSans_900', sans-serif;
+  font-family: 'Catamaran-ExtraBold', sans-serif;
   font-size: 12px;
   line-height: 12px;
   letter-spacing: 1.5px;
@@ -10175,8 +10100,8 @@ ul.language-switcher-locale-url > li span.locale-untranslated {
   border-radius: 4px;
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;
-  border: 1px solid #9bc31b;
-  background-color: #9bc31b;
+  border: 1px solid #ff0000;
+  background-color: #ff0000;
   opacity: 1.0;
 }
 .node.node-footer div.col-sm-12 .field-name-newsletter .field-item .webform-client-form .clear input:hover,
@@ -10211,7 +10136,7 @@ ul.language-switcher-locale-url > li span.locale-untranslated {
   padding: 0;
   display: inline-block;
   width: 80%;
-  background: #3b7da9 none;
+  background: #ff0000 none;
 }
 .node.node-footer div.col-sm-12 .field-name-newsletter .field-item .webform-client-form .form-actions,
 .node.node-footer .col-sm-6 .field-name-newsletter .field-item .webform-client-form .form-actions {
@@ -10220,14 +10145,14 @@ ul.language-switcher-locale-url > li span.locale-untranslated {
   padding: 0;
   vertical-align: top;
   width: 20%;
-  background: #3b7da9 none;
+  background: #ff0000 none;
 }
 .node.node-footer div.col-sm-12 .field-name-newsletter .field-item .webform-client-form .form-actions button.btn,
 .node.node-footer .col-sm-6 .field-name-newsletter .field-item .webform-client-form .form-actions button.btn {
   margin: 0;
   padding: 3px 10px 0;
   height: 24px;
-  font-family: 'MuseoSans_900', sans-serif;
+  font-family: 'Catamaran-ExtraBold', sans-serif;
   font-size: 12px;
   line-height: 12px;
   letter-spacing: 1.5px;
@@ -10239,8 +10164,8 @@ ul.language-switcher-locale-url > li span.locale-untranslated {
   border-radius: 4px;
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;
-  border: 1px solid #9bc31b;
-  background-color: #9bc31b;
+  border: 1px solid #ff0000;
+  background-color: #ff0000;
   opacity: 1.0;
   width: 100%;
 }
@@ -10302,11 +10227,11 @@ ul.language-switcher-locale-url > li span.locale-untranslated {
 }
 .node.node-donate .row .col-sm-12 .field-name-title h2,
 .node.node-donate .row .col-sm-6 .field-name-title h2 {
-  font-family: 'MuseoSans_900', sans-serif;
+  font-family: 'Catamaran-ExtraBold', sans-serif;
   font-size: 22px;
   letter-spacing: normal;
   text-transform: none;
-  color: #444;
+  color: #000000;
 }
 @media screen and (min-width: 30em) {
   .node.node-donate .row .col-sm-12 .field-name-title h2,
@@ -10332,7 +10257,7 @@ ul.language-switcher-locale-url > li span.locale-untranslated {
 .node.node-donate .row .col-sm-6 .field-name-body h5,
 .node.node-donate .row .col-sm-12 .field-name-body h6,
 .node.node-donate .row .col-sm-6 .field-name-body h6 {
-  font-family: 'MuseoSans_900', sans-serif;
+  font-family: 'Catamaran-ExtraBold', sans-serif;
   font-weight: bold;
   font-size: 18px;
 }
@@ -10400,7 +10325,7 @@ ul.language-switcher-locale-url > li span.locale-untranslated {
 .node.node-donate .row .col-sm-6 .field-name-body p,
 .node.node-donate .row .col-sm-12 .field-name-body tbody td,
 .node.node-donate .row .col-sm-6 .field-name-body tbody td {
-  font-family: 'MuseoSans_700', sans-serif;
+  font-family: 'Catamaran-ExtraBold', sans-serif;
   font-size: 12px;
   -ms-word-break: break-all;
   word-break: break-word;
@@ -10428,7 +10353,7 @@ ul.language-switcher-locale-url > li span.locale-untranslated {
 }
 .node.node-donate .row .col-sm-12 .field-name-body a,
 .node.node-donate .row .col-sm-6 .field-name-body a {
-  font-family: 'MuseoSans_700', sans-serif;
+  font-family: 'Catamaran-ExtraBold', sans-serif;
   font-size: 12px;
 }
 @media screen and (min-width: 30em) {
@@ -10447,7 +10372,7 @@ ul.language-switcher-locale-url > li span.locale-untranslated {
 .node.node-donate .row .col-sm-6 .field-name-body a:hover,
 .node.node-donate .row .col-sm-12 .field-name-body a:focus,
 .node.node-donate .row .col-sm-6 .field-name-body a:focus {
-  color: #9bc31b;
+  color: #ff0000;
   text-decoration: none;
   background: none;
 }
@@ -10455,7 +10380,7 @@ ul.language-switcher-locale-url > li span.locale-untranslated {
 .node.node-donate .row .col-sm-6 .field-name-body pre,
 .node.node-donate .row .col-sm-12 .field-name-body address,
 .node.node-donate .row .col-sm-6 .field-name-body address {
-  font-family: 'MuseoSans_700', sans-serif;
+  font-family: 'Catamaran-ExtraBold', sans-serif;
   font-size: 12px;
 }
 @media screen and (min-width: 30em) {
@@ -10476,7 +10401,7 @@ ul.language-switcher-locale-url > li span.locale-untranslated {
 }
 .node.node-donate .row .col-sm-12 .field-name-body strong,
 .node.node-donate .row .col-sm-6 .field-name-body strong {
-  font-family: 'MuseoSans_900', sans-serif;
+  font-family: 'Catamaran-ExtraBold', sans-serif;
   font-size: 16px;
 }
 @media screen and (min-width: 30em) {
@@ -10494,7 +10419,7 @@ ul.language-switcher-locale-url > li span.locale-untranslated {
 .node.node-donate .row .col-sm-12 .field-name-body hr,
 .node.node-donate .row .col-sm-6 .field-name-body hr {
   border: 0;
-  border-bottom: 2px solid #444;
+  border-bottom: 2px solid #000000;
   background: none;
 }
 .node.node-donate .row .col-sm-12 .field-name-body img,
@@ -10543,7 +10468,7 @@ ul.language-switcher-locale-url > li span.locale-untranslated {
 .node.node-donate .row .col-sm-6 .field-name-field-account-details h5,
 .node.node-donate .row .col-sm-12 .field-name-field-account-details h6,
 .node.node-donate .row .col-sm-6 .field-name-field-account-details h6 {
-  font-family: 'MuseoSans_900', sans-serif;
+  font-family: 'Catamaran-ExtraBold', sans-serif;
   font-weight: bold;
   font-size: 18px;
 }
@@ -10611,7 +10536,7 @@ ul.language-switcher-locale-url > li span.locale-untranslated {
 .node.node-donate .row .col-sm-6 .field-name-field-account-details p,
 .node.node-donate .row .col-sm-12 .field-name-field-account-details tbody td,
 .node.node-donate .row .col-sm-6 .field-name-field-account-details tbody td {
-  font-family: 'MuseoSans_700', sans-serif;
+  font-family: 'Catamaran-ExtraBold', sans-serif;
   font-size: 12px;
   -ms-word-break: break-all;
   word-break: break-word;
@@ -10639,7 +10564,7 @@ ul.language-switcher-locale-url > li span.locale-untranslated {
 }
 .node.node-donate .row .col-sm-12 .field-name-field-account-details a,
 .node.node-donate .row .col-sm-6 .field-name-field-account-details a {
-  font-family: 'MuseoSans_700', sans-serif;
+  font-family: 'Catamaran-ExtraBold', sans-serif;
   font-size: 12px;
 }
 @media screen and (min-width: 30em) {
@@ -10658,7 +10583,7 @@ ul.language-switcher-locale-url > li span.locale-untranslated {
 .node.node-donate .row .col-sm-6 .field-name-field-account-details a:hover,
 .node.node-donate .row .col-sm-12 .field-name-field-account-details a:focus,
 .node.node-donate .row .col-sm-6 .field-name-field-account-details a:focus {
-  color: #9bc31b;
+  color: #ff0000;
   text-decoration: none;
   background: none;
 }
@@ -10666,7 +10591,7 @@ ul.language-switcher-locale-url > li span.locale-untranslated {
 .node.node-donate .row .col-sm-6 .field-name-field-account-details pre,
 .node.node-donate .row .col-sm-12 .field-name-field-account-details address,
 .node.node-donate .row .col-sm-6 .field-name-field-account-details address {
-  font-family: 'MuseoSans_700', sans-serif;
+  font-family: 'Catamaran-ExtraBold', sans-serif;
   font-size: 12px;
 }
 @media screen and (min-width: 30em) {
@@ -10687,7 +10612,7 @@ ul.language-switcher-locale-url > li span.locale-untranslated {
 }
 .node.node-donate .row .col-sm-12 .field-name-field-account-details strong,
 .node.node-donate .row .col-sm-6 .field-name-field-account-details strong {
-  font-family: 'MuseoSans_900', sans-serif;
+  font-family: 'Catamaran-ExtraBold', sans-serif;
   font-size: 16px;
 }
 @media screen and (min-width: 30em) {
@@ -10705,7 +10630,7 @@ ul.language-switcher-locale-url > li span.locale-untranslated {
 .node.node-donate .row .col-sm-12 .field-name-field-account-details hr,
 .node.node-donate .row .col-sm-6 .field-name-field-account-details hr {
   border: 0;
-  border-bottom: 2px solid #444;
+  border-bottom: 2px solid #000000;
   background: none;
 }
 .node.node-donate .row .col-sm-12 .field-name-field-account-details img,
@@ -10736,14 +10661,14 @@ ul.language-switcher-locale-url > li span.locale-untranslated {
 }
 .node.node-donate .row .col-sm-12 .field-name-field-account-details p,
 .node.node-donate .row .col-sm-6 .field-name-field-account-details p {
-  font-family: 'MuseoSans_300', sans-serif;
+  font-family: 'Catamaran-Light', sans-serif;
   line-height: 22px;
 }
 /*
  *  Node testimonial component
  * --------------------------------------------------*/
 .node.node-testimonial {
-  background-color: #ebf0f8;
+  background-color: white;
 }
 .node.node-testimonial .row .col-sm-12,
 .node.node-testimonial .row .col-sm-6 {
@@ -10751,11 +10676,11 @@ ul.language-switcher-locale-url > li span.locale-untranslated {
 }
 .node.node-testimonial .row .col-sm-12 .field-name-title h2,
 .node.node-testimonial .row .col-sm-6 .field-name-title h2 {
-  font-family: 'MuseoSans_900', sans-serif;
+  font-family: 'Catamaran-ExtraBold', sans-serif;
   font-size: 22px;
   letter-spacing: normal;
   text-transform: none;
-  color: #444;
+  color: #000000;
 }
 @media screen and (min-width: 30em) {
   .node.node-testimonial .row .col-sm-12 .field-name-title h2,
@@ -10792,7 +10717,7 @@ ul.language-switcher-locale-url > li span.locale-untranslated {
 .node.node-testimonial .row .col-sm-6 .field-name-body h5,
 .node.node-testimonial .row .col-sm-12 .field-name-body h6,
 .node.node-testimonial .row .col-sm-6 .field-name-body h6 {
-  font-family: 'MuseoSans_900', sans-serif;
+  font-family: 'Catamaran-ExtraBold', sans-serif;
   font-weight: bold;
   font-size: 18px;
 }
@@ -10860,7 +10785,7 @@ ul.language-switcher-locale-url > li span.locale-untranslated {
 .node.node-testimonial .row .col-sm-6 .field-name-body p,
 .node.node-testimonial .row .col-sm-12 .field-name-body tbody td,
 .node.node-testimonial .row .col-sm-6 .field-name-body tbody td {
-  font-family: 'MuseoSans_700', sans-serif;
+  font-family: 'Catamaran-ExtraBold', sans-serif;
   font-size: 15.625px;
   -ms-word-break: break-all;
   word-break: break-word;
@@ -10888,7 +10813,7 @@ ul.language-switcher-locale-url > li span.locale-untranslated {
 }
 .node.node-testimonial .row .col-sm-12 .field-name-body a,
 .node.node-testimonial .row .col-sm-6 .field-name-body a {
-  font-family: 'MuseoSans_700', sans-serif;
+  font-family: 'Catamaran-ExtraBold', sans-serif;
   font-size: 15.625px;
 }
 @media screen and (min-width: 30em) {
@@ -10907,7 +10832,7 @@ ul.language-switcher-locale-url > li span.locale-untranslated {
 .node.node-testimonial .row .col-sm-6 .field-name-body a:hover,
 .node.node-testimonial .row .col-sm-12 .field-name-body a:focus,
 .node.node-testimonial .row .col-sm-6 .field-name-body a:focus {
-  color: #9bc31b;
+  color: #ff0000;
   text-decoration: none;
   background: none;
 }
@@ -10915,7 +10840,7 @@ ul.language-switcher-locale-url > li span.locale-untranslated {
 .node.node-testimonial .row .col-sm-6 .field-name-body pre,
 .node.node-testimonial .row .col-sm-12 .field-name-body address,
 .node.node-testimonial .row .col-sm-6 .field-name-body address {
-  font-family: 'MuseoSans_700', sans-serif;
+  font-family: 'Catamaran-ExtraBold', sans-serif;
   font-size: 15.625px;
 }
 @media screen and (min-width: 30em) {
@@ -10936,7 +10861,7 @@ ul.language-switcher-locale-url > li span.locale-untranslated {
 }
 .node.node-testimonial .row .col-sm-12 .field-name-body strong,
 .node.node-testimonial .row .col-sm-6 .field-name-body strong {
-  font-family: 'MuseoSans_900', sans-serif;
+  font-family: 'Catamaran-ExtraBold', sans-serif;
   font-size: 16.875px;
 }
 @media screen and (min-width: 30em) {
@@ -10954,7 +10879,7 @@ ul.language-switcher-locale-url > li span.locale-untranslated {
 .node.node-testimonial .row .col-sm-12 .field-name-body hr,
 .node.node-testimonial .row .col-sm-6 .field-name-body hr {
   border: 0;
-  border-bottom: 2px solid #444;
+  border-bottom: 2px solid #000000;
   background: none;
 }
 .node.node-testimonial .row .col-sm-12 .field-name-body img,
@@ -10985,8 +10910,8 @@ ul.language-switcher-locale-url > li span.locale-untranslated {
 }
 .node.node-testimonial .row .col-sm-12 .field-name-body p,
 .node.node-testimonial .row .col-sm-6 .field-name-body p {
-  font-family: 'MuseoSans_900', sans-serif;
-  color: #3b7da9;
+  font-family: 'Catamaran-ExtraBold', sans-serif;
+  color: #000000;
   line-height: 30px;
   text-align: center;
 }
@@ -10994,8 +10919,8 @@ ul.language-switcher-locale-url > li span.locale-untranslated {
 .node.node-testimonial .row .col-sm-6 .campaign-claim {
   margin: 30px auto;
   width: 60%;
-  font-family: 'MuseoSans_300', sans-serif;
-  color: #3b7da9;
+  font-family: 'Catamaran-Light', sans-serif;
+  color: #000000;
   line-height: 24px;
   text-align: center;
 }
@@ -11011,7 +10936,7 @@ ul.language-switcher-locale-url > li span.locale-untranslated {
 .node.node-testimonial .row .col-sm-6 .campaign-claim h5,
 .node.node-testimonial .row .col-sm-12 .campaign-claim h6,
 .node.node-testimonial .row .col-sm-6 .campaign-claim h6 {
-  font-family: 'MuseoSans_900', sans-serif;
+  font-family: 'Catamaran-ExtraBold', sans-serif;
   font-weight: bold;
   font-size: 18px;
 }
@@ -11079,7 +11004,7 @@ ul.language-switcher-locale-url > li span.locale-untranslated {
 .node.node-testimonial .row .col-sm-6 .campaign-claim p,
 .node.node-testimonial .row .col-sm-12 .campaign-claim tbody td,
 .node.node-testimonial .row .col-sm-6 .campaign-claim tbody td {
-  font-family: 'MuseoSans_700', sans-serif;
+  font-family: 'Catamaran-ExtraBold', sans-serif;
   font-size: 15px;
   -ms-word-break: break-all;
   word-break: break-word;
@@ -11107,7 +11032,7 @@ ul.language-switcher-locale-url > li span.locale-untranslated {
 }
 .node.node-testimonial .row .col-sm-12 .campaign-claim a,
 .node.node-testimonial .row .col-sm-6 .campaign-claim a {
-  font-family: 'MuseoSans_700', sans-serif;
+  font-family: 'Catamaran-ExtraBold', sans-serif;
   font-size: 15px;
 }
 @media screen and (min-width: 30em) {
@@ -11126,7 +11051,7 @@ ul.language-switcher-locale-url > li span.locale-untranslated {
 .node.node-testimonial .row .col-sm-6 .campaign-claim a:hover,
 .node.node-testimonial .row .col-sm-12 .campaign-claim a:focus,
 .node.node-testimonial .row .col-sm-6 .campaign-claim a:focus {
-  color: #9bc31b;
+  color: #ff0000;
   text-decoration: none;
   background: none;
 }
@@ -11134,7 +11059,7 @@ ul.language-switcher-locale-url > li span.locale-untranslated {
 .node.node-testimonial .row .col-sm-6 .campaign-claim pre,
 .node.node-testimonial .row .col-sm-12 .campaign-claim address,
 .node.node-testimonial .row .col-sm-6 .campaign-claim address {
-  font-family: 'MuseoSans_700', sans-serif;
+  font-family: 'Catamaran-ExtraBold', sans-serif;
   font-size: 15px;
 }
 @media screen and (min-width: 30em) {
@@ -11155,7 +11080,7 @@ ul.language-switcher-locale-url > li span.locale-untranslated {
 }
 .node.node-testimonial .row .col-sm-12 .campaign-claim strong,
 .node.node-testimonial .row .col-sm-6 .campaign-claim strong {
-  font-family: 'MuseoSans_900', sans-serif;
+  font-family: 'Catamaran-ExtraBold', sans-serif;
   font-size: 16.25px;
 }
 @media screen and (min-width: 30em) {
@@ -11173,7 +11098,7 @@ ul.language-switcher-locale-url > li span.locale-untranslated {
 .node.node-testimonial .row .col-sm-12 .campaign-claim hr,
 .node.node-testimonial .row .col-sm-6 .campaign-claim hr {
   border: 0;
-  border-bottom: 2px solid #444;
+  border-bottom: 2px solid #000000;
   background: none;
 }
 .node.node-testimonial .row .col-sm-12 .campaign-claim img,
@@ -11207,7 +11132,7 @@ ul.language-switcher-locale-url > li span.locale-untranslated {
  * --------------------------------------------------*/
 .node.node-facebook-post.view-mode-teaser {
   padding: 20px;
-  background-color: #ebf0f8;
+  background-color: white;
 }
 .node.node-facebook-post.view-mode-teaser .row div.col-sm-12 {
   width: 100%;
@@ -11221,9 +11146,9 @@ ul.language-switcher-locale-url > li span.locale-untranslated {
 }
 .node.node-facebook-post.view-mode-teaser .row div.col-sm-12 .field-name-title h2 {
   margin-top: 0;
-  font-family: 'MuseoSans_900', sans-serif;
+  font-family: 'Catamaran-ExtraBold', sans-serif;
   font-size: 14px;
-  color: #3b7da9;
+  color: #000000;
   line-height: 1.5;
 }
 @media screen and (min-width: 30em) {
@@ -11237,7 +11162,7 @@ ul.language-switcher-locale-url > li span.locale-untranslated {
   }
 }
 .node.node-facebook-post.view-mode-teaser .row div.col-sm-12 .field-name-body {
-  color: #3b7da9;
+  color: #000000;
 }
 .node.node-facebook-post.view-mode-teaser .row div.col-sm-12 .field-name-body h1,
 .node.node-facebook-post.view-mode-teaser .row div.col-sm-12 .field-name-body h2,
@@ -11245,7 +11170,7 @@ ul.language-switcher-locale-url > li span.locale-untranslated {
 .node.node-facebook-post.view-mode-teaser .row div.col-sm-12 .field-name-body h4,
 .node.node-facebook-post.view-mode-teaser .row div.col-sm-12 .field-name-body h5,
 .node.node-facebook-post.view-mode-teaser .row div.col-sm-12 .field-name-body h6 {
-  font-family: 'MuseoSans_900', sans-serif;
+  font-family: 'Catamaran-ExtraBold', sans-serif;
   font-weight: bold;
   font-size: 18px;
 }
@@ -11290,7 +11215,7 @@ ul.language-switcher-locale-url > li span.locale-untranslated {
 }
 .node.node-facebook-post.view-mode-teaser .row div.col-sm-12 .field-name-body p,
 .node.node-facebook-post.view-mode-teaser .row div.col-sm-12 .field-name-body tbody td {
-  font-family: 'MuseoSans_700', sans-serif;
+  font-family: 'Catamaran-ExtraBold', sans-serif;
   font-size: 12px;
   -ms-word-break: break-all;
   word-break: break-word;
@@ -11313,7 +11238,7 @@ ul.language-switcher-locale-url > li span.locale-untranslated {
   }
 }
 .node.node-facebook-post.view-mode-teaser .row div.col-sm-12 .field-name-body a {
-  font-family: 'MuseoSans_700', sans-serif;
+  font-family: 'Catamaran-ExtraBold', sans-serif;
   font-size: 12px;
 }
 @media screen and (min-width: 30em) {
@@ -11328,13 +11253,13 @@ ul.language-switcher-locale-url > li span.locale-untranslated {
 }
 .node.node-facebook-post.view-mode-teaser .row div.col-sm-12 .field-name-body a:hover,
 .node.node-facebook-post.view-mode-teaser .row div.col-sm-12 .field-name-body a:focus {
-  color: #9bc31b;
+  color: #ff0000;
   text-decoration: none;
   background: none;
 }
 .node.node-facebook-post.view-mode-teaser .row div.col-sm-12 .field-name-body pre,
 .node.node-facebook-post.view-mode-teaser .row div.col-sm-12 .field-name-body address {
-  font-family: 'MuseoSans_700', sans-serif;
+  font-family: 'Catamaran-ExtraBold', sans-serif;
   font-size: 12px;
 }
 @media screen and (min-width: 30em) {
@@ -11350,7 +11275,7 @@ ul.language-switcher-locale-url > li span.locale-untranslated {
   }
 }
 .node.node-facebook-post.view-mode-teaser .row div.col-sm-12 .field-name-body strong {
-  font-family: 'MuseoSans_900', sans-serif;
+  font-family: 'Catamaran-ExtraBold', sans-serif;
   font-size: 16px;
 }
 @media screen and (min-width: 30em) {
@@ -11365,7 +11290,7 @@ ul.language-switcher-locale-url > li span.locale-untranslated {
 }
 .node.node-facebook-post.view-mode-teaser .row div.col-sm-12 .field-name-body hr {
   border: 0;
-  border-bottom: 2px solid #444;
+  border-bottom: 2px solid #000000;
   background: none;
 }
 .node.node-facebook-post.view-mode-teaser .row div.col-sm-12 .field-name-body img,
@@ -11390,13 +11315,13 @@ ul.language-switcher-locale-url > li span.locale-untranslated {
   padding: 10px;
 }
 .node.node-facebook-post.view-mode-teaser .row div.col-sm-12 .field-name-field-link .field-item a {
-  font-family: 'MuseoSans_300', sans-serif;
+  font-family: 'Catamaran-Light', sans-serif;
   font-size: 14px;
   text-align: left;
-  color: #3b7da9;
+  color: #000000;
 }
 .node.node-facebook-post.view-mode-teaser .row div.col-sm-12 .field-name-field-link .field-item a:hover {
-  font-family: 'MuseoSans_700', sans-serif;
+  font-family: 'Catamaran-ExtraBold', sans-serif;
 }
 .node.node-facebook-post.view-mode-teaser .row div.col-sm-12 .field-name-field-name-from {
   display: none;
@@ -11404,10 +11329,10 @@ ul.language-switcher-locale-url > li span.locale-untranslated {
   width: 100%;
 }
 .node.node-facebook-post.view-mode-teaser .row div.col-sm-12 .field-name-field-name-from .field-item {
-  font-family: 'MuseoSans_300', sans-serif;
+  font-family: 'Catamaran-Light', sans-serif;
   font-size: 14px;
   text-align: left;
-  color: #3b7da9;
+  color: #000000;
 }
 .node.node-facebook-post.view-mode-teaser .row div.col-sm-12 .field-name-field-created-time {
   margin-right: -20px;
@@ -11415,17 +11340,17 @@ ul.language-switcher-locale-url > li span.locale-untranslated {
   width: 100%;
 }
 .node.node-facebook-post.view-mode-teaser .row div.col-sm-12 .field-name-field-created-time .field-item {
-  font-family: 'MuseoSans_700', sans-serif;
+  font-family: 'Catamaran-ExtraBold', sans-serif;
   font-size: 10px;
   text-align: right;
-  color: #3b7da9;
+  color: #000000;
 }
 .node.node-facebook-post.view-mode-teaser .row div.col-sm-12 .field-name-field-created-time .field-item:after {
   content: '\f09a';
   margin-left: 10px;
   font-family: 'fontawesome';
   font-size: 16px;
-  color: #3b7da9;
+  color: #000000;
 }
 .node.node-facebook-post.view-mode-teaser .row div.col-sm-12 .field-name-field-likes_count {
   margin: -20px 0 0 -20px;
@@ -11433,17 +11358,17 @@ ul.language-switcher-locale-url > li span.locale-untranslated {
   width: 100%;
 }
 .node.node-facebook-post.view-mode-teaser .row div.col-sm-12 .field-name-field-likes_count .field-item {
-  font-family: 'MuseoSans_700', sans-serif;
+  font-family: 'Catamaran-ExtraBold', sans-serif;
   font-size: 10px;
   text-align: left;
-  color: #3b7da9;
+  color: #000000;
 }
 .node.node-facebook-post.view-mode-teaser .row div.col-sm-12 .field-name-field-likes_count .field-item:after {
   content: 'Likes';
   margin-left: 10px;
-  font-family: 'MuseoSans_700', sans-serif;
+  font-family: 'Catamaran-ExtraBold', sans-serif;
   font-size: 10px;
-  color: #3b7da9;
+  color: #000000;
 }
 .node.node-facebook-post.view-mode-full .row div.col-sm-12 {
   width: 100%;
@@ -11451,9 +11376,9 @@ ul.language-switcher-locale-url > li span.locale-untranslated {
 .node.node-facebook-post.view-mode-full .row div.col-sm-12 .field-name-title h2 {
   margin: 0;
   padding: 15px 0;
-  font-family: 'MuseoSans_900', sans-serif;
+  font-family: 'Catamaran-ExtraBold', sans-serif;
   font-size: 18px;
-  color: #3b7da9;
+  color: #000000;
 }
 @media screen and (min-width: 30em) {
   .node.node-facebook-post.view-mode-full .row div.col-sm-12 .field-name-title h2 {
@@ -11477,7 +11402,7 @@ ul.language-switcher-locale-url > li span.locale-untranslated {
 }
 .node.node-facebook-post.view-mode-full .row div.col-sm-12 .field-name-body {
   margin: 0 0 20px;
-  color: #3b7da9;
+  color: #000000;
 }
 .node.node-facebook-post.view-mode-full .row div.col-sm-12 .field-name-body h1,
 .node.node-facebook-post.view-mode-full .row div.col-sm-12 .field-name-body h2,
@@ -11485,7 +11410,7 @@ ul.language-switcher-locale-url > li span.locale-untranslated {
 .node.node-facebook-post.view-mode-full .row div.col-sm-12 .field-name-body h4,
 .node.node-facebook-post.view-mode-full .row div.col-sm-12 .field-name-body h5,
 .node.node-facebook-post.view-mode-full .row div.col-sm-12 .field-name-body h6 {
-  font-family: 'MuseoSans_900', sans-serif;
+  font-family: 'Catamaran-ExtraBold', sans-serif;
   font-weight: bold;
   font-size: 18px;
 }
@@ -11530,7 +11455,7 @@ ul.language-switcher-locale-url > li span.locale-untranslated {
 }
 .node.node-facebook-post.view-mode-full .row div.col-sm-12 .field-name-body p,
 .node.node-facebook-post.view-mode-full .row div.col-sm-12 .field-name-body tbody td {
-  font-family: 'MuseoSans_700', sans-serif;
+  font-family: 'Catamaran-ExtraBold', sans-serif;
   font-size: 12px;
   -ms-word-break: break-all;
   word-break: break-word;
@@ -11553,7 +11478,7 @@ ul.language-switcher-locale-url > li span.locale-untranslated {
   }
 }
 .node.node-facebook-post.view-mode-full .row div.col-sm-12 .field-name-body a {
-  font-family: 'MuseoSans_700', sans-serif;
+  font-family: 'Catamaran-ExtraBold', sans-serif;
   font-size: 12px;
 }
 @media screen and (min-width: 30em) {
@@ -11568,13 +11493,13 @@ ul.language-switcher-locale-url > li span.locale-untranslated {
 }
 .node.node-facebook-post.view-mode-full .row div.col-sm-12 .field-name-body a:hover,
 .node.node-facebook-post.view-mode-full .row div.col-sm-12 .field-name-body a:focus {
-  color: #9bc31b;
+  color: #ff0000;
   text-decoration: none;
   background: none;
 }
 .node.node-facebook-post.view-mode-full .row div.col-sm-12 .field-name-body pre,
 .node.node-facebook-post.view-mode-full .row div.col-sm-12 .field-name-body address {
-  font-family: 'MuseoSans_700', sans-serif;
+  font-family: 'Catamaran-ExtraBold', sans-serif;
   font-size: 12px;
 }
 @media screen and (min-width: 30em) {
@@ -11590,7 +11515,7 @@ ul.language-switcher-locale-url > li span.locale-untranslated {
   }
 }
 .node.node-facebook-post.view-mode-full .row div.col-sm-12 .field-name-body strong {
-  font-family: 'MuseoSans_900', sans-serif;
+  font-family: 'Catamaran-ExtraBold', sans-serif;
   font-size: 16px;
 }
 @media screen and (min-width: 30em) {
@@ -11605,7 +11530,7 @@ ul.language-switcher-locale-url > li span.locale-untranslated {
 }
 .node.node-facebook-post.view-mode-full .row div.col-sm-12 .field-name-body hr {
   border: 0;
-  border-bottom: 2px solid #444;
+  border-bottom: 2px solid #000000;
   background: none;
 }
 .node.node-facebook-post.view-mode-full .row div.col-sm-12 .field-name-body img,
@@ -11628,10 +11553,10 @@ ul.language-switcher-locale-url > li span.locale-untranslated {
 }
 .node.node-facebook-post.view-mode-full .row div.col-sm-12 .field-name-body a {
   text-decoration: underline;
-  color: #3b7da9;
+  color: #000000;
 }
 .node.node-facebook-post.view-mode-full .row div.col-sm-12 .field-name-body a:hover {
-  color: #9bc31b;
+  color: #ff0000;
   text-decoration: none;
 }
 .node.node-facebook-post.view-mode-full .row div.col-sm-12 .field-name-field-link {
@@ -11641,7 +11566,7 @@ ul.language-switcher-locale-url > li span.locale-untranslated {
   font-size: 12px;
   text-align: left;
   text-decoration: underline;
-  color: #3b7da9;
+  color: #000000;
 }
 @media screen and (min-width: 30em) {
   .node.node-facebook-post.view-mode-full .row div.col-sm-12 .field-name-field-link .field-item a {
@@ -11654,7 +11579,7 @@ ul.language-switcher-locale-url > li span.locale-untranslated {
   }
 }
 .node.node-facebook-post.view-mode-full .row div.col-sm-12 .field-name-field-link .field-item a:hover {
-  color: #9bc31b;
+  color: #ff0000;
   text-decoration: none;
 }
 .node.node-facebook-post.view-mode-full .row div.col-sm-12 .field-name-field-name-from {
@@ -11663,28 +11588,28 @@ ul.language-switcher-locale-url > li span.locale-untranslated {
   width: 100%;
 }
 .node.node-facebook-post.view-mode-full .row div.col-sm-12 .field-name-field-name-from .field-item {
-  font-family: 'MuseoSans_300', sans-serif;
+  font-family: 'Catamaran-Light', sans-serif;
   font-size: 14px;
   text-align: left;
-  color: #3b7da9;
+  color: #000000;
 }
 .node.node-facebook-post.view-mode-full .row div.col-sm-12 .field-name-field-created-time {
   margin: 10px 0 20px;
   width: 100%;
 }
 .node.node-facebook-post.view-mode-full .row div.col-sm-12 .field-name-field-created-time .field-item {
-  font-family: 'MuseoSans_700', sans-serif;
+  font-family: 'Catamaran-ExtraBold', sans-serif;
   font-size: 12px;
   text-align: right;
   line-height: 1;
-  color: #3b7da9;
+  color: #000000;
 }
 .node.node-facebook-post.view-mode-full .row div.col-sm-12 .field-name-field-created-time .field-item:before {
   content: '\f09a';
   margin-right: 10px;
   font-family: 'fontawesome';
   font-size: 16px;
-  color: #3b7da9;
+  color: #000000;
 }
 .node.node-facebook-post.view-mode-full .row div.col-sm-12 .field-name-field-likes-count {
   margin: -34px 0 0;
@@ -11692,25 +11617,25 @@ ul.language-switcher-locale-url > li span.locale-untranslated {
   width: 100%;
 }
 .node.node-facebook-post.view-mode-full .row div.col-sm-12 .field-name-field-likes-count .field-item {
-  font-family: 'MuseoSans_700', sans-serif;
+  font-family: 'Catamaran-ExtraBold', sans-serif;
   font-size: 12px;
   text-align: left;
   line-height: 1;
-  color: #3b7da9;
+  color: #000000;
 }
 .node.node-facebook-post.view-mode-full .row div.col-sm-12 .field-name-field-likes-count .field-item:after {
   content: 'Likes';
   margin-left: 10px;
-  font-family: 'MuseoSans_700', sans-serif;
+  font-family: 'Catamaran-ExtraBold', sans-serif;
   font-size: 12px;
-  color: #3b7da9;
+  color: #000000;
 }
 /*
  *  Node tweet component
  * --------------------------------------------------*/
 .node.node-twitter-tweet-feed.view-mode-teaser {
   padding: 20px;
-  background-color: #ebf0f8;
+  background-color: white;
 }
 .node.node-twitter-tweet-feed.view-mode-teaser .row div.col-sm-12 {
   position: relative;
@@ -11722,9 +11647,9 @@ ul.language-switcher-locale-url > li span.locale-untranslated {
 }
 .node.node-twitter-tweet-feed.view-mode-teaser .row div.col-sm-12 .field-name-title h2 {
   margin: 15px;
-  font-family: 'MuseoSans_300', sans-serif;
+  font-family: 'Catamaran-Light', sans-serif;
   font-size: 12px;
-  color: #444;
+  color: #000000;
 }
 @media screen and (min-width: 30em) {
   .node.node-twitter-tweet-feed.view-mode-teaser .row div.col-sm-12 .field-name-title h2 {
@@ -11751,10 +11676,10 @@ ul.language-switcher-locale-url > li span.locale-untranslated {
   padding: 0;
 }
 .node.node-twitter-tweet-feed.view-mode-teaser .row div.col-sm-12 .field-name-field-tweet-author .field-item {
-  font-family: 'MuseoSans_300', sans-serif;
+  font-family: 'Catamaran-Light', sans-serif;
   font-size: 14px;
   text-align: left;
-  color: #3b7da9;
+  color: #000000;
 }
 .node.node-twitter-tweet-feed.view-mode-teaser .row div.col-sm-12 .field-name-field-tweet-author .field-item:before {
   content: '@';
@@ -11767,14 +11692,14 @@ ul.language-switcher-locale-url > li span.locale-untranslated {
   padding: 0;
 }
 .node.node-twitter-tweet-feed.view-mode-teaser .row div.col-sm-12 .field-name-field-tweet-author-name .field-item {
-  font-family: 'MuseoSans_300', sans-serif;
+  font-family: 'Catamaran-Light', sans-serif;
   font-size: 14px;
   text-align: left;
-  color: #3b7da9;
+  color: #000000;
 }
 .node.node-twitter-tweet-feed.view-mode-teaser .row div.col-sm-12 .field-name-field-tweet-contents {
   margin: 0 0 20px;
-  color: #3b7da9;
+  color: #000000;
 }
 .node.node-twitter-tweet-feed.view-mode-teaser .row div.col-sm-12 .field-name-field-tweet-contents h1,
 .node.node-twitter-tweet-feed.view-mode-teaser .row div.col-sm-12 .field-name-field-tweet-contents h2,
@@ -11782,7 +11707,7 @@ ul.language-switcher-locale-url > li span.locale-untranslated {
 .node.node-twitter-tweet-feed.view-mode-teaser .row div.col-sm-12 .field-name-field-tweet-contents h4,
 .node.node-twitter-tweet-feed.view-mode-teaser .row div.col-sm-12 .field-name-field-tweet-contents h5,
 .node.node-twitter-tweet-feed.view-mode-teaser .row div.col-sm-12 .field-name-field-tweet-contents h6 {
-  font-family: 'MuseoSans_900', sans-serif;
+  font-family: 'Catamaran-ExtraBold', sans-serif;
   font-weight: bold;
   font-size: 18px;
 }
@@ -11827,7 +11752,7 @@ ul.language-switcher-locale-url > li span.locale-untranslated {
 }
 .node.node-twitter-tweet-feed.view-mode-teaser .row div.col-sm-12 .field-name-field-tweet-contents p,
 .node.node-twitter-tweet-feed.view-mode-teaser .row div.col-sm-12 .field-name-field-tweet-contents tbody td {
-  font-family: 'MuseoSans_700', sans-serif;
+  font-family: 'Catamaran-ExtraBold', sans-serif;
   font-size: 12px;
   -ms-word-break: break-all;
   word-break: break-word;
@@ -11850,7 +11775,7 @@ ul.language-switcher-locale-url > li span.locale-untranslated {
   }
 }
 .node.node-twitter-tweet-feed.view-mode-teaser .row div.col-sm-12 .field-name-field-tweet-contents a {
-  font-family: 'MuseoSans_700', sans-serif;
+  font-family: 'Catamaran-ExtraBold', sans-serif;
   font-size: 12px;
 }
 @media screen and (min-width: 30em) {
@@ -11865,13 +11790,13 @@ ul.language-switcher-locale-url > li span.locale-untranslated {
 }
 .node.node-twitter-tweet-feed.view-mode-teaser .row div.col-sm-12 .field-name-field-tweet-contents a:hover,
 .node.node-twitter-tweet-feed.view-mode-teaser .row div.col-sm-12 .field-name-field-tweet-contents a:focus {
-  color: #9bc31b;
+  color: #ff0000;
   text-decoration: none;
   background: none;
 }
 .node.node-twitter-tweet-feed.view-mode-teaser .row div.col-sm-12 .field-name-field-tweet-contents pre,
 .node.node-twitter-tweet-feed.view-mode-teaser .row div.col-sm-12 .field-name-field-tweet-contents address {
-  font-family: 'MuseoSans_700', sans-serif;
+  font-family: 'Catamaran-ExtraBold', sans-serif;
   font-size: 12px;
 }
 @media screen and (min-width: 30em) {
@@ -11887,7 +11812,7 @@ ul.language-switcher-locale-url > li span.locale-untranslated {
   }
 }
 .node.node-twitter-tweet-feed.view-mode-teaser .row div.col-sm-12 .field-name-field-tweet-contents strong {
-  font-family: 'MuseoSans_900', sans-serif;
+  font-family: 'Catamaran-ExtraBold', sans-serif;
   font-size: 16px;
 }
 @media screen and (min-width: 30em) {
@@ -11902,7 +11827,7 @@ ul.language-switcher-locale-url > li span.locale-untranslated {
 }
 .node.node-twitter-tweet-feed.view-mode-teaser .row div.col-sm-12 .field-name-field-tweet-contents hr {
   border: 0;
-  border-bottom: 2px solid #444;
+  border-bottom: 2px solid #000000;
   background: none;
 }
 .node.node-twitter-tweet-feed.view-mode-teaser .row div.col-sm-12 .field-name-field-tweet-contents img,
@@ -11925,10 +11850,10 @@ ul.language-switcher-locale-url > li span.locale-untranslated {
 }
 .node.node-twitter-tweet-feed.view-mode-teaser .row div.col-sm-12 .field-name-field-tweet-contents a {
   text-decoration: underline;
-  color: #3b7da9;
+  color: #000000;
 }
 .node.node-twitter-tweet-feed.view-mode-teaser .row div.col-sm-12 .field-name-field-tweet-contents a:hover {
-  color: #9bc31b;
+  color: #ff0000;
   text-decoration: none;
 }
 .node.node-twitter-tweet-feed.view-mode-teaser .row div.col-sm-12 .field-name-field-tweet-creation-date {
@@ -11937,17 +11862,17 @@ ul.language-switcher-locale-url > li span.locale-untranslated {
   width: 100%;
 }
 .node.node-twitter-tweet-feed.view-mode-teaser .row div.col-sm-12 .field-name-field-tweet-creation-date .field-item {
-  font-family: 'MuseoSans_700', sans-serif;
+  font-family: 'Catamaran-ExtraBold', sans-serif;
   font-size: 10px;
   text-align: right;
-  color: #3b7da9;
+  color: #000000;
 }
 .node.node-twitter-tweet-feed.view-mode-teaser .row div.col-sm-12 .field-name-field-tweet-creation-date .field-item:after {
   content: '\f099';
   margin-left: 10px;
   font-family: 'fontawesome';
   font-size: 16px;
-  color: #3b7da9;
+  color: #000000;
 }
 .node.node-twitter-tweet-feed.view-mode-full .row div.col-sm-12 {
   width: 100%;
@@ -11960,9 +11885,9 @@ ul.language-switcher-locale-url > li span.locale-untranslated {
 .node.node-twitter-tweet-feed.view-mode-full .row div.col-sm-12 .field-name-title h2 {
   margin: 0;
   padding: 15px 0;
-  font-family: 'MuseoSans_900', sans-serif;
+  font-family: 'Catamaran-ExtraBold', sans-serif;
   font-size: 18px;
-  color: #3b7da9;
+  color: #000000;
 }
 @media screen and (min-width: 30em) {
   .node.node-twitter-tweet-feed.view-mode-full .row div.col-sm-12 .field-name-title h2 {
@@ -11989,10 +11914,10 @@ ul.language-switcher-locale-url > li span.locale-untranslated {
   padding: 0;
 }
 .node.node-twitter-tweet-feed.view-mode-full .row div.col-sm-12 .field-name-field-tweet-author .field-item {
-  font-family: 'MuseoSans_300', sans-serif;
+  font-family: 'Catamaran-Light', sans-serif;
   font-size: 14px;
   text-align: left;
-  color: #3b7da9;
+  color: #000000;
 }
 @media screen and (min-width: 30em) {
   .node.node-twitter-tweet-feed.view-mode-full .row div.col-sm-12 .field-name-field-tweet-author .field-item {
@@ -12015,10 +11940,10 @@ ul.language-switcher-locale-url > li span.locale-untranslated {
   padding: 0;
 }
 .node.node-twitter-tweet-feed.view-mode-full .row div.col-sm-12 .field-name-field-tweet-author-name .field-item {
-  font-family: 'MuseoSans_300', sans-serif;
+  font-family: 'Catamaran-Light', sans-serif;
   font-size: 14px;
   text-align: left;
-  color: #3b7da9;
+  color: #000000;
 }
 @media screen and (min-width: 30em) {
   .node.node-twitter-tweet-feed.view-mode-full .row div.col-sm-12 .field-name-field-tweet-author-name .field-item {
@@ -12032,7 +11957,7 @@ ul.language-switcher-locale-url > li span.locale-untranslated {
 }
 .node.node-twitter-tweet-feed.view-mode-full .row div.col-sm-12 .field-name-field-tweet-contents {
   margin: 0 0 20px;
-  color: #3b7da9;
+  color: #000000;
 }
 .node.node-twitter-tweet-feed.view-mode-full .row div.col-sm-12 .field-name-field-tweet-contents h1,
 .node.node-twitter-tweet-feed.view-mode-full .row div.col-sm-12 .field-name-field-tweet-contents h2,
@@ -12040,7 +11965,7 @@ ul.language-switcher-locale-url > li span.locale-untranslated {
 .node.node-twitter-tweet-feed.view-mode-full .row div.col-sm-12 .field-name-field-tweet-contents h4,
 .node.node-twitter-tweet-feed.view-mode-full .row div.col-sm-12 .field-name-field-tweet-contents h5,
 .node.node-twitter-tweet-feed.view-mode-full .row div.col-sm-12 .field-name-field-tweet-contents h6 {
-  font-family: 'MuseoSans_900', sans-serif;
+  font-family: 'Catamaran-ExtraBold', sans-serif;
   font-weight: bold;
   font-size: 18px;
 }
@@ -12085,7 +12010,7 @@ ul.language-switcher-locale-url > li span.locale-untranslated {
 }
 .node.node-twitter-tweet-feed.view-mode-full .row div.col-sm-12 .field-name-field-tweet-contents p,
 .node.node-twitter-tweet-feed.view-mode-full .row div.col-sm-12 .field-name-field-tweet-contents tbody td {
-  font-family: 'MuseoSans_700', sans-serif;
+  font-family: 'Catamaran-ExtraBold', sans-serif;
   font-size: 12px;
   -ms-word-break: break-all;
   word-break: break-word;
@@ -12108,7 +12033,7 @@ ul.language-switcher-locale-url > li span.locale-untranslated {
   }
 }
 .node.node-twitter-tweet-feed.view-mode-full .row div.col-sm-12 .field-name-field-tweet-contents a {
-  font-family: 'MuseoSans_700', sans-serif;
+  font-family: 'Catamaran-ExtraBold', sans-serif;
   font-size: 12px;
 }
 @media screen and (min-width: 30em) {
@@ -12123,13 +12048,13 @@ ul.language-switcher-locale-url > li span.locale-untranslated {
 }
 .node.node-twitter-tweet-feed.view-mode-full .row div.col-sm-12 .field-name-field-tweet-contents a:hover,
 .node.node-twitter-tweet-feed.view-mode-full .row div.col-sm-12 .field-name-field-tweet-contents a:focus {
-  color: #9bc31b;
+  color: #ff0000;
   text-decoration: none;
   background: none;
 }
 .node.node-twitter-tweet-feed.view-mode-full .row div.col-sm-12 .field-name-field-tweet-contents pre,
 .node.node-twitter-tweet-feed.view-mode-full .row div.col-sm-12 .field-name-field-tweet-contents address {
-  font-family: 'MuseoSans_700', sans-serif;
+  font-family: 'Catamaran-ExtraBold', sans-serif;
   font-size: 12px;
 }
 @media screen and (min-width: 30em) {
@@ -12145,7 +12070,7 @@ ul.language-switcher-locale-url > li span.locale-untranslated {
   }
 }
 .node.node-twitter-tweet-feed.view-mode-full .row div.col-sm-12 .field-name-field-tweet-contents strong {
-  font-family: 'MuseoSans_900', sans-serif;
+  font-family: 'Catamaran-ExtraBold', sans-serif;
   font-size: 16px;
 }
 @media screen and (min-width: 30em) {
@@ -12160,7 +12085,7 @@ ul.language-switcher-locale-url > li span.locale-untranslated {
 }
 .node.node-twitter-tweet-feed.view-mode-full .row div.col-sm-12 .field-name-field-tweet-contents hr {
   border: 0;
-  border-bottom: 2px solid #444;
+  border-bottom: 2px solid #000000;
   background: none;
 }
 .node.node-twitter-tweet-feed.view-mode-full .row div.col-sm-12 .field-name-field-tweet-contents img,
@@ -12183,10 +12108,10 @@ ul.language-switcher-locale-url > li span.locale-untranslated {
 }
 .node.node-twitter-tweet-feed.view-mode-full .row div.col-sm-12 .field-name-field-tweet-contents a {
   text-decoration: underline;
-  color: #3b7da9;
+  color: #000000;
 }
 .node.node-twitter-tweet-feed.view-mode-full .row div.col-sm-12 .field-name-field-tweet-contents a:hover {
-  color: #9bc31b;
+  color: #ff0000;
   text-decoration: none;
 }
 .node.node-twitter-tweet-feed.view-mode-full .row div.col-sm-12 .field-name-field-tweet-creation-date {
@@ -12194,10 +12119,10 @@ ul.language-switcher-locale-url > li span.locale-untranslated {
   width: 100%;
 }
 .node.node-twitter-tweet-feed.view-mode-full .row div.col-sm-12 .field-name-field-tweet-creation-date .field-item {
-  font-family: 'MuseoSans_700', sans-serif;
+  font-family: 'Catamaran-ExtraBold', sans-serif;
   font-size: 12px;
   text-align: right;
-  color: #3b7da9;
+  color: #000000;
 }
 .node.node-twitter-tweet-feed.view-mode-full .row div.col-sm-12 .field-name-field-tweet-creation-date .field-item:before {
   content: '\f099';
@@ -12221,10 +12146,10 @@ ul.language-switcher-locale-url > li span.locale-untranslated {
 .node.node-twitter-tweet-feed.view-mode-full .row div.col-sm-12 ul.actions li a {
   padding: 5px 12px 7px;
   text-decoration: underline;
-  color: #3b7da9;
+  color: #000000;
 }
 .node.node-twitter-tweet-feed.view-mode-full .row div.col-sm-12 ul.actions li a:hover {
-  color: #9bc31b;
+  color: #ff0000;
   text-decoration: none;
 }
 /*
@@ -12266,17 +12191,17 @@ ul.language-switcher-locale-url > li span.locale-untranslated {
   padding: 0 10px;
   height: 24px;
   max-width: 150px;
-  font-family: 'MuseoSans_300', sans-serif;
+  font-family: 'Catamaran-Light', sans-serif;
   font-size: 12px;
   line-height: 12px;
-  color: #444;
+  color: #000000;
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
   border-radius: 4px;
   border-bottom-right-radius: 0;
   border-top-right-radius: 0;
-  border: 1px solid #edf3da;
-  background-color: #edf3da;
+  border: 1px solid #ff0000;
+  background-color: #ff0000;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
@@ -12292,10 +12217,10 @@ ul.language-switcher-locale-url > li span.locale-untranslated {
   color: #5f5e5e;
 }
 .view-post-grid .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-widget-filter-combine .views-widget .form-item input.form-text:focus {
-  border: 1px solid #9bc31b;
-  -webkit-box-shadow: 0 0 2px #9bc31b inset;
-  -moz-box-shadow: 0 0 2px #9bc31b inset;
-  box-shadow: 0 0 2px #9bc31b inset;
+  border: 1px solid #ff0000;
+  -webkit-box-shadow: 0 0 2px #ff0000 inset;
+  -moz-box-shadow: 0 0 2px #ff0000 inset;
+  box-shadow: 0 0 2px #ff0000 inset;
 }
 @media screen and (min-width: 30em) {
   .view-post-grid .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-widget-filter-combine .views-widget .form-item input.form-text {
@@ -12320,7 +12245,7 @@ ul.language-switcher-locale-url > li span.locale-untranslated {
   margin: 0;
   padding: 0 10px;
   height: 24px;
-  font-family: 'MuseoSans_900', sans-serif;
+  font-family: 'Catamaran-ExtraBold', sans-serif;
   font-size: 12px;
   line-height: 12px;
   letter-spacing: 1.5px;
@@ -12332,8 +12257,8 @@ ul.language-switcher-locale-url > li span.locale-untranslated {
   border-radius: 4px;
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;
-  border: 1px solid #9bc31b;
-  background-color: #9bc31b;
+  border: 1px solid #ff0000;
+  background-color: #ff0000;
   opacity: 1.0;
 }
 @media screen and (min-width: 30em) {
@@ -12358,7 +12283,7 @@ ul.language-switcher-locale-url > li span.locale-untranslated {
 .view-post-grid .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-total-rows {
   height: 24px;
   padding: 3px 0 0 10px;
-  font-family: 'MuseoSans_300', sans-serif;
+  font-family: 'Catamaran-Light', sans-serif;
   font-size: 12px;
 }
 @media screen and (min-width: 30em) {
@@ -12531,10 +12456,10 @@ ul.language-switcher-locale-url > li span.locale-untranslated {
 }
 .view-post-grid .view-content > .pe-container .modal .modal-dialog .modal-content .modal-header button.close span {
   padding: 0;
-  font-family: 'MuseoSans_700', sans-serif;
+  font-family: 'Catamaran-ExtraBold', sans-serif;
   font-size: 60px;
   font-weight: normal;
-  color: #3b7da9;
+  color: #ff0000;
 }
 .view-post-grid .view-content > .pe-container .modal .modal-dialog .modal-content .modal-header .body-fading {
   display: none;
@@ -12555,19 +12480,19 @@ ul.language-switcher-locale-url > li span.locale-untranslated {
 }
 .view-post-grid .view-content > .pe-container .modal .modal-dialog .modal-content .modal-footer .btn {
   display: inline-block;
-  font-family: 'MuseoSans_900', sans-serif;
-  color: #444;
+  font-family: 'Catamaran-ExtraBold', sans-serif;
+  color: #000000;
   -moz-border-radius: 6px;
   -webkit-border-radius: 6px;
   border-radius: 6px;
-  border: 2px solid #444;
+  border: 2px solid #000000;
   background-color: #fff;
   -webkit-box-shadow: 0 0 4px rgba(100, 100, 100, 0.4);
   box-shadow: 0 0 4px rgba(100, 100, 100, 0.4);
 }
 .view-post-grid .view-content > .pe-container .modal .modal-dialog .modal-content .modal-footer .btn:hover {
   color: #fff;
-  background-color: #444;
+  background-color: #000000;
 }
 .view-post-grid .view-content > .pe-container .modal .modal-dialog .modal-content .modal-footer .body-fading {
   display: none;
@@ -12587,12 +12512,12 @@ ul.language-switcher-locale-url > li span.locale-untranslated {
 .view-post-grid ul.pagination li span,
 .view-post-grid ul.pager li span {
   padding: 2px 10px;
-  font-family: 'MuseoSans_700', sans-serif;
+  font-family: 'Catamaran-ExtraBold', sans-serif;
   font-size: 16px;
   line-height: 16px;
   text-align: center;
   text-decoration: none;
-  color: #444;
+  color: #000000;
   border: none;
   background: none;
 }
@@ -12608,7 +12533,7 @@ ul.language-switcher-locale-url > li span.locale-untranslated {
 .view-post-grid ul.pager li:focus span,
 .view-post-grid ul.pagination li.active span,
 .view-post-grid ul.pager li.active span {
-  color: #444;
+  color: #000000;
   text-decoration: none;
 }
 .view-post-grid ul.pagination li:hover a,
@@ -12617,7 +12542,7 @@ ul.language-switcher-locale-url > li span.locale-untranslated {
 .view-post-grid ul.pagination li:hover span,
 .view-post-grid ul.pagination li:focus span,
 .view-post-grid ul.pagination li.active span {
-  font-family: 'MuseoSans_900', sans-serif;
+  font-family: 'Catamaran-ExtraBold', sans-serif;
   text-decoration: none;
   font-size: 20px;
   background: none;
@@ -12658,26 +12583,26 @@ ul.language-switcher-locale-url > li span.locale-untranslated {
 .view-post-grid ul.pagination li.pager-previous.active span,
 .view-post-grid ul.pagination li.next.active span,
 .view-post-grid ul.pagination li.pager-next.active span {
-  font-family: 'MuseoSans_700', sans-serif;
+  font-family: 'Catamaran-ExtraBold', sans-serif;
   font-size: 16px;
 }
 .view-post-grid .pager.pager--infinite-scroll .pager__item a {
   display: inline-block;
   padding: 8px 20px 10px;
-  font-family: 'MuseoSans_700', sans-serif;
+  font-family: 'Catamaran-ExtraBold', sans-serif;
   font-size: 16px;
   line-height: 1;
-  color: #444;
+  color: #000000;
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   border-radius: 3px;
-  border: 1px solid #444;
+  border: 1px solid #000000;
   background-color: #fff;
 }
 .view-post-grid .pager.pager--infinite-scroll .pager__item a:hover,
 .view-post-grid .pager.pager--infinite-scroll .pager__item a.active {
   color: #fff;
-  background-color: #444;
+  background-color: #000000;
 }
 /*
  *  Confirm form component
@@ -12685,12 +12610,12 @@ ul.language-switcher-locale-url > li span.locale-untranslated {
 form.confirmation div {
   margin: 30px auto 50px;
   width: 90%;
-  font-family: 'MuseoSans_700', sans-serif;
+  font-family: 'Catamaran-ExtraBold', sans-serif;
   font-size: 14px;
   letter-spacing: normal;
   text-align: center;
   text-transform: none;
-  color: #444;
+  color: #000000;
 }
 @media screen and (min-width: 30em) {
   form.confirmation div {
@@ -12717,7 +12642,7 @@ form.confirmation div .form-actions button#edit-actions-submit {
   vertical-align: middle;
   margin: 0;
   padding: 7px 27px;
-  font-family: 'MuseoSans_900', sans-serif;
+  font-family: 'Catamaran-ExtraBold', sans-serif;
   font-size: 20px;
   line-height: 27px;
   letter-spacing: 1.5px;
@@ -12727,8 +12652,8 @@ form.confirmation div .form-actions button#edit-actions-submit {
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   border-radius: 3px;
-  border: 1px solid #9bc31b;
-  background-color: #9bc31b;
+  border: 1px solid #ff0000;
+  background-color: #ff0000;
   opacity: 1.0;
   margin-right: 20px;
 }
@@ -12765,18 +12690,18 @@ form.confirmation div .form-actions a#edit-actions-cancel {
   vertical-align: middle;
   margin: 0;
   padding: 7px 27px;
-  font-family: 'MuseoSans_900', sans-serif;
+  font-family: 'Catamaran-ExtraBold', sans-serif;
   font-size: 20px;
   line-height: 27px;
   letter-spacing: 1.5px;
   text-transform: capitalize;
-  color: #444;
+  color: #000000;
   outline: none;
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   border-radius: 3px;
-  border: 1px solid #9bc31b;
-  background-color: #9bc31b;
+  border: 1px solid #ff0000;
+  background-color: #ff0000;
   opacity: 1.0;
   padding: 0;
   border: none;
@@ -12828,9 +12753,9 @@ form.webform-client-form fieldset.panel .panel-heading {
 }
 form.webform-client-form fieldset.panel .panel-heading .panel-title {
   display: block;
-  font-family: 'MuseoSans_900', sans-serif;
+  font-family: 'Catamaran-ExtraBold', sans-serif;
   font-size: 22px;
-  color: #444;
+  color: #000000;
   text-align: left;
 }
 @media screen and (min-width: 30em) {
@@ -12849,8 +12774,8 @@ form.webform-client-form fieldset.panel .panel-body {
 form.webform-client-form fieldset.panel .panel-body .help-block {
   display: block;
   margin: 10px 0 0;
-  font-family: 'MuseoSans_300', sans-serif;
-  color: #444;
+  font-family: 'Catamaran-Light', sans-serif;
+  color: #000000;
   font-size: 13px;
   line-height: 17px;
 }
@@ -12874,55 +12799,6 @@ form.webform-client-form fieldset.panel .panel-body fieldset.panel {
 }
 form.webform-client-form fieldset.panel .panel-body fieldset.panel .panel-body fieldset.panel {
   margin-top: 30px;
-}
-form.webform-client-form fieldset.panel .panel-body .btn.btn-success,
-form.webform-client-form fieldset.panel .panel-body .btn.btn-danger {
-  display: inline-block;
-  vertical-align: middle;
-  margin: 0;
-  padding: 0 20px 0 0;
-  font-family: 'MuseoSans_700', sans-serif;
-  font-size: 14px;
-  letter-spacing: normal;
-  text-align: left;
-  text-transform: none;
-  color: #9bc31b;
-  border: none;
-  background: none;
-  opacity: 1.0;
-}
-@media screen and (min-width: 30em) {
-  form.webform-client-form fieldset.panel .panel-body .btn.btn-success,
-  form.webform-client-form fieldset.panel .panel-body .btn.btn-danger {
-    font-size: 2.91666667vw;
-  }
-}
-@media screen and (min-width: 48em) {
-  form.webform-client-form fieldset.panel .panel-body .btn.btn-success,
-  form.webform-client-form fieldset.panel .panel-body .btn.btn-danger {
-    font-size: 19px;
-  }
-}
-form.webform-client-form fieldset.panel .panel-body .btn.btn-success:hover,
-form.webform-client-form fieldset.panel .panel-body .btn.btn-danger:hover,
-form.webform-client-form fieldset.panel .panel-body .btn.btn-success:focus,
-form.webform-client-form fieldset.panel .panel-body .btn.btn-danger:focus {
-  opacity: 0.6;
-}
-form.webform-client-form fieldset.panel .panel-body .btn.btn-success:before,
-form.webform-client-form fieldset.panel .panel-body .btn.btn-danger:before {
-  display: inline-block;
-  vertical-align: middle;
-  padding-right: 10px;
-  font-family: 'fontawesome';
-  font-size: 30px;
-  color: #9bc31b;
-}
-form.webform-client-form fieldset.panel .panel-body .btn.btn-success:before {
-  content: '\f0fe';
-}
-form.webform-client-form fieldset.panel .panel-body .btn.btn-danger:before {
-  content: '\f146';
 }
 form.webform-client-form [id$=ajax-wrapper] {
   /* file upload container */
@@ -12960,7 +12836,7 @@ form.webform-client-form [id$=ajax-wrapper] .table-responsive table tbody tr.dra
   vertical-align: middle;
   margin: 0;
   padding: 7px 27px;
-  font-family: 'MuseoSans_900', sans-serif;
+  font-family: 'Catamaran-ExtraBold', sans-serif;
   font-size: 20px;
   line-height: 27px;
   letter-spacing: 1.5px;
@@ -12970,8 +12846,8 @@ form.webform-client-form [id$=ajax-wrapper] .table-responsive table tbody tr.dra
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   border-radius: 3px;
-  border: 1px solid #9bc31b;
-  background-color: #9bc31b;
+  border: 1px solid #ff0000;
+  background-color: #ff0000;
   opacity: 1.0;
   font-size: 14px;
 }
@@ -13025,7 +12901,7 @@ form.webform-client-form [id$=ajax-wrapper] .webform-component-multiple-file .fo
   vertical-align: middle;
   margin: 0;
   padding: 7px 27px;
-  font-family: 'MuseoSans_900', sans-serif;
+  font-family: 'Catamaran-ExtraBold', sans-serif;
   font-size: 20px;
   line-height: 27px;
   letter-spacing: 1.5px;
@@ -13035,8 +12911,8 @@ form.webform-client-form [id$=ajax-wrapper] .webform-component-multiple-file .fo
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   border-radius: 3px;
-  border: 1px solid #9bc31b;
-  background-color: #9bc31b;
+  border: 1px solid #ff0000;
+  background-color: #ff0000;
   opacity: 1.0;
   font-size: 16px;
   z-index: 10;
@@ -13088,12 +12964,12 @@ form.webform-client-form .webform-component[class*="-city"] {
 }
 form.webform-client-form .webform-component label {
   width: auto;
-  font-family: 'MuseoSans_700', sans-serif;
+  font-family: 'Catamaran-ExtraBold', sans-serif;
   font-size: 14px;
   letter-spacing: normal;
   text-align: left;
   text-transform: none;
-  color: #444;
+  color: #000000;
 }
 @media screen and (min-width: 30em) {
   form.webform-client-form .webform-component label {
@@ -13106,18 +12982,18 @@ form.webform-client-form .webform-component label {
   }
 }
 form.webform-client-form .webform-component label span.form-required {
-  color: #9bc31b;
+  color: #ff0000;
 }
 form.webform-client-form .webform-component div.description {
   display: block;
   margin: 10px 0 0;
-  font-family: 'MuseoSans_300', sans-serif;
-  color: #444;
+  font-family: 'Catamaran-Light', sans-serif;
+  color: #000000;
   font-size: 13px;
   line-height: 17px;
 }
 form.webform-client-form .webform-component div.description strong {
-  font-family: 'MuseoSans_700', sans-serif;
+  font-family: 'Catamaran-ExtraBold', sans-serif;
 }
 form.webform-client-form .webform-component .form-control,
 form.webform-client-form .webform-component .form-managed-file {
@@ -13126,9 +13002,9 @@ form.webform-client-form .webform-component .form-managed-file {
 form.webform-client-form .webform-component input.form-text,
 form.webform-client-form .webform-component textarea {
   padding: 0 10px;
-  font-family: 'MuseoSans_300', sans-serif;
+  font-family: 'Catamaran-Light', sans-serif;
   font-size: 14px;
-  color: #444;
+  color: #000000;
   line-height: 22px;
   letter-spacing: normal;
   text-align: left;
@@ -13136,8 +13012,8 @@ form.webform-client-form .webform-component textarea {
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   border-radius: 3px;
-  border: 1px solid #ebf0f8;
-  background-color: #ebf0f8;
+  border: 1px solid #ff0000;
+  background-color: white;
 }
 @media screen and (min-width: 30em) {
   form.webform-client-form .webform-component input.form-text,
@@ -13153,7 +13029,7 @@ form.webform-client-form .webform-component textarea {
 }
 form.webform-client-form .webform-component input.form-text:focus,
 form.webform-client-form .webform-component textarea:focus {
-  border: 1px solid #3b7da9;
+  border: 1px solid #ff0000;
   -webkit-box-shadow: 0 0 3px #eeeeee;
   box-shadow: 0 0 3px #eeeeee;
 }
@@ -13173,17 +13049,17 @@ form.webform-client-form .webform-component.webform-component-select select {
   padding: 5px 10px;
   width: 60px;
   height: auto;
-  font-family: 'MuseoSans_300', sans-serif;
+  font-family: 'Catamaran-Light', sans-serif;
   font-size: 14px;
-  color: #444;
+  color: #000000;
   line-height: 22px;
   letter-spacing: normal;
   text-align: left;
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   border-radius: 3px;
-  border: 1px solid #ebf0f8;
-  background-color: #ebf0f8;
+  border: 1px solid #ff0000;
+  background-color: white;
   outline: none;
   -webkit-box-shadow: none;
   box-shadow: none;
@@ -13201,7 +13077,7 @@ form.webform-client-form .webform-component.webform-component-select select {
 form.webform-client-form .webform-component.webform-component-select select:focus,
 form.webform-client-form .webform-component.webform-component-select select:active {
   outline: none;
-  border: 1px solid #3b7da9;
+  border: 1px solid #ff0000;
 }
 form.webform-client-form .webform-component.webform-component-select:after {
   content: '\f0d7';
@@ -13211,7 +13087,7 @@ form.webform-client-form .webform-component.webform-component-select:after {
   right: 5px;
   bottom: 0;
   font-family: 'fontawesome';
-  color: #9bc31b;
+  color: #ff0000;
   line-height: 30px;
   pointer-events: none;
 }
@@ -13224,7 +13100,7 @@ form.webform-client-form .webform-component .form-checkboxes .radio > label,
 form.webform-client-form .webform-component .form-radios .checkbox > label,
 form.webform-client-form .webform-component .form-checkboxes .checkbox > label {
   padding-left: 20px;
-  font-family: 'MuseoSans_300', sans-serif;
+  font-family: 'Catamaran-Light', sans-serif;
   font-size: 13px;
   text-align: left;
   vertical-align: top;
@@ -13244,7 +13120,7 @@ form.webform-client-form .webform-component .form-managed-file {
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   border-radius: 3px;
-  background-color: #ebf0f8;
+  background-color: white;
 }
 form.webform-client-form .webform-component .form-managed-file input {
   position: relative;
@@ -13253,7 +13129,7 @@ form.webform-client-form .webform-component .form-managed-file input {
   font-size: 14px;
   text-align: left;
   border: none;
-  background-color: #ebf0f8;
+  background-color: white;
 }
 @media screen and (min-width: 30em) {
   form.webform-client-form .webform-component .form-managed-file input {
@@ -13278,7 +13154,7 @@ form.webform-client-form .webform-component .form-managed-file button.btn {
   vertical-align: middle;
   margin: 0;
   padding: 7px 27px;
-  font-family: 'MuseoSans_900', sans-serif;
+  font-family: 'Catamaran-ExtraBold', sans-serif;
   font-size: 20px;
   line-height: 27px;
   letter-spacing: 1.5px;
@@ -13288,8 +13164,8 @@ form.webform-client-form .webform-component .form-managed-file button.btn {
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   border-radius: 3px;
-  border: 1px solid #9bc31b;
-  background-color: #9bc31b;
+  border: 1px solid #ff0000;
+  background-color: #ff0000;
   opacity: 1.0;
   padding: 0 12px;
   font-size: 14px;
@@ -13339,17 +13215,17 @@ form.webform-client-form .webform-component.webform-component-markup {
 }
 form.webform-client-form .webform-component.webform-component-markup h2,
 form.webform-client-form .webform-component.webform-component-markup strong {
-  font-family: 'MuseoSans_700', sans-serif;
+  font-family: 'Catamaran-ExtraBold', sans-serif;
   font-weight: normal;
-  color: #444;
+  color: #000000;
   font-size: 13px;
   line-height: 17px;
   text-align: left;
 }
 form.webform-client-form .webform-component.webform-component-markup p {
-  font-family: 'MuseoSans_300', sans-serif;
+  font-family: 'Catamaran-Light', sans-serif;
   font-size: 13px;
-  color: #444;
+  color: #000000;
   line-height: 17px;
   text-align: left;
   background: none;
@@ -13403,7 +13279,7 @@ form.webform-client-form div.form-actions button.webform-submit {
   vertical-align: middle;
   margin: 0;
   padding: 7px 27px;
-  font-family: 'MuseoSans_900', sans-serif;
+  font-family: 'Catamaran-ExtraBold', sans-serif;
   font-size: 20px;
   line-height: 27px;
   letter-spacing: 1.5px;
@@ -13413,8 +13289,8 @@ form.webform-client-form div.form-actions button.webform-submit {
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   border-radius: 3px;
-  border: 1px solid #9bc31b;
-  background-color: #9bc31b;
+  border: 1px solid #ff0000;
+  background-color: #ff0000;
   opacity: 1.0;
 }
 @media screen and (min-width: 30em) {
@@ -13450,18 +13326,18 @@ form.webform-client-form div.form-actions a.back-link {
   vertical-align: middle;
   margin: 0;
   padding: 7px 27px;
-  font-family: 'MuseoSans_900', sans-serif;
+  font-family: 'Catamaran-ExtraBold', sans-serif;
   font-size: 20px;
   line-height: 27px;
   letter-spacing: 1.5px;
   text-transform: capitalize;
-  color: #444;
+  color: #000000;
   outline: none;
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   border-radius: 3px;
-  border: 1px solid #9bc31b;
-  background-color: #9bc31b;
+  border: 1px solid #ff0000;
+  background-color: #ff0000;
   opacity: 1.0;
   font-size: 18px;
   padding-left: 0;
@@ -13512,21 +13388,21 @@ form.webform-client-form div.form-actions a.done-link {
   vertical-align: middle;
   margin: 0;
   padding: 7px 27px;
-  font-family: 'MuseoSans_900', sans-serif;
+  font-family: 'Catamaran-ExtraBold', sans-serif;
   font-size: 20px;
   line-height: 27px;
   letter-spacing: 1.5px;
   text-transform: capitalize;
-  color: #444;
+  color: #000000;
   outline: none;
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   border-radius: 3px;
-  border: 1px solid #9bc31b;
-  background-color: #9bc31b;
+  border: 1px solid #ff0000;
+  background-color: #ff0000;
   opacity: 1.0;
   font-size: 18px;
-  color: #9bc31b;
+  color: #ff0000;
   padding-left: 0;
   border: none;
   background: none;
@@ -13578,14 +13454,14 @@ form.webform-client-form div.form-actions a.done-link:focus {
   padding: 15px 30px;
   width: 80%;
   color: #fff;
-  border: 1px solid #9bc31b;
+  border: 1px solid #ff0000;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
   border-radius: 5px;
-  background-color: #9bc31b;
+  background-color: #ff0000;
 }
 .webform-confirmation .confirmation-title {
-  font-family: 'MuseoSans_900', sans-serif;
+  font-family: 'Catamaran-ExtraBold', sans-serif;
   font-size: 20px;
   line-height: 30px;
   text-align: center;
@@ -13601,7 +13477,7 @@ form.webform-client-form div.form-actions a.done-link:focus {
   }
 }
 .webform-confirmation .confirmation-message {
-  font-family: 'MuseoSans_700', sans-serif;
+  font-family: 'Catamaran-ExtraBold', sans-serif;
   font-size: 14px;
   line-height: 20px;
   text-align: center;
@@ -13674,19 +13550,18 @@ form.webform-client-form div.form-actions a.done-link:focus {
 }
 .submission-actions > ul.webform-submission-actions li a {
   padding: 5px 10px;
-  font-family: 'MuseoSans_700', sans-serif;
+  font-family: 'Catamaran-ExtraBold', sans-serif;
   font-size: 16px;
-  color: #9bc31b;
+  color: #000000;
   text-decoration: none;
   border-radius: 3px;
-  border: 2px solid #9bc31b;
-  background: none;
+  border: 2px solid #000000;
   outline: none;
 }
 .submission-actions > ul.webform-submission-actions li a:hover,
 .submission-actions > ul.webform-submission-actions li a:active {
   color: #fff;
-  background: #9bc31b none;
+  background: #ff0000 none;
   outline: none;
 }
 .submission-actions > ul.webform-submission-actions li.resend {
@@ -13698,7 +13573,7 @@ form.webform-client-form div.form-actions a.done-link:focus {
 header#navbar {
   margin: 0;
   border-bottom: none;
-  background: #3b7da9 none;
+  background: white none;
   -webkit-box-shadow: 0 4px 3px -4px gray;
   -moz-box-shadow: 0 4px 3px -4px gray;
   box-shadow: 0 4px 3px -4px gray;
@@ -13787,7 +13662,7 @@ header#navbar .navbar-top-container > .container .navbar-header .region-navigati
   cursor: pointer;
   display: inline-block;
   padding: 0 5px;
-  font-family: 'MuseoSans_900', sans-serif;
+  font-family: 'Catamaran-ExtraBold', sans-serif;
   font-size: 15.625px;
   line-height: 1.25;
   letter-spacing: 1px;
@@ -13817,7 +13692,7 @@ header#navbar .navbar-top-container > .container .navbar-header .region-navigati
 header#navbar .navbar-top-container > .container .navbar-header .region-navigation ul.menu > li span.active,
 header#navbar .navbar-top-container > .container .navbar-header .region-navigation ul.menu > li a.checked,
 header#navbar .navbar-top-container > .container .navbar-header .region-navigation ul.menu > li span.checked {
-  color: #3b7da9;
+  color: #ff0000;
   background: white;
 }
 @media screen and (max-width: 29.9375em) {
@@ -13892,7 +13767,7 @@ header#navbar .navbar-top-container > .container .navbar-collapse nav ul.menu > 
   cursor: pointer;
   display: inline-block;
   padding: 15px 20px ;
-  font-family: 'MuseoSans_300', sans-serif;
+  font-family: 'Catamaran-Light', sans-serif;
   font-size: 40px;
   line-height: 1;
   letter-spacing: 1.8px;
@@ -13905,7 +13780,7 @@ header#navbar .navbar-top-container > .container .navbar-collapse nav ul.menu > 
 header#navbar .navbar-top-container > .container .navbar-collapse nav ul.menu > li span.active,
 header#navbar .navbar-top-container > .container .navbar-collapse nav ul.menu > li a.checked,
 header#navbar .navbar-top-container > .container .navbar-collapse nav ul.menu > li span.checked {
-  font-family: 'MuseoSans_900', sans-serif;
+  font-family: 'Catamaran-ExtraBold', sans-serif;
   letter-spacing: 1px;
   background: none;
 }
@@ -14012,12 +13887,12 @@ body {
 }
 body .main-container #page-header .region-header h2.block-title {
   margin: 20px 0 10px;
-  font-family: 'MuseoSans_700', sans-serif;
+  font-family: 'Catamaran-ExtraBold', sans-serif;
   font-size: 24px;
 }
 body .main-container .row section h1.page-header {
   margin: 20px 0 10px;
-  font-family: 'MuseoSans_900', sans-serif;
+  font-family: 'Catamaran-ExtraBold', sans-serif;
   font-size: 41px;
 }
 body .main-container .row section .breadcrumb {
@@ -14060,7 +13935,7 @@ footer.footer {
   padding: 0;
   max-height: 266px;
   border: none;
-  background: #3b7da9 none;
+  background: white none;
   z-index: 1000;
 }
 @media screen and (min-width: 48em) {

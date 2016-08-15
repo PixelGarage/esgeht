@@ -91,6 +91,18 @@ function _random_testimonials(&$vars) {
     if ($result && !empty($result['node'])) {
       $testimonials = node_load_multiple(array_keys($result['node']));
     }
+    else return;
+  }
+
+  // generic testimonial link
+  global $language;
+  switch ($language->language) {
+    case 'de':
+      $default_link = 'http://www.gruenewirtschaft.ch';
+      break;
+    case 'fr':
+      $default_link = 'http://www.economieverte.ch';
+      break;
   }
 
   // chose random testimonial from list
@@ -98,9 +110,13 @@ function _random_testimonials(&$vars) {
   $row_count = count($view->result) - 1;
   $keys = array_keys($testimonials);
   foreach ($keys as $index => $key) {
+    $testimonial_link = !empty($testimonials[$key]->field_link) ? $testimonials[$key]->field_link[LANGUAGE_NONE][0] : $default_link;
     $i = mt_rand(0, $row_count);
     $testimonial = node_view($testimonials[$key], 'teaser');
-    $vars['testimonials'][$i] = render($testimonial);
+    $vars['testimonials'][$i] = array (
+      'rendered_testimonial' => render($testimonial),
+      'testimonial_link' => $testimonial_link,
+    );
   }
 }
 

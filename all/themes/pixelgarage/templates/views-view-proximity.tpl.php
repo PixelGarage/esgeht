@@ -3,16 +3,6 @@
  * @file
  * View theme template to layout the proximity items and add the bootstrap modal dialog functionality to each item.
  */
-
-global $language;
-switch ($language->language) {
-  case 'de':
-    $testimonial_link = 'http://www.gruenewirtschaft.ch';
-    break;
-  case 'fr':
-    $testimonial_link = 'http://www.economieverte.ch';
-    break;
-}
 ?>
 
 <div id="<?php print $pe_container_id; ?>" class="pe-container">
@@ -28,8 +18,8 @@ switch ($language->language) {
     <?php if (isset($testimonials[$id])): ?>
       <div class="pe-item pe-item-linked">
         <div class="pe-item-inner">
-          <a role="button" href="<?php print $testimonial_link; ?>" target="_blank">
-            <?php print $testimonials[$id]; ?>
+          <a role="button" href="<?php print $testimonials[$id]['testimonial_link']; ?>" target="_blank">
+            <?php print $testimonials[$id]['rendered_testimonial']; ?>
           </a>
         </div>
       </div>

@@ -1,0 +1,49 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: ralph
+ * Date: 14.08.16
+ * Time: 16:37
+ */
+
+/* --------------------------------------------------
+ * Webform select option definition
+ * --------------------------------------------------*/
+
+/**
+ * Define a custom select list displaying all available courses.
+ *
+ */
+function esgeht_webform_select_options_info() {
+  $items = array();
+
+  $items['category'] = array(
+    'title' => t('Category'),
+    'options callback' => '_webform_select_options_taxonomy',
+    'options arguments' => array ('category'),
+  );
+
+  return $items;
+}
+
+/**
+ * Creates a list of all available terms of a certain taxonomy.
+ */
+function _webform_select_options_taxonomy ($component, $flat, $arguments) {
+  $query = new EntityFieldQuery();
+  $query->entityCondition('entity_type', 'taxonomy_term')
+    ->entityCondition('bundle', $arguments[0]);
+  $result = $query->execute();
+  if (isset($result['taxonomy_term'])) {
+    $tids = array_keys($result['taxonomy_term']);
+    $terms = taxonomy_term_load_multiple($tids);
+
+    $list = array();
+    foreach ($terms as $term) {
+      $list[$term->tid] = $term->name;
+    }
+    return $list;
+  }
+  return null;
+}
+

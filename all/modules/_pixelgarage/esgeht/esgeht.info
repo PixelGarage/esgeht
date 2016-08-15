@@ -1,0 +1,5 @@
+name = EsGeht project module
+description = "Provides hooks for EsGeht project."
+core = 7.x
+package = Pixelgarage
+version = "7.x-1.0"

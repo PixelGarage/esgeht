@@ -32,7 +32,8 @@ function esgeht_webform_select_options_info() {
 function _webform_select_options_taxonomy ($component, $flat, $arguments) {
   $query = new EntityFieldQuery();
   $query->entityCondition('entity_type', 'taxonomy_term')
-    ->entityCondition('bundle', $arguments[0]);
+    ->entityCondition('bundle', $arguments[0])
+    ->propertyCondition('tid', '56', '<>');
   $result = $query->execute();
   if (isset($result['taxonomy_term'])) {
     $tids = array_keys($result['taxonomy_term']);

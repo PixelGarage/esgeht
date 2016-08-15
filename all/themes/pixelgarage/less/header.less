@@ -25,6 +25,8 @@ header#navbar {
 
     .navbar-meta {
       position: relative;
+      top: -10px;
+      right: 0;
       z-index: 10;
 
       .block-locale {
@@ -46,13 +48,13 @@ header#navbar {
       // header (branding)
       a.logo {
         display: inline-block;
-        margin: 10px 0;
+        margin: 20px 0;
         padding: 0;
         outline: none;
 
         img {
           margin: 0;
-          width: 100px;
+          width: 150px;
           height: auto;
           max-width: 100%;
           max-height: none;
@@ -64,76 +66,7 @@ header#navbar {
             width: 300px;
           }
           @media @normal {
-            width: 400px;
-          }
-        }
-      }
-
-      .region-navigation {
-        display: inline-block;
-        position: static;
-        margin-left: 10px;
-        vertical-align: middle;
-
-        @media @tablet {
-          position: absolute;
-          right: 0;
-          bottom: 10px;
-          margin: 0;
-        }
-        @media @normal {
-          bottom: 20px;
-        }
-
-        // SPECIAL MENU: Image upload
-        ul.menu {
-          float: none;
-          margin: 0 auto;
-          padding: 0;
-          line-height: 1;
-
-          >li {
-            display: inline-block;
-            float: none;
-            padding: 0;
-            line-height: 1;
-
-            a, span {
-              cursor: pointer;
-              display: inline-block;
-              padding: 0 5px;
-              font-family: @pxl-text-font-bold;
-              #pxl-mixins.font-size-responsive(25px, 14px);
-              line-height: 1.25;
-              letter-spacing: 1px;
-              color: white;
-              outline: none;
-              border: 1px solid white;
-              #pxl-mixins.border-radius(3px);
-              background: none;
-
-              &:hover, &.active, &.checked {
-                color: @pxl-color-main;
-                background: white;
-              }
-
-              @media @mobile {
-                font-size: 14px;
-              }
-              @media @tablet {
-                padding: 0 15px;
-                font-size: 25px;
-                border: 2px solid white;
-              }
-              @media @normal {
-                font-size: 25px;
-              }
-              @media @wide {
-                font-size: 27px;
-              }
-
-            }
-
+            width: 350px;
           }
         }
       }
@@ -146,7 +79,7 @@ header#navbar {
         margin: 0;
         padding: 0;
         font-size: 30px;
-        color: #fff;
+        color: @pxl-color-main;
         border: none;
         background: none;
         opacity: 1.0;
@@ -158,15 +91,16 @@ header#navbar {
 
     }
 
-    // collapse part
+    // mobile collapse part
     .navbar-collapse {
       padding: 5px 0;
-      background: none;
+      background: white;
 
       nav {
         text-align: center;
         width: 100%;
 
+        // main menu
         ul.menu {
           display: inline-block;
           float: none;
@@ -189,13 +123,35 @@ header#navbar {
               font-size: 40px;
               line-height: 1;
               letter-spacing: 1.8px;
-              color: #fff;
+              color: @pxl-color-main;
               outline: none;
 
               &:hover, &.active, &.checked {
                 font-family: @pxl-text-font-bold;
                 letter-spacing: 1px;
                 background: none;
+              }
+            }
+
+            &.last {
+              a, span {
+                cursor: pointer;
+                display: inline-block;
+                margin-left: 0;
+                padding: 8px 5px 5px;
+                font-family: @pxl-text-font-bold;
+                line-height: 1;
+                letter-spacing: 1px;
+                color: white;
+                outline: none;
+                border: 1px solid @pxl-color-main;
+                #pxl-mixins.border-radius(0);
+                background: @pxl-color-main;
+
+                &:hover, &.active, &.checked {
+                  color: @pxl-color-main;
+                  background: white;
+                }
               }
             }
           }
@@ -213,20 +169,20 @@ header#navbar {
 
           ul.menu {
             width: 100%;
-            text-align: justify;
-
-            &:after {
-              // justify's last line is not justified, therefore add one
-              content: '';
-              display: inline-block;
-              width: 100%;
-            }
+            text-align: right;
 
             li {
               display: inline-block;
               a, span {
                 padding: 3px 0;
-                font-size: 16px;
+                font-size: 18px;
+              }
+              &.last {
+                a, span {
+                  margin-left: 15px;
+                  padding: 8px 15px 5px;
+                  border: 2px solid @pxl-color-main;
+                }
               }
             }
           }
@@ -238,7 +194,7 @@ header#navbar {
             li {
               a, span {
                 padding: 3px 0;
-                font-size: 22px;
+                font-size: 24px;
               }
             }
           }

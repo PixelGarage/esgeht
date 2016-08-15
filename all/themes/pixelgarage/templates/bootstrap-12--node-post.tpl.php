@@ -4,35 +4,9 @@
  * Bootstrap 12 template for Display Suite.
  */
 //
-// create language dependent banner and slogan images
-global $language;
-
-switch ($language->language) {
-  case 'de':
-  default:
-    $banner_path = drupal_get_path('theme', 'pixelgarage') . '/images/logo_banner_d.png';
-    break;
-  case 'fr':
-    $banner_path = drupal_get_path('theme', 'pixelgarage') . '/images/logo_banner_f.png';
-    break;
-  case 'en':
-    $banner_path = drupal_get_path('theme', 'pixelgarage') . '/images/logo_banner_e.png';
-    break;
-}
-$params = array(
-  'path' => $banner_path,
-  'alt' => 'for you',
-  'width' => '90%',
-  'height' => 'auto',
-  'attributes' => array('class' => array('img', 'img-banner')),
-);
-$banner_img = theme_image($params);
-
-//
 // set language dependent heading
 $post_title = t('Support campaign!');
 $post_heading = t('Share this post with your friends and family members!');
-$post_slogan = t(' - Nachhaltig bis 2050 - ');
 ?>
 
 
@@ -65,8 +39,7 @@ $post_slogan = t(' - Nachhaltig bis 2050 - ');
   <div class="row">
     <<?php print $central_wrapper; ?> class="col-sm-12 <?php print $central_classes; ?>">
       <?php print $central; ?>
-      <div class="slogan-wrapper"><?php print $post_slogan; ?></div>
-      <div class="banner-wrapper"><?php print $banner_img; ?></div>
+      <div class="slogan-wrapper"></div>
     </<?php print $central_wrapper; ?>>
   </div>
 </<?php print $layout_wrapper ?>>

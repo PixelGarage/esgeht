@@ -5,8 +5,8 @@
 // Variables
 // -------------------------
 @ss-font-path: "@{pxl-font-path}/ss-social";
-@ss-sub-font: "Circle"; // supported sub-fonts are "Circle" and "Regular"
-@ss-sub-font-hover: "Regular";
+@ss-sub-font: "Regular"; // supported sub-fonts are "Circle" and "Regular"
+@ss-sub-font-hover: "Circle";
 
 @pxl-share-color: @pxl-color-red;
 @pxl-share-align: left;
@@ -68,7 +68,7 @@
     right: 0;
     #pxl-mixins.border-radius(5);
     .border-right-radius(0);
-    background: white;
+    background: none;
 
     @media @tablet {
       display: block;
@@ -149,14 +149,14 @@
     font-family: @pxl-text-font-bold;
     font-size: 18px;
     line-height: 18px;
-    color: white;
+    color: @pxl-follow-color;
 
     @media @narrow {
       display: inline-block;
     }
     @media @normal {
-      font-size: 23px;
-      line-height: 23px;
+      font-size: 18px;
+      line-height: 18px;
     }
   }
 
@@ -167,7 +167,6 @@
     .follow-link-wrapper {
       display: inline-block;
       vertical-align: middle;
-
       margin: 0;
 
       a.follow-link {

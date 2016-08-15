@@ -12,7 +12,7 @@
 @pxl-color-black: #000000;
 
 @pxl-color-main: @pxl-color-red;
-@pxl-color-second: @pxl-color-black;
+@pxl-color-active: @pxl-color-black;
 
 @pxl-color-border: #5f5e5e;
 @pxl-color-border-active: @pxl-color-main;
@@ -50,7 +50,8 @@
 //## Font, line-height, and color for body text, headings, and more.
 @text-color:            @pxl-color-black;
 @text-color-disabled:   @gray-lighter;
-@text-color-field: #5f5e5e;
+@text-color-field:      @pxl-color-black;
+@text-color-placeholder: @pxl-color-red;
 
 @font-size-base:          16px;
 @font-size-large:         ceil((@font-size-base * 1.25));
@@ -119,7 +120,7 @@
 @wide:    ~"screen and (min-width: @{screen-lg-min})";
 
 // special break for menu items
-@menu-break: ~"screen and (min-width: 600px)";
+@special-break: ~"screen and (min-width: 640px)";
 
 // Media queries stacked
 @tablet-only:  ~"screen and (min-width: @{screen-sm-min}) and (max-width: @{screen-sm-max})";

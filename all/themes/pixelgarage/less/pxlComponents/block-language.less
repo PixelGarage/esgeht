@@ -30,31 +30,37 @@ ul.language-switcher-locale-url {
 
     a.language-link {
       display: inline-block;
-      padding: 0 5px;
+      padding-right: 5px;
       font-family: @pxl-text-font-light;
       font-size: 18px;
       line-height: 18px;
       text-transform: uppercase;
       text-decoration: none;
-      color: white;
-      letter-spacing: 1.5px;
+      color: @pxl-color-main;
       outline: none;
-      border-right: 1px solid #fff;
+      border: none;
+
+      &:after {
+        content: '/';
+        padding-left: 5px;
+      }
 
       &.active, &:hover {
-        font-family: @pxl-text-font-bold;
-        letter-spacing: 1px;
+        color: @pxl-color-active;
       }
 
       @media @tablet {
-        font-size: 22px;
-        line-height: 22px;
+        font-size: 18px;
+        line-height: 18px;
       }
     }
 
     &:last-child a {
-      border: none;
       padding-right: 0;
+
+      &:after {
+        content: '';
+      }
     }
 
     span.locale-untranslated {

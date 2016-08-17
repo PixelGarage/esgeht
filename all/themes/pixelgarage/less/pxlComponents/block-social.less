@@ -87,19 +87,13 @@
     }
 
     .a2a_svg {
-      .ss-social(@ss-sub-font);
       width: @pxl-share-icon-size;
       height: @pxl-share-icon-size;
       font-size: (@pxl-share-icon-size - 4px);
       color: @pxl-share-color;
       text-align: center;
       line-height: @pxl-share-icon-size;
-      background: none !important;
-
-      &:hover {
-        .ss-social(@ss-sub-font-hover);
-        opacity: 1.0;
-      }
+      border: none !important;
 
       &:before {
         display: inline-block;
@@ -110,29 +104,36 @@
   }
 
   a.a2a_button_facebook {
-    .a2a_svg:before {
-      content: "\f610";
+    .a2a_svg {
+      background: url(../images/social-icon-facebook.png) no-repeat center center / contain !important;
+
+      &:hover {
+        opacity: 1.0;
+        background: url(../images/social-icon-facebook-hover.png) no-repeat center center / contain !important;
+      }
     }
   }
   a.a2a_button_twitter {
-    .a2a_svg:before {
-      content: "\f611";
-    }
-  }
+    .a2a_svg {
+      background: url(../images/social-icon-twitter.png) no-repeat center center / contain !important;
+
+      &:hover {
+        opacity: 1.0;
+        background: url(../images/social-icon-twitter-hover.png) no-repeat center center / contain !important;
+      }
+    }  }
   a.a2a_button_google_plus {
-    .a2a_svg:before {
-      content: "\f613";
-    }
-  }
+    .a2a_svg {
+      background: url(../images/social-icon-google.png) no-repeat center center / contain !important;
+
+      &:hover {
+        opacity: 1.0;
+        background: url(../images/social-icon-google-hover.png) no-repeat center center / contain !important;
+      }
+    }  }
   a.a2a_button_email {
-    .a2a_svg:before {
-      content:'✉'
-    }
   }
   a.a2a_button_pinterest {
-    .a2a_svg:before {
-      content: "\f650";
-    }
   }
 }
 

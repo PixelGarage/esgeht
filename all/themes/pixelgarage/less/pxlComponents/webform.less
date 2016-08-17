@@ -140,6 +140,40 @@ form.webform-client-form {
         }
       }
 
+      //
+      // ADD MORE buttons
+      .btn.btn-default {
+        display: inline-block;
+        vertical-align: middle;
+        margin: 0;
+        padding: 0 20px 0 0;
+        font-family: @pxl-text-font;
+        #pxl-mixins.font-size-responsive(19px, 14px);
+        letter-spacing: normal;
+        text-align: left;
+        text-transform: none;
+        color: @pxl-color-main;
+        border: none;
+        background: none;
+
+        &:before {
+          display: inline-block;
+          vertical-align: middle;
+          padding-right: 10px;
+          font-family: @pxl-icon-font;
+          font-size: 30px;
+        }
+
+        &:hover, &:focus {
+          color: @pxl-color-active;
+        }
+      }
+      [id*='webform-addmore-add']:before {
+        content: '\f0fe';
+      }
+      [id*='webform-addmore-remove']:before {
+        content: '\f146';
+      }
     }
   }
 

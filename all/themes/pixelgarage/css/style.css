@@ -9011,61 +9011,38 @@ form#user-login {
   display: none;
 }
 .a2a_kit a .a2a_svg {
-  font-family: "SSSocial-Regular";
-  font-style: normal;
-  font-weight: normal;
-  text-decoration: none;
-  text-rendering: optimizeLegibility;
-  white-space: nowrap;
-  -webkit-font-feature-settings: "liga";
-  -moz-font-feature-settings: "liga=1";
-  -moz-font-feature-settings: "liga";
-  -ms-font-feature-settings: "liga" 1;
-  -o-font-feature-settings: "liga";
-  font-feature-settings: "liga";
-  -webkit-font-smoothing: antialiased;
   width: 40px;
   height: 40px;
   font-size: 36px;
   color: #ff0000;
   text-align: center;
   line-height: 40px;
-  background: none !important;
-}
-.a2a_kit a .a2a_svg:hover {
-  font-family: "SSSocial-Circle";
-  font-style: normal;
-  font-weight: normal;
-  text-decoration: none;
-  text-rendering: optimizeLegibility;
-  white-space: nowrap;
-  -webkit-font-feature-settings: "liga";
-  -moz-font-feature-settings: "liga=1";
-  -moz-font-feature-settings: "liga";
-  -ms-font-feature-settings: "liga" 1;
-  -o-font-feature-settings: "liga";
-  font-feature-settings: "liga";
-  -webkit-font-smoothing: antialiased;
-  opacity: 1.0;
+  border: none !important;
 }
 .a2a_kit a .a2a_svg:before {
   display: inline-block;
   vertical-align: text-bottom;
 }
-.a2a_kit a.a2a_button_facebook .a2a_svg:before {
-  content: "\f610";
+.a2a_kit a.a2a_button_facebook .a2a_svg {
+  background: url(../images/social-icon-facebook.png) no-repeat center center / contain !important;
 }
-.a2a_kit a.a2a_button_twitter .a2a_svg:before {
-  content: "\f611";
+.a2a_kit a.a2a_button_facebook .a2a_svg:hover {
+  opacity: 1.0;
+  background: url(../images/social-icon-facebook-hover.png) no-repeat center center / contain !important;
 }
-.a2a_kit a.a2a_button_google_plus .a2a_svg:before {
-  content: "\f613";
+.a2a_kit a.a2a_button_twitter .a2a_svg {
+  background: url(../images/social-icon-twitter.png) no-repeat center center / contain !important;
 }
-.a2a_kit a.a2a_button_email .a2a_svg:before {
-  content: '✉';
+.a2a_kit a.a2a_button_twitter .a2a_svg:hover {
+  opacity: 1.0;
+  background: url(../images/social-icon-twitter-hover.png) no-repeat center center / contain !important;
 }
-.a2a_kit a.a2a_button_pinterest .a2a_svg:before {
-  content: "\f650";
+.a2a_kit a.a2a_button_google_plus .a2a_svg {
+  background: url(../images/social-icon-google.png) no-repeat center center / contain !important;
+}
+.a2a_kit a.a2a_button_google_plus .a2a_svg:hover {
+  opacity: 1.0;
+  background: url(../images/social-icon-google-hover.png) no-repeat center center / contain !important;
 }
 #block-follow-site {
   display: inline-block;
@@ -12290,7 +12267,7 @@ ul.language-switcher-locale-url > li span.locale-untranslated {
 .view-post-grid .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-widget-filter-field_category_tid .bef-select-as-links .form-type-bef-link {
   display: inline-block;
   margin: 0 -2px;
-  padding: 0 5px;
+  padding: 0 10px;
 }
 .view-post-grid .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-widget-filter-field_category_tid .bef-select-as-links .form-type-bef-link a {
   display: block;
@@ -12344,7 +12321,7 @@ ul.language-switcher-locale-url > li span.locale-untranslated {
 .view-post-grid .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-widget-sort-by .bef-select-as-links .form-type-bef-link {
   display: inline-block;
   margin: 0 -2px;
-  padding: 0 5px;
+  padding: 0 10px;
 }
 .view-post-grid .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-widget-sort-by .bef-select-as-links .form-type-bef-link a {
   display: block;
@@ -12376,7 +12353,7 @@ ul.language-switcher-locale-url > li span.locale-untranslated {
 }
 .view-post-grid .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-reset-button button.btn {
   margin: 0;
-  padding: 0;
+  padding: 0 0 0 10px;
   width: 28px;
   height: 28px;
   text-indent: -9999px;
@@ -12921,6 +12898,47 @@ form.webform-client-form fieldset.panel .panel-body fieldset.panel .panel-body f
   -webkit-border-radius: 0;
   border-radius: 0;
   border-left: 2px solid #ff0000;
+}
+form.webform-client-form fieldset.panel .panel-body .btn.btn-default {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0;
+  padding: 0 20px 0 0;
+  font-family: 'Catamaran-ExtraBold', sans-serif;
+  font-size: 14px;
+  letter-spacing: normal;
+  text-align: left;
+  text-transform: none;
+  color: #ff0000;
+  border: none;
+  background: none;
+}
+@media screen and (min-width: 30em) {
+  form.webform-client-form fieldset.panel .panel-body .btn.btn-default {
+    font-size: 2.91666667vw;
+  }
+}
+@media screen and (min-width: 48em) {
+  form.webform-client-form fieldset.panel .panel-body .btn.btn-default {
+    font-size: 19px;
+  }
+}
+form.webform-client-form fieldset.panel .panel-body .btn.btn-default:before {
+  display: inline-block;
+  vertical-align: middle;
+  padding-right: 10px;
+  font-family: 'fontawesome';
+  font-size: 30px;
+}
+form.webform-client-form fieldset.panel .panel-body .btn.btn-default:hover,
+form.webform-client-form fieldset.panel .panel-body .btn.btn-default:focus {
+  color: #000000;
+}
+form.webform-client-form fieldset.panel .panel-body [id*='webform-addmore-add']:before {
+  content: '\f0fe';
+}
+form.webform-client-form fieldset.panel .panel-body [id*='webform-addmore-remove']:before {
+  content: '\f146';
 }
 form.webform-client-form [id$=ajax-wrapper] {
   /* file upload container */

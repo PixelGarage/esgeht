@@ -6,6 +6,14 @@
  * Time: 16:37
  */
 
+/**
+ * Implements hook_cron().
+ */
+function hso_importer_cron() {
+  variable_set('esgeht_cron_last_run', REQUEST_TIME);
+}
+
+
 /* --------------------------------------------------
  * Webform select option definition
  * --------------------------------------------------*/

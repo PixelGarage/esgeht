@@ -12,10 +12,10 @@
   <div class="stamp stamp1"></div>
 
   <?php foreach ($rows as $id => $row): ?>
-    <!--
-    Add randomly chosen testimonials to the list
-    -->
     <?php if (isset($testimonials[$id])): ?>
+      <!--
+      Add randomly chosen testimonials to the list
+      -->
       <div class="pe-item pe-item-linked">
         <div class="pe-item-inner">
           <a role="button" href="<?php print $testimonials[$id]['testimonial_link']; ?>" target="_blank">
@@ -25,10 +25,10 @@
       </div>
     <?php endif; ?>
 
-    <!--
-    Add a set of SOME items to the list
-    -->
     <?php if (isset($social_items[$id])): ?>
+      <!--
+      Add a set of SOME items to the list
+      -->
       <div class="pe-item pe-item-ajax <?php print 'pe-item-' . $social_items[$id]['nid']; ?>" style="margin: 0 -2px">
         <div class="pe-item-inner">
           <!-- modal trigger -->
@@ -40,21 +40,23 @@
       </div>
     <?php endif; ?>
 
-    <!--
-    Add non-ajax posts to the list
-    -->
-    <div
-      class="pe-item pe-item-no-ajax <?php print 'pe-item-' . $ajax_load_params[$id]; ?> <?php if ($classes_array[$id]) print $classes_array[$id]; ?>"
-      style="margin: 0 -2px">
-      <div class="pe-item-inner">
-        <!-- modal trigger
+    <?php if (isset($row)): ?>
+      <!--
+     Add non-ajax posts to the list
+     -->
+      <div
+        class="pe-item pe-item-no-ajax <?php print 'pe-item-' . $ajax_load_params[$id]; ?> <?php if ($classes_array[$id]) print $classes_array[$id]; ?>"
+        style="margin: 0 -2px">
+        <div class="pe-item-inner">
+          <!-- modal trigger
         <a class="button" role="button" href="<?php print $item_base_url . $ajax_load_params[$id]; ?>"
            data-ajax-load-param="<?php print $ajax_load_params[$id]; ?>" <?php print drupal_attributes($toggle_attributes); ?>>
         </a>
         -->
-        <?php print $row; ?>
+          <?php print $row; ?>
+        </div>
       </div>
-    </div>
+    <?php endif; ?>
 
   <?php endforeach; ?>
 

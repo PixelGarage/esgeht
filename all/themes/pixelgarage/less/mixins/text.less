@@ -44,7 +44,7 @@
   }
 
 
-  .placeholder(@color: @input-color-placeholder; @text-align: left) {
+  .placeholder(@color: @text-color-placeholder; @text-align: left) {
     // Firefox
     &::-moz-placeholder {
       text-align: @text-align;
@@ -87,6 +87,7 @@
     a {
       font-family: @pxl-text-font;
       .font-size-responsive(@text-size, @resp-font-size-min);
+      color: @link-color;
 
       &:hover, &:focus {
         color: @link-hover-color;

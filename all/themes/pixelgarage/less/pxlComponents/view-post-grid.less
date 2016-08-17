@@ -110,7 +110,7 @@
         }
 
         &.views-submit-button {
-          margin: 0 0 0 -4px;
+          margin: 0 0 0 5px;
           padding: 0;
 
           button {
@@ -123,12 +123,11 @@
             line-height: 12px;
             letter-spacing: 1.5px;
             text-transform: lowercase;
-            color: #fff;
+            color: @pxl-color-main;
             outline: none;
             #pxl-mixins.border-radius(0);
-            border: 1px solid @pxl-color-main;
-            background-color: @pxl-color-main;
-            opacity: 1.0;
+            border: 2px solid @pxl-color-main;
+            background-color: @pxl-color-body-bg;
 
             @media @narrow {
               padding: 0 12px;
@@ -144,7 +143,8 @@
             }
 
             &:hover {
-              opacity: 0.6;
+              color: @pxl-color-body-bg;
+              background-color: @pxl-color-main;
             }
           }
         }
@@ -181,7 +181,7 @@
                   background: url(../images/icon-ferien.png) no-repeat center center / contain;
 
                   &:hover, &.active {
-                    background-image: url(../images/icon-ferien.png);
+                    background-image: url(../images/icon-ferien-hover.png);
                   }
                 }
               }
@@ -191,7 +191,7 @@
                   background: url(../images/icon-dusche.png) no-repeat center center / contain;
 
                   &:hover, &.active {
-                    background-image: url(../images/icon-dusche.png);
+                    background-image: url(../images/icon-dusche-hover.png);
                   }
                 }
               }
@@ -201,7 +201,7 @@
                   background: url(../images/icon-cervelat.png) no-repeat center center / contain;
 
                   &:hover, &.active {
-                    background-image: url(../images/icon-cervelat.png);
+                    background-image: url(../images/icon-cervelat-hover.png);
                   }
                 }
               }
@@ -211,7 +211,7 @@
                   background: url(../images/icon-bulb.png) no-repeat center center / contain;
 
                   &:hover, &.active {
-                    background-image: url(../images/icon-bulb.png);
+                    background-image: url(../images/icon-bulb-hover.png);
                   }
                 }
               }
@@ -247,12 +247,12 @@
               }
 
               // sort by value type
-              &.form-item-edit-sort-by-value-type {
+              &.form-item-edit-sort-by-value {
                 a {
                   background: url(../images/icon-herz.png) no-repeat center center / contain;
 
                   &:hover, &.active {
-                    background-image: url(../images/icon-herz.png);
+                    background-image: url(../images/icon-herz-hover.png);
                   }
                 }
               }
@@ -272,7 +272,8 @@
             background: url(../images/icon-x.png) no-repeat center center / contain;
 
             &:hover, &.active {
-              background-image: url(../images/icon-x.png);
+              #pxl-mixins.box-shadow(none);
+              background-image: url(../images/icon-x-hover.png);
             }
 
             @media @narrow {
@@ -345,7 +346,7 @@
 
   //
   // view pager
-  #pxl-mixins.view-pager(16px, @text-color, @text-color);
+  #pxl-mixins.view-pager(18px, @text-color, @text-color);
 
   ul.pagination {
     li {
@@ -365,7 +366,7 @@
         &:hover, &:focus, &.active {
           a, span {
             font-family: @pxl-text-font;
-            font-size: 16px;
+            font-size: 18px;
           }
         }
       }

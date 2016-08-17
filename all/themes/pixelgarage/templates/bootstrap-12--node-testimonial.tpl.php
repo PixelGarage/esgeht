@@ -5,7 +5,7 @@
  */
 //
 // set language dependent heading
-$testimonial_claim = t('Ja zur Grünen Wirtschaft am 25. 9. 2016');
+$testimonial_claim = t('#EsGeht');
 ?>
 
 
@@ -16,7 +16,9 @@ $testimonial_claim = t('Ja zur Grünen Wirtschaft am 25. 9. 2016');
   <div class="row">
     <<?php print $central_wrapper; ?> class="col-sm-12 <?php print $central_classes; ?>">
       <?php print $central; ?>
-      <div class="campaign-claim"><?php print $testimonial_claim; ?></div>
+      <?php if (!empty($testimonial_claim)): ?>
+        <div class="campaign-claim"><?php print $testimonial_claim; ?></div>
+      <?php endif; ?>
     </<?php print $central_wrapper; ?>>
   </div>
 </<?php print $layout_wrapper ?>>

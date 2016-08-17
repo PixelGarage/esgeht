@@ -20,18 +20,11 @@
   background-color: white;
 
   .row {
-    .col-sm-12, .col-sm-6 {
-      padding: 15px;
+    margin: 0;
 
-      .field-name-title {
-        h2 {
-          font-family: @pxl-text-font-bold;
-          #pxl-mixins.font-size-responsive(30px, 22px);
-          letter-spacing: normal;
-          text-transform: none;
-          color: @text-color;
-        }
-      }
+    .col-sm-12, .col-sm-6 {
+      position: relative;
+      padding: 0 0 40px;
 
       .field-name-field-picture {
         img {
@@ -42,26 +35,83 @@
       }
 
       .field-name-body {
-        margin: 5px auto 0;
-        width: 80%;
-        #pxl-mixins.wysiwyg-body(25px);
+        margin: @grid-gutter-width auto 0;
+        width: 90%;
+        #pxl-mixins.wysiwyg-body(34px);
 
         p {
           font-family: @pxl-text-font-bold;
+          #pxl-mixins.font-size-responsive(34px, 24px);
           color: @text-color;
-          line-height: 30px;
-          text-align: center;
+          line-height: 1.2;
+          text-align: left;
+
+          @media @mobile {
+            font-size: 7vw;
+          }
+          @media @tablet {
+            font-size: 24px;
+          }
+          @media @normal {
+            font-size: 34px;
+          }
+          @media @wide {
+            font-size: 34px;
+          }
         }
       }
 
       .campaign-claim {
-        margin: 30px auto;
-        width: 60%;
-        #pxl-mixins.wysiwyg-body(24px);
-        font-family: @pxl-text-font-light;
-        color: @text-color;
-        line-height: 24px;
-        text-align: center;
+        margin: 0 auto;
+        width: 90%;
+        font-family: @pxl-text-font-bold;
+        #pxl-mixins.font-size-responsive(34px, 24px);
+        color: @pxl-color-main;
+        line-height: 1.2;
+        text-align: left;
+
+        @media @mobile {
+          font-size: 7vw;
+        }
+        @media @tablet {
+          font-size: 24px;
+        }
+        @media @normal {
+          font-size: 34px;
+        }
+        @media @wide {
+          font-size: 34px;
+        }
+      }
+
+      .field-name-field-category-multiple {
+        position: absolute;
+        bottom: 0;
+        padding: 0;
+        right: @grid-gutter-width/2;
+        text-align: right;
+
+        .field-item {
+          display: inline-block;
+          overflow: hidden;
+          width: 24px;
+          height: 24px;
+          text-indent: 100%;
+          white-space: nowrap;
+
+          &.category-52 { // mobility
+            background: url(../images/icon-ferien-hover.png) no-repeat center center / contain;
+          }
+          &.category-53 { // heat
+            background: url(../images/icon-dusche-hover.png) no-repeat center center / contain;
+          }
+          &.category-54 { // food
+            background: url(../images/icon-cervelat-hover.png) no-repeat center center / contain;
+          }
+          &.category-56 { // tecPost
+            background: url(../images/icon-bulb-hover.png) no-repeat center center / contain;
+          }
+        }
       }
 
     }

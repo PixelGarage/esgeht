@@ -5,8 +5,10 @@
  */
 //
 // set language dependent heading
+$content = $variables['content'];
 $post_title = t('Support campaign!');
 $post_heading = t('Share this post with your friends and family members!');
+$post_claim = t('#EsGeht');
 ?>
 
 
@@ -38,8 +40,17 @@ $post_heading = t('Share this post with your friends and family members!');
   <?php endif; ?>
   <div class="row">
     <<?php print $central_wrapper; ?> class="col-sm-12 <?php print $central_classes; ?>">
-      <?php print $central; ?>
-      <div class="slogan-wrapper"></div>
+      <?php print render($content['field_image']); ?>
+      <?php if (!empty($post_claim)): ?>
+        <div class="quote-wrapper">
+          <?php print render($content['field_quote']); ?>
+          <span class="post-claim"><?php print $post_claim; ?></span>
+        </div>
+      <?php else: ?>
+        <?php print render($content['field_quote']); ?>
+      <?php endif; ?>
+      <?php print render($content['field_your_name']); ?>
+      <?php print render($content['group_icons']); ?>
     </<?php print $central_wrapper; ?>>
   </div>
 </<?php print $layout_wrapper ?>>

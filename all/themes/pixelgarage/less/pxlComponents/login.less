@@ -8,8 +8,10 @@
 //text
 @pxl-login-btn-color: #fff;
 @pxl-login-btn-hover-color: @pxl-color-main;
-@pxl-login-link-color: @pxl-color-main;
-@pxl-login-link-hover-color: @pxl-color-main;
+@pxl-login-link-color: @link-hover-color;
+@pxl-login-link-hover-color: @link-color;
+
+@pxl-hr-color: @text-color;
 
 
 // Mixins
@@ -27,10 +29,23 @@
   float: none;
   width: auto;
 
-  input:focus,
-  textarea:focus {
-    border: 1px solid @pxl-color-border-active;
-    .box-shadow(0 0 3px @pxl-color-main);
+  input.form-control {
+    font-family: @pxl-text-font-light;
+    color: @text-color;
+    border: none;
+    border-bottom: 1px solid @pxl-color-border-active;
+    #pxl-mixins.border-radius(0);
+    background: none;
+    .box-shadow(none);
+
+    &:hover, &:focus {
+      border: 1px solid @pxl-color-border-active;
+      .box-shadow(0 0 3px @pxl-color-main inset);
+    }
+  }
+
+  .help-block {
+    color: @text-color;
   }
 }
 
@@ -59,12 +74,14 @@ form#user-login {
   }
 
   .login-register {
-    #pxl-mixins.submit-button(#fff, @pxl-color-main);
     display: inline-block;
     position: absolute;
     right: 0;
     vertical-align: middle;
     margin: 0;
+    #pxl-mixins.submit-button(@pxl-login-btn-color, @pxl-login-btn-hover-color);
+    #pxl-mixins.border-radius(0);
+    border: 2px solid @pxl-login-btn-hover-color;
   }
 
 }
@@ -76,13 +93,13 @@ form#user-login {
   padding: 0 0 2em;
   width: 100%;
   border: 0;
-  border-bottom: 1px solid @hr-border;
+  border-bottom: 1px solid @pxl-hr-color;
 
   @media @normal {
     padding: 2em;
     width: 50%;
     border: 0;
-    border-right: 1px solid @hr-border;
+    border-right: 1px solid @pxl-hr-color;
   }
 
   .form-actions-wrapper {
@@ -97,7 +114,9 @@ form#user-login {
       margin: 0;
 
       .btn {
-        #pxl-mixins.submit-button(#fff, @pxl-color-main);
+        #pxl-mixins.submit-button(@pxl-login-btn-color, @pxl-login-btn-hover-color);
+        #pxl-mixins.border-radius(0);
+        border: 2px solid @pxl-login-btn-hover-color;
       }
     }
 
@@ -134,11 +153,6 @@ form#user-login {
         display: inline-block;
         margin-top:  0.5em;
         color: @pxl-login-link-color;
-
-        &:hover {
-          color: @pxl-login-link-hover-color;
-          text-decoration: underline;
-        }
       }
 
       &:before {
@@ -149,10 +163,19 @@ form#user-login {
         text-align: center;
         padding: 0.3em;
       }
+
+      &:hover {
+        .login-account, &:before {
+          color: @pxl-login-link-hover-color;
+          text-decoration: none;
+        }
+      }
     }
 
     .btn {
-      #pxl-mixins.submit-button(#fff, @pxl-color-main);
+      #pxl-mixins.submit-button(@pxl-login-btn-color, @pxl-login-btn-hover-color);
+      #pxl-mixins.border-radius(0);
+      border: 2px solid @pxl-login-btn-hover-color;
       float: right;
     }
   }

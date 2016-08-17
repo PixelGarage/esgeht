@@ -22,7 +22,7 @@
 // Donate confirmation
 $current_tnid = $node->tnid ? $node->tnid : $node->nid;
 $delivery_tnid = 789;
-$donation_tnid = 782;
+$donation_tnid = 808;
 $newsletter_tnid = 61;
 
 $title = t('Thank you,');

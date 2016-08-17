@@ -24,7 +24,22 @@ function pixelgarage_preprocess_page(&$vars) {
   pg_login_preprocess_page($vars);
 
   // replace logo with .svg
-  $vars['logo'] = str_replace('.jpg', '.svg', $vars['logo']);
+  //$vars['logo'] = str_replace('.jpg', '.svg', $vars['logo']);
+}
+
+/**
+ * Add specific category classes to all category fields.
+ */
+function pixelgarage_preprocess_field(&$vars) {
+  //
+  // add icons to category fields
+  $element = $vars['element'];
+
+  if ($element['#field_name'] === 'field_category' || $element['#field_name'] === 'field_category_multiple') {
+    foreach($element['#items'] as $index => $item) {
+      $vars['items_classes'][$index] = 'category-' . $element['#items'][$index]['tid'];
+    }
+  }
 }
 
 
@@ -37,8 +52,6 @@ function pixelgarage_preprocess_page(&$vars) {
  * Adds total result count to exposed form and the placeholder for the search field.
  */
 function pixelgarage_preprocess_views_exposed_form(&$vars) {
-  $view = views_get_page_view();
-  $vars['total_rows'] = null;
   if ($filter = &$vars['widgets']['filter-combine']) {
     $placeholder = 'placeholder="' . $filter->label . '"/>';
     $filter->widget = str_replace('/>', $placeholder, $filter->widget);
@@ -52,7 +65,7 @@ function pixelgarage_preprocess_views_exposed_form(&$vars) {
 
 function pixelgarage_preprocess_rate_template_thumbs_up(&$vars) {
   $results = $vars['results'];
-  $vars['score'] = $results['rating'];
+  $vars['score'] = $results['count'];
   $vars['info'] = null;
 }
 
@@ -71,7 +84,7 @@ function pixelgarage_preprocess_views_view_proximity (&$vars) {
   if (!empty($vars['view']->exposed_data['combine'])) return;
 
   _random_testimonials($vars);
-  //_social_items($vars);
+  _social_items($vars);
 }
 
 /**
@@ -110,7 +123,7 @@ function _random_testimonials(&$vars) {
   $row_count = count($view->result) - 1;
   $keys = array_keys($testimonials);
   foreach ($keys as $index => $key) {
-    $testimonial_link = !empty($testimonials[$key]->field_link) ? $testimonials[$key]->field_link[LANGUAGE_NONE][0] : $default_link;
+    $testimonial_link = !empty($testimonials[$key]->field_link) ? $testimonials[$key]->field_link[LANGUAGE_NONE][0]['url'] : $default_link;
     $i = mt_rand(0, $row_count);
     $testimonial = node_view($testimonials[$key], 'teaser');
     $vars['testimonials'][$i] = array (
@@ -122,7 +135,7 @@ function _random_testimonials(&$vars) {
 
 function _social_items(&$vars) {
   //
-  // get the SOME items
+  // get the SOME items of last cron run
   $session_data = &pixelgarage_session_data();
   $social_items = array();
   $timestamp = time();

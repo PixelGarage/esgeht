@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'CatamaranLight';
+    src: url('fonts/CatamaranLight.eot');
+    src: url('fonts/CatamaranLight.eot') format('embedded-opentype'),
+         url('fonts/CatamaranLight.woff2') format('woff2'),
+         url('fonts/CatamaranLight.woff') format('woff'),
+         url('fonts/CatamaranLight.ttf') format('truetype'),
+         url('fonts/CatamaranLight.svg#CatamaranLight') format('svg');
+}

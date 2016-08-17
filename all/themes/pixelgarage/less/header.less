@@ -82,10 +82,9 @@ header#navbar {
         color: @pxl-color-main;
         border: none;
         background: none;
-        opacity: 1.0;
 
         &:hover {
-          opacity: 0.6;
+          color: @pxl-color-active;
         }
       }
 
@@ -119,17 +118,15 @@ header#navbar {
               cursor: pointer;
               display: inline-block;
               padding: 15px 20px ;
-              font-family: @pxl-text-font-light;
+              font-family: @pxl-text-font-bold;
               font-size: 40px;
               line-height: 1;
-              letter-spacing: 1.8px;
               color: @pxl-color-main;
               outline: none;
+              background: none;
 
               &:hover, &.active, &.checked {
-                font-family: @pxl-text-font-bold;
-                letter-spacing: 1px;
-                background: none;
+                color: @pxl-color-active;
               }
             }
 

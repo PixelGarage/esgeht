@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'CatamaranExtraBold';
+    src: url('fonts/CatamaranExtraBold.eot');
+    src: url('fonts/CatamaranExtraBold.eot') format('embedded-opentype'),
+         url('fonts/CatamaranExtraBold.woff2') format('woff2'),
+         url('fonts/CatamaranExtraBold.woff') format('woff'),
+         url('fonts/CatamaranExtraBold.ttf') format('truetype'),
+         url('fonts/CatamaranExtraBold.svg#CatamaranExtraBold') format('svg');
+}

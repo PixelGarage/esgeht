@@ -9,6 +9,8 @@
 @pxl-name-field-bg-color-right: @pxl-color-main;
 @pxl-name-field-color: #fff;
 
+@start-text-area: (100%/1.4);
+
 
 // Mixins
 // -------------------------
@@ -98,96 +100,152 @@
       .field-name-field-your-name {
         position: absolute;
         bottom: 3%;
-        #pxl-mixins.center-horizontally;
+        right: @grid-gutter-width/2;
         padding: 0;
 
         .field-item {
           width: auto;
           font-family: @pxl-text-font-light;
-          #pxl-mixins.font-size-responsive(14px, 11px);
+          #pxl-mixins.font-size-responsive(14px, 12px);
           letter-spacing: 1px;
           line-height: 1.1;
           color: @text-color;
           white-space: nowrap;
 
           @media @mobile {
-            font-size: 4.5vw;
+            font-size: 4vw;
+          }
+          @media @tablet {
+            font-size: 12px;
           }
           @media @normal {
             font-size: 14px;
           }
           @media @wide {
-            font-size: 14px;
-          }
-
-          &:before, &:after {
-            content: '-';
-            padding: 0 3px;
+            font-size: 16px;
           }
         }
       }
 
-      .field-name-field-quote {
+      .quote-wrapper {
         position: absolute;
         overflow: hidden;
-        top: 80%;
+        top: 75%;
         left: 5%;
         width: 90%;
         height: auto;
-
-        .field-item {
-          font-family: @pxl-text-font-bold;
-          #pxl-mixins.font-size-responsive(15px, 10px);
-          color: @text-color;
-          line-height: 1.1;
-          text-align: center;
-          #pxl-mixins.hyphenate(auto);
-
-          @media @mobile {
-            font-size: 4.5vw;
-          }
-          @media @tablet {
-            font-size: 11px;
-          }
-          @media @normal {
-            font-size: 15px;
-          }
-          @media @wide {
-            font-size: 17px;
-          }
-        }
-      }
-
-      .field-name-rate-integration-1 {
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        z-index: 100;
-      }
-
-      .slogan-wrapper {
-        position: absolute;
-        top: 0;
-        width: 100%;
-        padding: 10px;
         font-family: @pxl-text-font-bold;
-        #pxl-mixins.font-size-responsive(22px, 17px);
-        color: white;
-        line-height: 1.1;
-        text-align: center;
-        #gradient.vertical(rgba(0,0,0,0.5), rgba(0,0,0,0.0), 0%, 75%);
+        #pxl-mixins.font-size-responsive(17px, 13px);
 
         @media @mobile {
-          font-size: 6.5vw;
+          font-size: 4.5vw;
         }
         @media @tablet {
-          font-size: 18px;
+          font-size: 13px;
         }
         @media @normal {
-          font-size: 24px;
+          font-size: 17px;
         }
         @media @wide {
-          font-size: 28px;
+          font-size: 20px;
+        }
+
+        .field-name-field-quote {
+          display: inline;
+
+          .field-items {
+            display: inline;
+
+            .field-item {
+              display: inline;
+              color: @text-color;
+              line-height: 1.1;
+              text-align: left;
+              #pxl-mixins.hyphenate(auto);
+            }
+          }
+        }
+
+        .post-claim {
+          display: inline;
+          color: @pxl-color-main;
+          line-height: 1.1;
+          text-align: left;
+        }
+      }
+
+      .group-icons {
+        position: absolute;
+        bottom: (100 - @start-text-area);
+        left: 0;
+        width: 100%;
+        padding: 5px 10px;
+        font-family: @pxl-text-font-light;
+        #pxl-mixins.font-size-responsive(16px, 12px);
+        color: white;
+        line-height: 1.1;
+        text-align: right;
+        #gradient.vertical(rgba(0,0,0,0.0), rgba(0,0,0,0.5), 0%, 100%);
+
+        .field-name-rate-integration-1 {
+          display: inline-block;
+          vertical-align: middle;
+          position: relative;
+          z-index: 100;
+
+          .field-item {
+            .rate-widget {
+              .rating-score {
+                display: inline-block;
+                vertical-align: middle;
+              }
+
+              .rate-thumbs-up-btn-up {
+                display: inline-block;
+                overflow: hidden;
+                vertical-align: middle;
+                width: 24px;
+                height: 24px;
+                text-indent: 100%;
+                white-space: nowrap;
+                background: url(../images/icon-herz-white.png) no-repeat center center / contain;
+              }
+            }
+
+            &:hover {
+              .rate-widget {
+                .rate-thumbs-up-btn-up {
+                  background: url(../images/icon-herz.png) no-repeat center center / contain;
+                }
+              }
+            }
+          }
+        }
+
+        .field-name-field-category {
+          display: inline-block;
+          vertical-align: middle;
+
+          .field-item {
+            overflow: hidden;
+            width: 24px;
+            height: 24px;
+            text-indent: 100%;
+            white-space: nowrap;
+
+            &.category-52 { // mobility
+              background: url(../images/icon-ferien-white.png) no-repeat center center / contain;
+            }
+            &.category-53 { // heat
+              background: url(../images/icon-dusche-white.png) no-repeat center center / contain;
+            }
+            &.category-54 { // food
+              background: url(../images/icon-cervelat-white.png) no-repeat center center / contain;
+            }
+            &.category-56 { // tecPost
+              background: url(../images/icon-bulb-white.png) no-repeat center center / contain;
+            }
+          }
         }
       }
     }
@@ -207,25 +265,35 @@
           }
         }
 
-        .field-name-field-quote {
-          .field-item {
-            @media @narrow {
-              font-size: 25px;
+        .quote-wrapper {
+          @media @narrow {
+            font-size: 25px;
+          }
+        }
+
+        .group-icons {
+          @media @narrow {
+            font-size: 22px;
+
+            .field-name-rate-integration-1 {
+              .field-item{
+                .rate-widget {
+                  .rate-thumbs-up-btn-up {
+                    width: 30px;
+                    height: 30px;
+                  }
+                }
+              }
+            }
+
+            .field-name-field-category {
+              .field-item {
+                width: 30px;
+                height: 30px;
+              }
             }
           }
-        }
 
-        .slogan-wrapper {
-          @media @narrow {
-            font-size: 37px;
-          }
-        }
-
-        .field-name-rate-integration-1 {
-          position: absolute;
-          left: 0;
-          bottom: 0;
-          z-index: 100;
         }
       }
     }

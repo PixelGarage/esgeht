@@ -1,9 +1,0 @@
-@font-face {
-    font-family: 'MuseoSans_700';
-    src: url('fonts/MuseoSans_700.eot');
-    src: url('fonts/MuseoSans_700.eot') format('embedded-opentype'),
-         url('fonts/MuseoSans_700.woff2') format('woff2'),
-         url('fonts/MuseoSans_700.woff') format('woff'),
-         url('fonts/MuseoSans_700.ttf') format('truetype'),
-         url('fonts/MuseoSans_700.svg#MuseoSans_700') format('svg');
-}

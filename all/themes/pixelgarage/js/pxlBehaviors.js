@@ -9,7 +9,7 @@
   /**
    * This behavior adds shadow to header on scroll.
    *
-  Drupal.behaviors.addHeaderShadow = {
+   Drupal.behaviors.addHeaderShadow = {
     attach: function (context) {
       var isFixedHeader = true;
 
@@ -72,7 +72,7 @@
   Drupal.behaviors.fullSizeClickableCards = {
     attach: function () {
       var $clickableItems = $('.view-post-grid .pe-item-no-ajax'),
-          $linkedItems = $('.view-post-grid .pe-item-linked');
+        $linkedItems = $('.view-post-grid .pe-item-linked');
 
       $clickableItems.once('click', function () {
         $(this).on('click', function () {
@@ -90,13 +90,17 @@
     }
   };
 
+  /**
+   * Implements all filter buttons as toggle buttons.
+   * @type {{attach: Drupal.behaviors.createToggleFilters.attach}}
+   */
   Drupal.behaviors.createToggleFilters = {
-    attach: function() {
+    attach: function () {
       var $categoryWrapper = $('#edit-field-category-tid-wrapper'),
-          $categoryFilters = $categoryWrapper.find('.form-type-bef-link'),
-          $activeFilter = $categoryFilters.find('>a.active'),
-          $categoryReset = $categoryWrapper.find('.form-item-edit-field-category-tid-all'),
-          categoryResetLink = $categoryReset.find('>a').attr('href');
+        $categoryFilters = $categoryWrapper.find('.form-type-bef-link'),
+        $activeFilter = $categoryFilters.find('>a.active'),
+        $categoryReset = $categoryWrapper.find('.form-item-edit-field-category-tid-all'),
+        categoryResetLink = $categoryReset.find('>a').attr('href');
 
       //
       // hide reset filter and make active filter a toggle filter
@@ -108,13 +112,17 @@
     }
   };
 
+  /**
+   * Implements the sort button as toggle button.
+   * @type {{attach: Drupal.behaviors.createToggleSort.attach}}
+   */
   Drupal.behaviors.createToggleSort = {
-    attach: function() {
+    attach: function () {
       var $sortWrapper = $('.views-widget-sort-by'),
-          $sortItems = $sortWrapper.find('.form-type-bef-link'),
-          $activeSort = $sortItems.find('>a.active'),
-          $sortReset = $sortWrapper.find('.form-item-edit-sort-by-created'),
-          sortResetLink = $sortReset.find('>a').attr('href');
+        $sortItems = $sortWrapper.find('.form-type-bef-link'),
+        $activeSort = $sortItems.find('>a.active'),
+        $sortReset = $sortWrapper.find('.form-item-edit-sort-by-created'),
+        sortResetLink = $sortReset.find('>a').attr('href');
 
       //
       // hide reset filter and make active filter a toggle filter
@@ -122,6 +130,29 @@
 
       if ($activeSort) {
         $activeSort.attr('href', sortResetLink);
+      }
+    }
+  };
+
+  /**
+   * Implements the reset behavior of all buttons, e.g. de/activation of reset button
+   * according to the sort and filter button states.
+   *
+   * @type {{attach: Drupal.behaviors.activateResetButton.attach}}
+   */
+  Drupal.behaviors.activateResetButton = {
+    attach: function () {
+      var $toggleFilterWrapper = $('#toggle-filters-wrapper'),
+        $categoryWrapper = $toggleFilterWrapper.find('#edit-field-category-tid-wrapper'),
+        $sortWrapper = $toggleFilterWrapper.find('.views-widget-sort-by'),
+        $resetCategoryLink = $categoryWrapper.find('.form-item-edit-field-category-tid-all > a'),
+        $resetSortLink = $sortWrapper.find('.form-item-edit-sort-by-created > a'),
+        $resetButton = $toggleFilterWrapper.find('.views-reset-button > button');
+
+      //
+      // de/activate reset button
+      if ($resetCategoryLink.hasClass('active') && $resetSortLink.hasClass('active')) {
+        $resetButton.addClass('active');
       }
     }
   };

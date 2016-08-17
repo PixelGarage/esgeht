@@ -21,12 +21,12 @@
   color: @color;
   outline: none;
   #pxl-mixins.border-radius(@radius);
-  border: 1px solid @bg-color;
+  border: 2px solid @bg-color;
   background-color: @bg-color;
-  opacity: 1.0;
 
   &:hover, &:focus {
-    opacity: 0.6;
+    color: @bg-color;
+    background-color: @color;
   }
 }
 

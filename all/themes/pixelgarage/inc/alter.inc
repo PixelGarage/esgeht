@@ -373,6 +373,7 @@ function pixelgarage_postcard_draw_pdf_alter(&$tcpdf_obj, &$pdf_uri, &$options) 
   //
   // get post node from options
   $post = $options['post_node'];
+  $post_view = node_view($post, 'teaser');
 
   //
   // create hires image from node image (pdf resolution), if possible
@@ -389,42 +390,55 @@ function pixelgarage_postcard_draw_pdf_alter(&$tcpdf_obj, &$pdf_uri, &$options) 
   $img_style_path = $img_style_sw->realpath();
 
   //
-  // get banner image path from theme
-  global $language, $base_url;
-  switch($language->language) {
-    case 'de':
-    default:
-      $ext = '_d.png';
-      break;
-    case 'fr':
-      $ext = '_f.png';
-      break;
-    case 'en':
-      $ext = '_e.png';
-      break;
+  // get images
+  $path = drupal_get_path('theme', 'pixelgarage') . '/images/';
+  $gradient_img_path = $path . 'gradient_bg_bottom.png';
+  $rateIcon = $path . 'icon-herz-white.png';
+
+  // get category icon
+  $categoryIcon = false;
+  if (!empty($post->field_category)) {
+    $category_tid = $post->field_category[$post->language][0]['tid'];
+    switch ($category_tid) {
+      case '52': // mobility
+        $categoryIcon = $path . 'icon-ferien-white.png';
+        break;
+      case '53': // household
+        $categoryIcon = $path . 'icon-dusche-white.png';
+        break;
+      case '54': // food
+        $categoryIcon = $path . 'icon-cervelat-white.png';
+        break;
+      default:
+        $categoryIcon = false;
+    }
   }
-  $banner_img_path = drupal_get_path('theme', 'pixelgarage') . '/images/logo_banner' . $ext;
 
   //
-  // get gradient image
-  $gradient_img_path = drupal_get_path('theme', 'pixelgarage') . '/images/gradient_bg.png';
+  // get rating score
+  $rate_html = $post_view['rate_esgeht']['#markup'];
+  $score_start = strpos($rate_html, '"rating-score">') + 15;
+  $rate_html = substr($rate_html, $score_start);
+  $score_end = strpos($rate_html, '</span>');
+  $score = substr($rate_html, 0, $score_end);
 
   //
   // get strings from post
-  $slogan = t('Nachhaltig bis 2050');
-  $name = $post->field_name[$post->language][0]['value'];
   $quote = $post->field_quote[$post->language][0]['value'];
-  $your_name = '- ' . $post->field_your_name[$post->language][0]['value'] . ' -';
+  $slogan = t('#EsGeht');
+  $html_quote = '<span>' . $quote . '</span><span style="color:#ff0000"> '. $slogan . '</span>';
+  $your_name = $post->field_your_name[$post->language][0]['value'];
 
 
+  //
   //
   // Draw the postcard
   //
   // set pdf specifc settings
   $tcpdf_obj->SetCreator(PDF_CREATOR);
-  $tcpdf_obj->SetAuthor('FürDich.org');
-  $tcpdf_obj->SetTitle('Postcard created by FürDich.org');
-  $tcpdf_obj->SetSubject('Ja zur Grünen Wirtschaft');
+  $tcpdf_obj->SetAuthor('EsGeht.org');
+  $tcpdf_obj->SetTitle('Postcard created by EsGeht.org');
+  $tcpdf_obj->SetSubject('Ja zur Grünen Wirtschaft am 25. September 2016');
   $tcpdf_obj->SetKeywords('Postcard, Grüne Wirtschaft, tcpdf, PDF, Drupal, Pixelgarage');
   $tcpdf_obj->SetMargins(0, 0, 0);
 
@@ -432,71 +446,56 @@ function pixelgarage_postcard_draw_pdf_alter(&$tcpdf_obj, &$pdf_uri, &$options) 
   $bMargin = $tcpdf_obj->getBreakMargin();
   $tcpdf_obj->SetAutoPageBreak(false, 0);
 
-  // line and fill color
+  // set line, draw and fill colors
   //$tcpdf_obj->SetFillColor(128, 128, 128);
   //$tcpdf_obj->SetDrawColor(128);
   $tcpdf_obj->SetLineWidth(0.8);
   $line_style = array('width' => 0.6, 'cap' => 'round', 'join' => 'miter', 'dash' => 0, 'color' => array(255, 255, 255));
 
-  // fill background with green
-  $bg_color = array(155, 195, 27); // green (#9bc31b)
+  // fill background with white
+  $bg_color = array(255, 255, 255);
   $tcpdf_obj->Rect(0, 0, 105, 148, 'F', array(), $bg_color);
 
   // draw post image (high-resolution)
   $tcpdf_obj->Image($img_style_path, 0, 0, 105, 105, '', '', '', false, 300, '', false, false, 0, 'CT');
 
-  // draw banner image (418x161px)
-  $tcpdf_obj->Image($banner_img_path, 5.25, 82.88, 94.5, 0, '', '', '', false, 300, '', false, false, 0);
-
   // draw linear gradient background
-  $tcpdf_obj->Image($gradient_img_path,0, 0, 105, 0, '', '', '', false, 300, '', false, false, 0);
-
-
-  // draw slogan with dashes
-  $tcpdf_obj->Line(5, 7, 10, 7, $line_style);
-  $tcpdf_obj->Line(95, 7, 100, 7, $line_style);
-  $tcpdf_obj->addFont('museosans_900', '', 'museosans_900');
-  $tcpdf_obj->setFont('museosans_900');//, null, 'museosans_900', false);
-  $tcpdf_obj->setFontSize(22);
-  $tcpdf_obj->SetTextColor(255, 255, 255);
-  $tcpdf_obj->setXY(0,2);
-  // Format: Cell($w, $h=0, $txt='', $border=0, $ln=0, $align='', $fill=false, $link='', $stretch=0, $ignore_min_height=false, $calign='T', $valign='M')
-  $tcpdf_obj->Cell(0, 0, $slogan, 0, 0, 'C', false);
+  $tcpdf_obj->Image($gradient_img_path,0, 95, 105, 10, '', '', '', false, 300, '', false, false, 0);
 
   // draw quote
-  // Format: writeHTML($html, $ln=true, $fill=false, $reseth=false, $cell=false, $align='')
-  // Format: writeHTMLCell($w, $h, $x, $y, $html='', $border=0, $ln=0, $fill=false, $reseth=true, $align='', $autopadding=true)
-  $tcpdf_obj->addFont('museosans_900', '', 'museosans_900');
-  $tcpdf_obj->setFont('museosans_900', 'B');//, null, 'museosans_900', false);
-  $tcpdf_obj->setFontSize(17);
-  $tcpdf_obj->SetTextColor(255, 255, 255);
-  $tcpdf_obj->setCellHeightRatio(1.1);
-  $tcpdf_obj->setXY(5.25,118.4);
   // Format: MultiCell($w, $h, $txt, $border=0, $align='J', $fill=false, $ln=1, $x='', $y='', $reseth=true, $stretch=0, $ishtml=false, $autopadding=true, $maxh=0, $valign='T', $fitcell=false)
-  $tcpdf_obj->MultiCell(94.5, 17, $quote, 0, 'C', false, 1);
+  // Format: writeHTMLCell($w, $h, $x, $y, $html='', $border=0, $ln=0, $fill=false, $reseth=true, $align='', $autopadding=true)
+  $tcpdf_obj->addFont('CatamaranExtrabold', '', 'catamaranextrabold', false);
+  $tcpdf_obj->setFont('CatamaranExtrabold', 'B'); //, null, 'catamaranextrabold', false);
+  $tcpdf_obj->setFontSize(17);
+  $tcpdf_obj->SetTextColor(0, 0, 0);
+  $tcpdf_obj->setCellHeightRatio(1.2);
+  $tcpdf_obj->setXY(5.25, 111);
+  $tcpdf_obj->writeHTMLCell(94.5, 25, 5.25, 111, $html_quote, 0, 1);
+
 
   // draw your name
-  $tcpdf_obj->addFont('MuseoSans_300', '', 'museosans_300');
-  $tcpdf_obj->setFont('MuseoSans_300', '', null, 'museosans_300', false);
+  // Format: Cell($w, $h=0, $txt='', $border=0, $ln=0, $align='', $fill=false, $link='', $stretch=0, $ignore_min_height=false, $calign='T', $valign='M')
+  $tcpdf_obj->addFont('CatamaranLight', '', 'catamaranlight', false);
+  $tcpdf_obj->setFont('catamaranlight', ''); //, null, 'catamaranlight', false);
   $tcpdf_obj->setFontSize(10);
+  $tcpdf_obj->SetTextColor(0, 0, 0);
+  $tcpdf_obj->setXY(5.25,140);
+  $tcpdf_obj->Cell(94.5, 0, $your_name, 0, 0, 'R', false);
+
+  // draw score, rate and category icons from right to left
+  $xPos = 89.75;  // right margin position
+  $yPos = 95;
+  if ($categoryIcon) {
+    $tcpdf_obj->Image($categoryIcon, $xPos+1, $yPos+1, 8, 8, '', '', '', false, 300, '', false, false, 0, 'CM');
+    $xPos -= 10;
+  }
+  $tcpdf_obj->Image($rateIcon, $xPos+1, $yPos+1, 8, 8, '', '', '', false, 300, '', false, false, 0, 'CM');
+  $width = $xPos - 5.25;
+  $tcpdf_obj->setFontSize(17);
   $tcpdf_obj->SetTextColor(255, 255, 255);
-  $tcpdf_obj->setXY(0,140);
-  // Format: Cell($w, $h=0, $txt='', $border=0, $ln=0, $align='', $fill=false, $link='', $stretch=0, $ignore_min_height=false, $calign='T', $valign='M')
-  $tcpdf_obj->Cell(0, 0, $your_name, 0, 0, 'C', false);
-
-  // draw child name
-  $tcpdf_obj->addFont('Pacifico', '', 'pacifico');
-  $tcpdf_obj->setFont('Pacifico');
-  $tcpdf_obj->SetTextColor(155, 195, 27); // green (#9bc31b)
-  $tcpdf_obj->setFontSize(24);
-  $tcpdf_obj->StartTransform();
-  $tcpdf_obj->setXY(5.25,103);
-  $tcpdf_obj->Rotate(2);
-  // Format: Cell($w, $h=0, $txt='', $border=0, $ln=0, $align='', $fill=false, $link='', $stretch=0, $ignore_min_height=false, $calign='T', $valign='M')
-  $tcpdf_obj->Cell(94.5, 0, $name, 0, 0, 'C', false);
-  // rotate the text
-  $tcpdf_obj->StopTransform();
-
+  $tcpdf_obj->setXY(5.25,95);
+  $tcpdf_obj->Cell($width, 10, $score, 0, 0, 'R', false);
 
   // restore auto-page-break status
   $tcpdf_obj->SetAutoPageBreak(true, $bMargin);

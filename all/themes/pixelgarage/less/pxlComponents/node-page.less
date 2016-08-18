@@ -50,16 +50,19 @@
         #pxl-mixins.wysiwyg-body(17px);
 
         p {
+          font-family: @pxl-text-font-light;
           margin-bottom: 30px;
           line-height: 22px;
         }
 
         a {
-          font-family: @pxl-text-font-bold;
+          font-family: @pxl-text-font-light;
           color: @link-color;
+          text-decoration: underline;
 
           &:focus, &:hover {
             color: @link-hover-color;
+            text-decoration: none;
           }
         }
 

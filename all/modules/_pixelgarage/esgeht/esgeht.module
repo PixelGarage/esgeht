@@ -9,7 +9,7 @@
 /**
  * Implements hook_cron().
  */
-function hso_importer_cron() {
+function esgeht_cron() {
   variable_set('esgeht_cron_last_run', REQUEST_TIME);
 }
 

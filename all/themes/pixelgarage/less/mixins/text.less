@@ -112,7 +112,16 @@
       background: none;
     }
 
-    img, embed, video, audio, iframe {
+    img {
+      display: inline-block;
+      vertical-align: middle;
+      overflow: hidden;
+      margin: 0 auto;
+      padding: @grid-gutter-width/2;
+      max-width: 100%;
+    }
+
+    embed, video, audio, iframe {
       display: block;
       overflow: hidden;
       margin: 20px auto;

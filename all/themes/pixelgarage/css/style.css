@@ -13185,6 +13185,7 @@ form.webform-client-form .webform-component label {
   width: auto;
   font-family: 'Catamaran-ExtraBold', sans-serif;
   font-size: 14px;
+  font-weight: normal;
   letter-spacing: normal;
   text-align: left;
   text-transform: none;

@@ -9673,7 +9673,7 @@ ul.language-switcher-locale-url > li span.locale-untranslated {
   vertical-align: middle;
   overflow: hidden;
   margin: 0 auto;
-  padding: 15px;
+  padding: 0;
   max-width: 100%;
 }
 .node.node-webform .row .col-sm-12 .field-name-body embed,
@@ -9939,7 +9939,7 @@ ul.language-switcher-locale-url > li span.locale-untranslated {
   vertical-align: middle;
   overflow: hidden;
   margin: 0 auto;
-  padding: 15px;
+  padding: 0;
   max-width: 100%;
 }
 .node-page .row div.col-sm-12 .field-name-body embed,
@@ -10515,7 +10515,7 @@ ul.language-switcher-locale-url > li span.locale-untranslated {
   vertical-align: middle;
   overflow: hidden;
   margin: 0 auto;
-  padding: 15px;
+  padding: 0;
   max-width: 100%;
 }
 .node.node-donate .row .col-sm-12 .field-name-body embed,
@@ -10734,7 +10734,7 @@ ul.language-switcher-locale-url > li span.locale-untranslated {
   vertical-align: middle;
   overflow: hidden;
   margin: 0 auto;
-  padding: 15px;
+  padding: 0;
   max-width: 100%;
 }
 .node.node-donate .row .col-sm-12 .field-name-field-account-details embed,
@@ -10975,7 +10975,7 @@ ul.language-switcher-locale-url > li span.locale-untranslated {
   vertical-align: middle;
   overflow: hidden;
   margin: 0 auto;
-  padding: 15px;
+  padding: 0;
   max-width: 100%;
 }
 .node.node-testimonial .row .col-sm-12 .field-name-body embed,
@@ -11297,7 +11297,7 @@ ul.language-switcher-locale-url > li span.locale-untranslated {
   vertical-align: middle;
   overflow: hidden;
   margin: 0 auto;
-  padding: 15px;
+  padding: 0;
   max-width: 100%;
 }
 .node.node-facebook-post.view-mode-teaser .row div.col-sm-12 .field-name-body embed,
@@ -11542,7 +11542,7 @@ ul.language-switcher-locale-url > li span.locale-untranslated {
   vertical-align: middle;
   overflow: hidden;
   margin: 0 auto;
-  padding: 15px;
+  padding: 0;
   max-width: 100%;
 }
 .node.node-facebook-post.view-mode-full .row div.col-sm-12 .field-name-body embed,
@@ -11847,7 +11847,7 @@ ul.language-switcher-locale-url > li span.locale-untranslated {
   vertical-align: middle;
   overflow: hidden;
   margin: 0 auto;
-  padding: 15px;
+  padding: 0;
   max-width: 100%;
 }
 .node.node-twitter-tweet-feed.view-mode-teaser .row div.col-sm-12 .field-name-field-tweet-contents embed,
@@ -12113,7 +12113,7 @@ ul.language-switcher-locale-url > li span.locale-untranslated {
   vertical-align: middle;
   overflow: hidden;
   margin: 0 auto;
-  padding: 15px;
+  padding: 0;
   max-width: 100%;
 }
 .node.node-twitter-tweet-feed.view-mode-full .row div.col-sm-12 .field-name-field-tweet-contents embed,

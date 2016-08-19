@@ -44,6 +44,26 @@
     font-size: 25px !important;
   }
 }
+.colored-text-block a {
+  font-family: 'Catamaran-ExtraBold', sans-serif !important;
+  font-size: 22px !important;
+  color: #fff !important;
+  text-decoration: none !important;
+}
+@media screen and (min-width: 480px) {
+  .colored-text-block a {
+    font-size: 4.58333333vw !important;
+  }
+}
+@media screen and (min-width: 768px) {
+  .colored-text-block a {
+    font-size: 25px !important;
+  }
+}
+.colored-text-block a:hover {
+  color: #fff !important;
+  text-decoration: none !important;
+}
 .colored-numbered-list {
   list-style: none;
   margin: 0;

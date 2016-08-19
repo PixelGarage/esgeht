@@ -13886,6 +13886,11 @@ header#navbar .navbar-top-container > .container .navbar-header a.logo {
   padding: 0;
   outline: none;
 }
+@media screen and (min-width: 64em) {
+  header#navbar .navbar-top-container > .container .navbar-header a.logo {
+    margin-left: -50px;
+  }
+}
 header#navbar .navbar-top-container > .container .navbar-header a.logo img {
   margin: 0;
   width: 150px;

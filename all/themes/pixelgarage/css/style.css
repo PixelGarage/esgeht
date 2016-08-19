@@ -9385,10 +9385,12 @@ ul.language-switcher-locale-url > li span.locale-untranslated {
 }
 .node.node-post div.row div.col-sm-12 .group-icons .field-name-rate-integration-1 .field-item .rate-widget .rating-score {
   display: inline-block;
+  margin: 0 3px;
   vertical-align: middle;
 }
 .node.node-post div.row div.col-sm-12 .group-icons .field-name-rate-integration-1 .field-item .rate-widget .rate-thumbs-up-btn-up {
   display: inline-block;
+  margin: 0 3px;
   overflow: hidden;
   vertical-align: middle;
   width: 24px;
@@ -9403,6 +9405,7 @@ ul.language-switcher-locale-url > li span.locale-untranslated {
 .node.node-post div.row div.col-sm-12 .group-icons .field-name-field-category {
   display: inline-block;
   vertical-align: middle;
+  margin: 0 3px;
 }
 .node.node-post div.row div.col-sm-12 .group-icons .field-name-field-category .field-item {
   overflow: hidden;
@@ -12253,7 +12256,7 @@ ul.language-switcher-locale-url > li span.locale-untranslated {
   -webkit-border-radius: 0;
   border-radius: 0;
   border: none;
-  border-bottom: 1px solid #ff0000;
+  border-bottom: 2px solid #ff0000;
   background: none;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
@@ -13224,7 +13227,7 @@ form.webform-client-form .webform-component .form-managed-file {
 form.webform-client-form .webform-component input.form-text,
 form.webform-client-form .webform-component textarea {
   padding: 0 10px;
-  font-family: 'Catamaran-Light', sans-serif;
+  font-family: 'Catamaran-ExtraBold', sans-serif;
   font-size: 14px;
   color: #000000;
   line-height: 1.2;

@@ -74,10 +74,6 @@ function pixelgarage_preprocess_rate_template_thumbs_up(&$vars) {
 /* =============================================================================
  *      Front Masonry
  * ========================================================================== */
-function pixelgarage_preprocess_views_view(&$vars) {
-}
-
-
 /**
  * Adapts the proximity view, so that always two randomly chosen testimonials are visible
  * in the masonry.
@@ -100,6 +96,12 @@ function pixelgarage_preprocess_views_view_proximity (&$vars) {
 
     // create dummy rows and call proximity view
     $vars['rows'] = array_fill(0, $count, null);
+  }
+  else if ($category_filter) {
+    //
+    // show special testimonial for category at first place
+    $testimonials = _get_linked_testimonials(true, $exposed_data['field_category_tid']);
+    $vars['testimonials'] = $testimonials;
   }
 
   //
@@ -139,7 +141,7 @@ function _randomly_injected_testimonials(&$vars, $testimonials_per_page, $only_s
 /**
  * Gets the testimonials from the DB.
  */
-function _get_linked_testimonials($only_special_items = false) {
+function _get_linked_testimonials($only_special_items = false, $category_tid = false) {
   global $language;
   $testimonials = array();
 
@@ -151,7 +153,9 @@ function _get_linked_testimonials($only_special_items = false) {
     ->propertyCondition('status', NODE_PUBLISHED)
     ->fieldCondition('field_explains_category', 'value', $only_special_items ? 1 : 0)
     ->propertyCondition('language', $language->language);
-
+  if ($category_tid) {
+    $query->fieldCondition('field_category_multiple', 'tid', $category_tid);
+  }
   $result = $query->execute();
   if ($result && !empty($result['node'])) {
     $testimonials = node_load_multiple(array_keys($result['node']));

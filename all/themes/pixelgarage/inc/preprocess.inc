@@ -135,7 +135,14 @@ function _randomly_injected_testimonials(&$vars, $testimonials_per_page, $only_s
   $pager = $vars['view']->query->pager;
   $injected_testimonials = array();
   _define_injected_items_of_page($pager, $linked_testimonials, $testimonials_per_page, $injected_testimonials);
-  $vars['testimonials'] = array_merge($vars['testimonials'], $injected_testimonials);
+  if (empty($vars['testimonials'])) {
+    $vars['testimonials'] = $injected_testimonials;
+  }
+  else {
+    foreach ($injected_testimonials as $index => $injected_testimonial) {
+      $vars['testimonials'][$index] = $injected_testimonial;
+    }
+  }
 }
 
 /**
@@ -262,7 +269,7 @@ function _define_injected_items_of_page($pager, $items, $items_per_page, &$injec
   // get injected items for current page at random list places
   $keys = _distinct_random_numbers(0, $posts_per_page-1, $items_per_page);
   foreach ($keys as $index => $key) {
-    if ($total_items > ($start_index + $index)) {
+    if ($total_posts > ($start_index + $index)) {
       $injected_items[$key] = $items[$start_index + $index];
     }
   }

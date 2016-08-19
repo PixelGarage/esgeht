@@ -420,7 +420,7 @@ function pixelgarage_postcard_draw_pdf_alter(&$tcpdf_obj, &$pdf_uri, &$options) 
   $score_start = strpos($rate_html, '"rating-score">') + 15;
   $rate_html = substr($rate_html, $score_start);
   $score_end = strpos($rate_html, '</span>');
-  $score = substr($rate_html, 0, $score_end);
+  $score = max(1, (int)substr($rate_html, 0, $score_end));
 
   //
   // get strings from post

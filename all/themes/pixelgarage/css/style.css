@@ -13372,6 +13372,7 @@ form.webform-client-form .webform-component .form-managed-file input {
   position: relative;
   float: none;
   padding: 0;
+  width: 75%;
   font-size: 14px;
   color: #000000;
   text-align: left;

@@ -85,10 +85,11 @@ function pixelgarage_postcard_multi_step_webform_info_alter(&$info) {
     // previous step
     'prev step' => null,
     // next step id
-    'next step' => 'postcard delivery',
+    'next step' => null,
     // submission related node type
     'related node type' => 'post'
   );
+  /*
   $info['postcard delivery'] = array(
     // delivery webform node id
     'nid' =>  POSTCARD_DELIVERY_WEBFORM_ID,
@@ -97,6 +98,7 @@ function pixelgarage_postcard_multi_step_webform_info_alter(&$info) {
     // next step id
     'next step' => null,
   );
+  */
 
   return $info;
 }

@@ -316,7 +316,13 @@
 
       @media @tablet {
         .grid-sizer, .pe-item {
-          width: 31.33333%;
+          width: 31.3333333%;
+        }
+      }
+
+      @media @normal {
+        .grid-sizer, .pe-item {
+          width: (25% - 3*@grid-gutter-dist/4);
         }
       }
 
@@ -325,7 +331,7 @@
         overflow: hidden;
         margin: 0 0 @grid-gutter-dist !important;
         opacity: 0.9;
-        #pxl-mixins.transition(opacity 1s);
+        //#pxl-mixins.transition(opacity 1s);
 
         &.shown {
           opacity: 1.0;

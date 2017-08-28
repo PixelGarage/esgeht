@@ -55,70 +55,155 @@
     &::-webkit-input-placeholder  { text-align: @text-align; color: @color; } // Safari and Chrome
   }
 
+  //
   // responsive font size with minimum and maximum size
-  .font-size-responsive(@max-size: @resp-font-size-max; @min-size: @resp-font-size-min) {
-    font-size: max(@min-size, @max-size*5/8);   // min = 480 / 768 * max
+  .font-size-responsive(@max-size: @resp-text-size-max; @med-size: @resp-text-size-med; @min-size: @resp-text-size-min) {
+    @min-max-breakpoint: unit((48 * @min-size / @med-size), em);
+    @font-break:  ~"screen and (min-width: @{min-max-breakpoint})";
 
-    @media @narrow {
-      font-size: max(unit(@max-size/7.68, vw), unit(@min-size/4.8, vw));
+    // min font size
+    font-size: @min-size;
+
+    // dynamic font size
+    @media @font-break {
+      font-size: unit(@med-size/7.68, vw);
     }
+
+    // maed.font size
     @media @tablet {
+      font-size: @med-size;
+    }
+    // max.font size
+    @media @normal {
       font-size: @max-size;
     }
   }
 
+  //
+  // title, subtitle, text styles
+  .title() {
+    font-family: @pxl-title-font;
+    .font-size-responsive(@resp-title-size-max, @resp-title-size-med, @resp-title-size-min);
+    letter-spacing: @title-letter-spacing;
+    line-height: @title-line-height;
+    text-align: @title-text-align;
+    color: @text-color;
+  }
 
-  .wysiwyg-body(@text-size: @resp-font-size-max; @title-size: @resp-title-size-max; @subtitle-size: @resp-subtitle-size-max) {
-    h1, h2, h3, h4, h5, h6 {
-      font-family: @pxl-title-font;
-      font-weight: bold;
-      .font-size-responsive(@subtitle-size, @resp-subtitle-size-min);
+  .subtitle() {
+    font-family: @pxl-subtitle-font;
+    .font-size-responsive(@resp-subtitle-size-max, @resp-subtitle-size-med, @resp-subtitle-size-min);
+    letter-spacing: @subtitle-letter-spacing;
+    line-height: @subtitle-line-height;
+    text-align: @subtitle-text-align;
+    color: @text-color;
+  }
+
+  .text() {
+    font-family: @pxl-text-font;
+    .font-size-responsive();
+    letter-spacing: @text-letter-spacing;
+    line-height: @text-line-height;
+    text-align: @text-text-align;
+    color: @text-color;
+  }
+
+  .subtext() {
+    font-family: @pxl-text-font;
+    .font-size-responsive(@resp-subtext-size-max,@resp-subtext-size-med,@resp-subtext-size-min);
+    letter-spacing: @subtext-letter-spacing;
+    line-height: @subtext-line-height;
+    text-align: @subtext-text-align-small;
+
+    @media @tablet {
+      text-align: @subtext-text-align;
     }
-    h1, h2, h3 {
-      .font-size-responsive(@title-size, @resp-title-size-min);
+  }
+
+  .paragraph-first-letter() {
+    p::first-letter {
+      .title();
+      float: left;
+      vertical-align: top;
+    }
+  }
+
+  //
+  // WYSIWYG body
+  .wysiwyg-body() {
+    h1, h2, h3, .pxl-title {
+      margin: 10px auto 20px;
+      .title();
     }
 
-    p, tbody td {
-      font-family: @pxl-text-font;
-      .font-size-responsive(@text-size, @resp-font-size-min);
+    h4, h5, h6, .pxl-subtitle {
+      margin: 10px auto;
+      .subtitle();
+    }
+
+    p {
+      margin: 0 0 10px;
+      .text();
       .hyphenate;
     }
 
+    small, .pxl-subtext {
+      .subtext();
+    }
+
+    .pxl-quote {
+      .title();
+      text-align: center;
+    }
+
     a {
-      font-family: @pxl-text-font;
-      .font-size-responsive(@text-size, @resp-font-size-min);
+      .text();
       color: @link-color;
 
       &:hover, &:focus {
-        color: @link-hover-color;
-        text-decoration: none;
+        color: @link-color-hover;
+        text-decoration: @link-decoration-hover;
         background: none;
       }
     }
 
-    pre, address {
+    pre, address, i, em {
+      .text();
       font-family: @pxl-text-font-italic;
-      .font-size-responsive(@text-size);
     }
 
-    strong {
+    strong, b {
+      .text();
       font-family: @pxl-text-font-bold;
-      .font-size-responsive(@text-size + 2, 16px);
+    }
+
+    u {
+      .text();
+      color: @link-color;
+
+      &:hover, &:focus {
+        color: @link-hover-color;
+      }
+    }
+
+    mark {
+      .text();
+      background-color: #ff0;
     }
 
     hr {
       border: 0;
-      border-bottom: 2px solid @text-color;
+      border-bottom: 2px solid @pxl-color-border-active;
       background: none;
     }
 
     img {
-      display: inline-block;
-      vertical-align: middle;
+      display: block;
       overflow: hidden;
-      margin: 0 auto;
+      margin: 20px auto;
       padding: 0;
       max-width: 100%;
+      height: auto;
     }
 
     embed, video, audio, iframe {
@@ -126,13 +211,12 @@
       overflow: hidden;
       margin: 20px auto;
       padding: @grid-gutter-width/2;
-      width: 100% !important;
+      width: 100%;
       max-width: 100%;
-      height: auto !important;
-    }
-    embed, video, iframe {
+      height: auto;
       min-height: 350px;
     }
   }
+
 
 }

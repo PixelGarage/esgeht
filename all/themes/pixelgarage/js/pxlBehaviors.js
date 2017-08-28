@@ -65,6 +65,20 @@
    */
 
   /**
+   * Set a class defining the device, e.g. mobile-device or desktop.
+   */
+  Drupal.behaviors.setMobileClass = {
+    attach: function (context) {
+      if (isMobile.any) {
+        $('body').addClass('mobile-device');
+      }
+      else {
+        $('body').addClass('desktop');
+      }
+    }
+  };
+
+  /**
    * Allows full size clickable cards (open node in full size).
    *
    * Remark: Disable this behavior, if flip card are used

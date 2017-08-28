@@ -4,6 +4,18 @@
  * Bootstrap 12 template for Display Suite.
  */
 //
+// shariff button definition
+libraries_load('shariff', 'naked');
+$shariff_attrs = array(
+  'data-services' => '["facebook","twitter","mail","whatsapp"]',
+  'data-orientation' => "horizontal",
+  'data-mail-url' => "mailto:",
+  'data-mail-subject' => variable_get('shariff_mail_subject', t("Zweimal JA zur AHV-Reform...")),
+  'data-mail-body' => variable_get('shariff_mail_body', t('Zweimal JA zur AHV-Reform...')),
+  'data-lang' => "de",
+);
+
+//
 // set language dependent heading
 $content = $variables['content'];
 $post_title = t('Support campaign!');
@@ -21,14 +33,8 @@ $post_claim = t('#EsGeht');
       <div class="post-heading">
         <?php print $post_heading ?>
       </div>
-      <div class="social-share">
-        <!-- AddtoAny social share buttons -->
-        <div class="a2a_kit a2a_kit_size_32 a2a_default_style">
-          <a class="a2a_button_facebook"></a>
-          <a class="a2a_button_twitter"></a>
-          <a class="a2a_button_google_plus"></a>
-        </div>
-        <script async src="https://static.addtoany.com/menu/page.js"></script>
+      <div class="social-buttons">
+        <div class="shariff" <?php print drupal_attributes($shariff_attrs); ?>></div>
       </div>
     </div>
     <div class="node-post-wrapper">
@@ -50,7 +56,6 @@ $post_claim = t('#EsGeht');
         <?php print render($content['field_quote']); ?>
       <?php endif; ?>
       <?php print render($content['field_your_name']); ?>
-      <?php print render($content['group_icons']); ?>
     </<?php print $central_wrapper; ?>>
   </div>
 </<?php print $layout_wrapper ?>>

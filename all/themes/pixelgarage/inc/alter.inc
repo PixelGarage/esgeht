@@ -163,10 +163,11 @@ function _post_data_step_presave(&$step_options, $node, &$submission) {
   // update submission data on the post and save it
   $post->title = t('It works for @you', array('@you' => $submission->data[17][0])); // create node title
   $post->field_e_mail[$post->language][0]['email'] = $submission->data[19][0]; // email
-  $post->field_image[$post->language][0]['fid'] = $submission->data[1][0]; // fid image
-  $post->field_category[$post->language][0]['tid'] = $submission->data[20][0]; // Category
   $post->field_your_name[$post->language][0]['value'] = $submission->data[17][0]; // your name
+  $post->field_image[$post->language][0]['fid'] = $submission->data[1][0]; // fid image
   $post->field_quote[$post->language][0]['value'] = substr($submission->data[5][0], 0, 100); // Quote
+  $post->field_age[$post->language][0]['value'] = $submission->data[20][0]; // Age
+  $post->field_profession[$post->language][0]['value'] = $submission->data[20][0]; // Profession
   $post = node_submit($post);
   node_save($post);
 
@@ -174,6 +175,11 @@ function _post_data_step_presave(&$step_options, $node, &$submission) {
   // add step options about created post
   $step_options['post_nid'] = $post->nid;
   $step_options['post_status'] = $status;
+
+  //
+  // add related post id to submission
+  _set_submission_value($master, $submission, 'post_nid', $post->nid);
+  return;
 
   //
   // create postcard and high resolution image and add it to post node, if available
@@ -240,10 +246,6 @@ function _post_data_step_presave(&$step_options, $node, &$submission) {
     node_save($post);
 
   }
-
-  //
-  // add related post id to submission
-  _set_submission_value($master, $submission, 'post_nid', $post->nid);
 
   //
   // add postcard to next webform node

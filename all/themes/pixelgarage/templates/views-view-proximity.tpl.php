@@ -111,22 +111,4 @@
     </div>
   <?php endif; ?>
 
-  <!--
-  Content container that can be used to add any loaded content (via AJAX or direct call)
-  -->
-  <div id="pe-content-container-<?php print $container_index; ?>" class="pe-content-container" role="page">
-    <div class="content">
-      <?php if (!$use_modal_dlg && $rendered_item) print $rendered_item; ?>
-    </div>
-  </div>
-
 </div>
-
-<!-- AddtoAny social share buttons -->
-<div class="a2a_kit a2a_kit_size_32 a2a_floating_style a2a_vertical_style">
-  <a class="a2a_button_facebook"></a>
-  <a class="a2a_button_twitter"></a>
-  <a class="a2a_button_google_plus"></a>
-</div>
-
-<script async src="https://static.addtoany.com/menu/page.js"></script>

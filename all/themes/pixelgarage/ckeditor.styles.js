@@ -11,28 +11,41 @@ if(typeof(CKEDITOR) !== 'undefined') {
     CKEDITOR.addStylesSet( 'drupal',
     [
             /* Kulturfolger styles */
-            { name : 'Colored title',
-                    element : 'p',
-                    attributes : {
-                            'class' : 'colored-title' }
-            },
-            { name : 'Colored text block',
-                    element : 'p',
-                    attributes : {
-                            'class' : 'colored-text-block' }
-            },
-            { name : 'Colored numbered list',
-                    element : 'ol',
-                    attributes : {
-                            'class' : 'colored-numbered-list' }
-            }
+      {
+        name: 'Normal',
+        element: 'p',
+        attributes: {
+          'class': 'pxl-normal'
+        }
+      },
+      {
+        name: 'Title',
+        element: 'p',
+        attributes: {
+          'class': 'pxl-title'
+        }
+      },
+      {
+        name: 'Subtitle',
+        element: 'p',
+        attributes: {
+          'class': 'pxl-subtitle'
+        }
+      },
+      {
+        name: 'Subtext',
+        element: 'p',
+        attributes: {
+          'class': 'pxl-subtext'
+        }
+      },
 
-            /* Block Styles */
+
+      /* Block Styles */
 
             // These styles are already available in the "Format" drop-down list, so they are
             // not needed here by default. You may enable them to avoid placing the
             // "Format" drop-down list in the toolbar, maintaining the same features.
-            /*
             { name : 'Paragraph'		, element : 'p' },
             { name : 'Heading 1'		, element : 'h1' },
             { name : 'Heading 2'		, element : 'h2' },
@@ -42,7 +55,6 @@ if(typeof(CKEDITOR) !== 'undefined') {
             { name : 'Heading 6'		, element : 'h6' },
             { name : 'Preformatted Text', element : 'pre' },
             { name : 'Address'			, element : 'address' },
-            */
 
             /* Inline Styles */
 

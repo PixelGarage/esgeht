@@ -186,5 +186,9 @@
 <footer class="footer">
   <div class="container">
     <?php print render($page['footer']); ?>
+
+    <?php if ($is_front): ?>
+      <div class="shariff" <?php print $shariff_attributes; ?>></div>
+    <?php endif; ?>
   </div>
 </footer>

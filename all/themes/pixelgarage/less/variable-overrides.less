@@ -34,17 +34,6 @@
 @brand-warning:         #f0ad4e;
 @brand-danger:          #d9534f;
 
-//== Scaffolding
-//
-@link-color:            @pxl-color-black;
-//** Link hover color set via `darken()` function.
-@link-hover-color:      @pxl-color-red;
-//** Link hover decoration.
-@link-hover-decoration: underline;
-
-@pxl-box-shadow: 0 0 4px rgba(100,100,100, 0.4);
-
-
 
 //== Typography
 //
@@ -54,6 +43,58 @@
 @text-color-field:      @pxl-color-black;
 @text-color-placeholder: @pxl-color-red;
 
+@title-letter-spacing: 0;
+@title-line-height: 1;
+@title-text-align: left;
+@title-text-align-small: left;
+
+@subtitle-letter-spacing: 0;
+@subtitle-line-height: 1.14em;
+@subtitle-text-align: left;
+@subtitle-text-align-small: left;
+
+@text-letter-spacing: 0;
+@text-line-height: 1.14em;
+@text-text-align: left;
+@text-text-align-small: left;
+
+@subtext-letter-spacing: 0;
+@subtext-line-height: 1.1667em;
+@subtext-text-align: left;
+@subtext-text-align-small: left;
+
+@form-letter-spacing: normal;
+@form-line-height: 1.15em;
+@form-text-align: left;
+
+@form-button-letter-spacing: normal;
+@form-button-line-height: 1;
+@form-button-text-align: center;
+
+//
+// responsive font sizes
+@resp-title-size-max:     30px;
+@resp-title-size-med:     30px;
+@resp-title-size-min:     22px;
+
+@resp-subtitle-size-max:  24px;
+@resp-subtitle-size-med:  24px;
+@resp-subtitle-size-min:  18px;
+
+@resp-text-size-max:      17px;
+@resp-text-size-med:      17px;
+@resp-text-size-min:      15px;
+
+@resp-subtext-size-max:   14px;
+@resp-subtext-size-med:   14px;
+@resp-subtext-size-min:   12px;
+
+@resp-button-size-max:    28px;
+@resp-button-size-med:    28px;
+@resp-button-size-min:    24px;
+
+//
+// selected element font size
 @font-size-base:          16px;
 @font-size-large:         ceil((@font-size-base * 1.25));
 @font-size-larger:        ceil((@font-size-base * 1.5));
@@ -62,26 +103,25 @@
 @font-size-min:          14px;
 
 //
-// responsive font sizes
-@resp-font-size:          2vw;
-@resp-font-size-min:      12px;
-@resp-font-size-max:      17px;
-
-@resp-subtitle-size:      2.6vw;
-@resp-subtitle-size-min:  18px;
-@resp-subtitle-size-max:  24px;
-
-@resp-title-size:         3.125vw;
-@resp-title-size-min:     22px;
-@resp-title-size-max:     30px;
-
-//
 // selected element font size
 @font-size-button-small:  20px;
 @font-size-button:        24px;
 @font-size-pane-title:    32px;
 @font-size-pane-subtitle: 20px;
 
+
+//== Scaffolding
+// links
+@link-color:            @text-color;
+//** Link hover decoration.
+@link-decoration:       none;
+//** Link hover color set via `darken()` function.
+@link-color-hover:      @pxl-color-active;
+//** Link hover decoration.
+@link-decoration-hover: underline;
+
+// shadows
+@pxl-box-shadow: 0 0 4px rgba(100,100,100, 0.4);
 
 
 //== Iconography

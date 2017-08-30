@@ -161,13 +161,13 @@ function _post_data_step_presave(&$step_options, $node, &$submission) {
   }
   //
   // update submission data on the post and save it
-  $post->title = t('It works for @you', array('@you' => $submission->data[17][0])); // create node title
+  $post->title = $submission->data[17][0]; // create node title
   $post->field_e_mail[$post->language][0]['email'] = $submission->data[19][0]; // email
   $post->field_your_name[$post->language][0]['value'] = $submission->data[17][0]; // your name
   $post->field_image[$post->language][0]['fid'] = $submission->data[1][0]; // fid image
   $post->field_quote[$post->language][0]['value'] = substr($submission->data[5][0], 0, 80); // Quote
-  $post->field_profession[$post->language][0]['value'] = $submission->data[20][0]; // Profession
-  $post->field_age[$post->language][0]['value'] = $submission->data[21][0]; // Age
+  $post->field_profession[$post->language][0]['value'] = !empty($submission->data[20][0]) ? $submission->data[20][0] : ''; // Profession
+  $post->field_age[$post->language][0]['value'] = !empty($submission->data[21][0]) ? $submission->data[21][0] : 0; // Age
   $post = node_submit($post);
   node_save($post);
 

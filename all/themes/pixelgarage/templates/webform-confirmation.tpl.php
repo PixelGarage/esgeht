@@ -24,7 +24,10 @@
 module_load_include('inc', 'webform', 'includes/webform.submissions');
 
 $master = postcard_webform_master_form($node);
-$submission = webform_get_submission($master->nid, $sid);
+$submission = webform_get_submissions(array('nid' => $master->nid, 'sid' => $sid))[$sid];
+$post_nid = _webform_submission_value($master, 'post_nid', $submission);
+$post = node_load($post_nid);
+$rendered_post = node_view($post);
 
 $delivery_tnid = 18;
 $title = t('Thank you');
@@ -45,6 +48,7 @@ $url = '/';
   <div class="confirmation-title"><?php print $title; ?></div>
   <div class="confirmation-message"><?php print $message; ?></div>
 </div>
+<div class="rendered-node"><?php print render($rendered_post); ?></div>
 
 <div class="links">
   <a href="<?php print $url; ?>"><?php print t('Go back to home') ?></a>

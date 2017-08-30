@@ -19,7 +19,6 @@
  * - $url: The URL of the form (or for in-block confirmations, the same page).
  */
 
-// Donate confirmation
 // load webform submission includes
 module_load_include('inc', 'webform', 'includes/webform.submissions');
 
@@ -29,11 +28,12 @@ $post_nid = _webform_submission_value($master, 'post_nid', $submission);
 $post = node_load($post_nid);
 $rendered_post = node_view($post);
 
-$delivery_tnid = 18;
+$messages = drupal_get_messages();
+
 $title = t('Thank you');
 
 switch ($master->nid) {
-  case $delivery_tnid:
+  case 18:
     $message = t('for your investment into a safe AHV!');
     break;
   default:

@@ -5,14 +5,21 @@
  */
 //
 // shariff button definition
+global $base_url;
 libraries_load('shariff', 'naked');
+$node_url = $base_url . '/node/' . $node->nid;
+$mail_subject = t("@title sagt zweimal JA zur AHV-Reform...", array('@title' => $node->title));
+$html_body =  $node->field_quote[LANGUAGE_NONE][0]['value'] . l("<p>Hier geht's zum Beitrag</p>", $node_url, array('html' => true));
+$mail_descr = drupal_html_to_text($html_body);
+
 $shariff_attrs = array(
   'data-services' => '["facebook","twitter","mail","whatsapp"]',
   'data-orientation' => "horizontal",
   'data-mail-url' => "mailto:",
-  'data-mail-subject' => variable_get('shariff_mail_subject', t("Zweimal JA zur AHV-Reform...")),
-  'data-mail-body' => variable_get('shariff_mail_body', t('Zweimal JA zur AHV-Reform...')),
+  'data-mail-subject' => variable_get('shariff_mail_subject', $mail_subject),
+  'data-mail-body' => variable_get('shariff_mail_body', $mail_descr),
   'data-lang' => "de",
+  'data-url' => $node_url,
 );
 
 //

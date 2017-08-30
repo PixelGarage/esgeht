@@ -10408,13 +10408,13 @@ body.desktop .node-post-page-wrapper .node-post-header .social-buttons .shariff 
 @media screen and (min-width: 64em) {
   .node.node-post div.row div.col-sm-12 .field-name-field-your-name .field-item,
   .node.node-post div.row div.col-sm-12 .profession-age-wrapper .field-item {
-    font-size: 12px;
+    font-size: 16px;
   }
 }
 @media screen and (min-width: 80em) {
   .node.node-post div.row div.col-sm-12 .field-name-field-your-name .field-item,
   .node.node-post div.row div.col-sm-12 .profession-age-wrapper .field-item {
-    font-size: 15px;
+    font-size: 16px;
   }
 }
 .node.node-post div.row div.col-sm-12 .field-name-field-your-name {
@@ -10473,12 +10473,12 @@ body.desktop .node-post-page-wrapper .node-post-header .social-buttons .shariff 
 }
 @media screen and (min-width: 64em) {
   .node.node-post div.row div.col-sm-12 .quote-wrapper {
-    font-size: 12px;
+    font-size: 16px;
   }
 }
 @media screen and (min-width: 80em) {
   .node.node-post div.row div.col-sm-12 .quote-wrapper {
-    font-size: 15px;
+    font-size: 16px;
   }
 }
 .node.node-post div.row div.col-sm-12 .quote-wrapper .field-name-field-quote {
@@ -10492,13 +10492,6 @@ body.desktop .node-post-page-wrapper .node-post-header .social-buttons .shariff 
   color: #f40f8d;
   line-height: 1.1;
   text-align: left;
-  -ms-word-break: break-all;
-  word-break: break-word;
-  -webkit-hyphens: auto;
-  -moz-hyphens: auto;
-  -ms-hyphens: auto;
-  -o-hyphens: auto;
-  hyphens: auto;
 }
 @media screen and (min-width: 30em) {
   .node.node-post.view-mode-full div.row div.col-sm-12 .field-name-field-your-name .field-item,
@@ -12913,10 +12906,11 @@ body.desktop .node-post-page-wrapper .node-post-header .social-buttons .shariff 
 @media screen and (min-width: 48em) {
   .view-post-grid .view-content > .pe-container .grid-sizer,
   .view-post-grid .view-content > .pe-container .pe-item {
+    margin: 0 -2px 0 0;
     width: 31.99999997%;
   }
 }
-@media screen and (min-width: 64em) {
+@media screen and (min-width: 80em) {
   .view-post-grid .view-content > .pe-container .grid-sizer,
   .view-post-grid .view-content > .pe-container .pe-item {
     margin: 0 -2px 0 0;
@@ -14442,23 +14436,23 @@ body.navbar-is-fixed-top.admin-menu {
     padding-top: 50px !important;
   }
   body.navbar-is-fixed-top.admin-menu {
-    padding-top: 81px !important;
+    padding-top: 50px !important;
   }
 }
 @media screen and (min-width: 48em) {
   body.navbar-is-fixed-top {
-    padding-top: 90px !important;
+    padding-top: 65px !important;
   }
   body.navbar-is-fixed-top.admin-menu {
-    padding-top: 90px !important;
+    padding-top: 65px !important;
   }
 }
 @media screen and (min-width: 64em) {
   body.navbar-is-fixed-top {
-    padding-top: 110px !important;
+    padding-top: 80px !important;
   }
   body.navbar-is-fixed-top.admin-menu {
-    padding-top: 110px !important;
+    padding-top: 80px !important;
   }
 }
 header#navbar {
@@ -14563,7 +14557,7 @@ header#navbar .navbar-top-container > .container .navbar-collapse nav ul.menu > 
 header#navbar .navbar-top-container > .container .navbar-collapse nav ul.menu > li span {
   cursor: pointer;
   display: inline-block;
-  padding: 15px 20px ;
+  padding: 15px 20px;
   font-family: 'ProximaNovaBold', sans-serif;
   font-size: 40px;
   line-height: 1;
@@ -14584,7 +14578,7 @@ header#navbar .navbar-top-container > .container .navbar-collapse nav ul.menu > 
   cursor: pointer;
   display: inline-block;
   margin-left: 0;
-  padding: 8px 5px 5px;
+  padding: 5px 5px 3px;
   font-family: 'ProximaNovaBold', sans-serif;
   line-height: 1;
   letter-spacing: 1px;
@@ -14608,13 +14602,10 @@ header#navbar .navbar-top-container > .container .navbar-collapse nav ul.menu > 
 @media screen and (min-width: 48em) {
   header#navbar .navbar-top-container > .container .navbar-collapse {
     position: absolute;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
+    bottom: 10px;
     right: 15px;
     padding: 0;
-    width: 54%;
+    width: 75%;
   }
   header#navbar .navbar-top-container > .container .navbar-collapse nav {
     text-align: right;
@@ -14625,6 +14616,7 @@ header#navbar .navbar-top-container > .container .navbar-collapse nav ul.menu > 
   }
   header#navbar .navbar-top-container > .container .navbar-collapse nav ul.menu li {
     display: inline-block;
+    margin-left: 15px;
   }
   header#navbar .navbar-top-container > .container .navbar-collapse nav ul.menu li a,
   header#navbar .navbar-top-container > .container .navbar-collapse nav ul.menu li span {
@@ -14633,8 +14625,7 @@ header#navbar .navbar-top-container > .container .navbar-collapse nav ul.menu > 
   }
   header#navbar .navbar-top-container > .container .navbar-collapse nav ul.menu li.last a,
   header#navbar .navbar-top-container > .container .navbar-collapse nav ul.menu li.last span {
-    margin-left: 15px;
-    padding: 8px 15px 5px;
+    padding: 3px 10px 3px;
     border: 2px solid #f40f8d;
   }
 }

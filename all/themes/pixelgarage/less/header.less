@@ -23,21 +23,21 @@ body.navbar-is-fixed-top {
     padding-top: 50px !important;
 
     &.admin-menu {
-      padding-top: 81px !important;
+      padding-top: 50px !important;
     }
   }
   @media @tablet {
-    padding-top: 90px !important;
+    padding-top: 65px !important;
 
     &.admin-menu {
-      padding-top: 90px !important;
+      padding-top: 65px !important;
     }
   }
   @media @normal {
-    padding-top: 110px !important;
+    padding-top: 80px !important;
 
     &.admin-menu {
-      padding-top: 110px !important;
+      padding-top: 80px !important;
     }
   }
 }
@@ -89,14 +89,20 @@ header#navbar {
           height: auto;
           max-width: 100%;
           max-height: none;
+        }
 
-          @media @narrow {
+        @media @narrow {
+          img {
             width: 50px;
           }
-          @media @tablet {
+        }
+        @media @tablet {
+          img {
             width: 80px;
           }
-          @media @normal {
+        }
+        @media @normal {
+          img {
             width: 100px;
           }
         }
@@ -148,7 +154,7 @@ header#navbar {
             a, span {
               cursor: pointer;
               display: inline-block;
-              padding: 15px 20px ;
+              padding: 15px 20px;
               font-family: @pxl-text-font-bold;
               font-size: 40px;
               line-height: 1;
@@ -166,7 +172,7 @@ header#navbar {
                 cursor: pointer;
                 display: inline-block;
                 margin-left: 0;
-                padding: 8px 5px 5px;
+                padding: 5px 5px 3px;
                 font-family: @pxl-text-font-bold;
                 line-height: 1;
                 letter-spacing: 1px;
@@ -187,10 +193,12 @@ header#navbar {
       }
 
       @media @tablet {
-        #pxl-mixins.center-vertically(absolute);
+        //#pxl-mixins.center-vertically(absolute);
+        position: absolute;
+        bottom: 10px;
         right: @grid-gutter-width / 2;
         padding: 0;
-        width: 54%;
+        width: 75%;
 
         nav {
           text-align: right;
@@ -201,14 +209,15 @@ header#navbar {
 
             li {
               display: inline-block;
+              margin-left: 15px;
+
               a, span {
                 padding: 3px 0;
                 font-size: 18px;
               }
               &.last {
                 a, span {
-                  margin-left: 15px;
-                  padding: 8px 15px 5px;
+                  padding: 3px 10px 3px;
                   border: 2px solid @pxl-color-main;
                 }
               }

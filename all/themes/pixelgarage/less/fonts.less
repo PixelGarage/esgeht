@@ -17,17 +17,17 @@
 @pxl-icon-font: 'fontawesome';
 
 // title font
-@pxl-title-font: 'SohoGothicProBold';
-@pxl-subtitle-font: 'SohoGothicProBold';
+@pxl-title-font: 'ProximaNovaBold';
+@pxl-subtitle-font: 'ProximaNovaBold';
 
 // text fonts
-@pxl-text-font: 'Catamaran-ExtraBold', sans-serif;
-@pxl-text-font-light: 'Catamaran-Light', sans-serif;
-@pxl-text-font-medium: 'Catamaran-ExtraBold', sans-serif;
-@pxl-text-font-bold: 'Catamaran-ExtraBold', sans-serif;
-@pxl-text-font-italic: 'Catamaran-ExtraBold', sans-serif;
-@pxl-text-font-light-italic: 'Catamaran-Light', sans-serif;
-@pxl-text-font-bold-italics: 'Catamaran-ExtraBold', sans-serif;
+@pxl-text-font: 'ProximaNovaRegular', sans-serif;
+@pxl-text-font-light: 'ProximaNovaLight', sans-serif;
+@pxl-text-font-medium: @pxl-text-font;
+@pxl-text-font-bold: 'ProximaNovaBold', sans-serif;
+@pxl-text-font-italic: @pxl-text-font;
+@pxl-text-font-light-italic: @pxl-text-font-light;
+@pxl-text-font-bold-italics: 'ProximaNovaBold', sans-serif;
 
 // handwriter font
 @pxl-text-font-handwriter: cursive;
@@ -45,21 +45,30 @@
 // font faces
 //
 @font-face {
-  font-family: 'Catamaran-Light';
-  src: url('@{pxl-font-path}/CatamaranLight/CatamaranLight.eot');
-  src: url('@{pxl-font-path}/CatamaranLight/CatamaranLight.eot') format('embedded-opentype'),
-  url('@{pxl-font-path}/CatamaranLight/CatamaranLight.woff2') format('woff2'),
-  url('@{pxl-font-path}/CatamaranLight/CatamaranLight.woff') format('woff'),
-  url('@{pxl-font-path}/CatamaranLight/CatamaranLight.ttf') format('truetype'),
-  url('@{pxl-font-path}/CatamaranLight/CatamaranLight.svg#CatamaranLight') format('svg');
+  font-family: 'ProximaNovaLight';
+  src: url('@{pxl-font-path}/ProximaNovaLight/ProximaNovaLight.eot');
+  src: url('@{pxl-font-path}/ProximaNovaLight/ProximaNovaLight.eot') format('embedded-opentype'),
+  url('@{pxl-font-path}/ProximaNovaLight/ProximaNovaLight.woff2') format('woff2'),
+  url('@{pxl-font-path}/ProximaNovaLight/ProximaNovaLight.woff') format('woff'),
+  url('@{pxl-font-path}/ProximaNovaLight/ProximaNovaLight.ttf') format('truetype'),
+  url('@{pxl-font-path}/ProximaNovaLight/ProximaNovaLight.svg#ProximaNovaLight') format('svg');
+}
+@font-face {
+  font-family: 'ProximaNovaRegular';
+  src: url('@{pxl-font-path}/ProximaNovaRegular/ProximaNovaRegular.eot');
+  src: url('@{pxl-font-path}/ProximaNovaRegular/ProximaNovaRegular.eot') format('embedded-opentype'),
+  url('@{pxl-font-path}/ProximaNovaRegular/ProximaNovaRegular.woff2') format('woff2'),
+  url('@{pxl-font-path}/ProximaNovaRegular/ProximaNovaRegular.woff') format('woff'),
+  url('@{pxl-font-path}/ProximaNovaRegular/ProximaNovaRegular.ttf') format('truetype'),
+  url('@{pxl-font-path}/ProximaNovaRegular/ProximaNovaRegular.svg#ProximaNovaRegular') format('svg');
+}
+@font-face {
+  font-family: 'ProximaNovaBold';
+  src: url('@{pxl-font-path}/ProximaNovaBold/ProximaNovaBold.eot');
+  src: url('@{pxl-font-path}/ProximaNovaBold/ProximaNovaBold.eot') format('embedded-opentype'),
+  url('@{pxl-font-path}/ProximaNovaBold/ProximaNovaBold.woff2') format('woff2'),
+  url('@{pxl-font-path}/ProximaNovaBold/ProximaNovaBold.woff') format('woff'),
+  url('@{pxl-font-path}/ProximaNovaBold/ProximaNovaBold.ttf') format('truetype'),
+  url('@{pxl-font-path}/ProximaNovaBold/ProximaNovaBold.svg#ProximaNovaBold') format('svg');
 }
 
-@font-face {
-  font-family: 'Catamaran-ExtraBold';
-  src: url('@{pxl-font-path}/CatamaranExtraBold/CatamaranExtraBold.eot');
-  src: url('@{pxl-font-path}/CatamaranExtraBold/CatamaranExtraBold.eot') format('embedded-opentype'),
-  url('@{pxl-font-path}/CatamaranExtraBold/CatamaranExtraBold.woff2') format('woff2'),
-  url('@{pxl-font-path}/CatamaranExtraBold/CatamaranExtraBold.woff') format('woff'),
-  url('@{pxl-font-path}/CatamaranExtraBold/CatamaranExtraBold.ttf') format('truetype'),
-  url('@{pxl-font-path}/CatamaranExtraBold/CatamaranExtraBold.svg#CatamaranExtraBold') format('svg');
-}

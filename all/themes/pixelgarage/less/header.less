@@ -12,6 +12,37 @@
 
 // Main settings
 // -------------------------
+body.navbar-is-fixed-top {
+  padding-top: 50px !important;
+
+  &.admin-menu {
+    padding-top: 50px !important;
+  }
+
+  @media @narrow {
+    padding-top: 50px !important;
+
+    &.admin-menu {
+      padding-top: 81px !important;
+    }
+  }
+  @media @tablet {
+    padding-top: 90px !important;
+
+    &.admin-menu {
+      padding-top: 90px !important;
+    }
+  }
+  @media @normal {
+    padding-top: 110px !important;
+
+    &.admin-menu {
+      padding-top: 110px !important;
+    }
+  }
+}
+
+
 header#navbar {
   margin: 0;
   border-bottom: none;
@@ -48,29 +79,25 @@ header#navbar {
       // header (branding)
       a.logo {
         display: inline-block;
-        margin: 20px 0;
+        margin: 10px 0;
         padding: 0;
         outline: none;
 
-        @media @normal {
-          margin-left: -50px;
-        }
-
         img {
           margin: 0;
-          width: 150px;
+          width: 50px;
           height: auto;
           max-width: 100%;
           max-height: none;
 
           @media @narrow {
-            width: 200px;
+            width: 50px;
           }
           @media @tablet {
-            width: 300px;
+            width: 80px;
           }
           @media @normal {
-            width: 350px;
+            width: 100px;
           }
         }
       }

@@ -30,8 +30,8 @@ function pixelgarage_preprocess_page(&$vars) {
   // define shariff buttons
   if ($vars['is_front']) {
     $shariff_attrs = array(
-      'data-services' => '["twitter","facebook","mail, whatsapp"]',
-      'data-orientation' => "vertical",
+      'data-services' => '["twitter","facebook","mail","whatsapp"]',
+      'data-orientation' => "horizontally",
       'data-mail-url' => "mailto:",
       'data-mail-subject' => variable_get('shariff_mail_subject', t("Zweimal JA zur AHV-Reform...")),
       'data-mail-body' => variable_get('shariff_mail_body', t("Zweimal JA zur AHV-Reform ...")),

@@ -78,75 +78,27 @@
     }
   };
 
-  /**
-   * Allows full size clickable cards (open node in full size).
-   *
-   * Remark: Disable this behavior, if flip card are used
-   */
-  Drupal.behaviors.fullSizeClickableCards = {
-    attach: function () {
-      var $clickableItems = $('.view-post-grid .pe-item-no-ajax'),
-        $linkedItems = $('.view-post-grid .pe-item-linked');
+  Drupal.behaviors.shariffFrontuttons = {
+    attach: function(context) {
+      var $window = $(window),
+          $shariffContainer = $('.main-container .shariff ul');
 
-      $clickableItems.once('click', function () {
-        $(this).on('click', function () {
-          window.location = $(this).find(".node-post .field-name-field-image a").attr("href");
-          return false;
+      $shariffContainer.once('resize', function() {
+        $window.on('resize', function(ev) {
+          if ($window.width() >= 768) {
+            $shariffContainer.removeClass('orientation-horizontally').addClass('orientation-vertical')
+          }
+          else {
+            $shariffContainer.removeClass('orientation-vertical').addClass('orientation-horizontally')
+          }
         });
+
+        $(this).resize();
       });
-      $linkedItems.once('click', function () {
-        $(this).on('click', function () {
-          var link = $(this).find(".pe-item-inner > a").attr("href");
-          window.open(link, '_blank');
-          return false;
-        });
-      });
+
     }
   };
 
-  /**
-   * Implements all filter buttons as toggle buttons.
-   * @type {{attach: Drupal.behaviors.createToggleFilters.attach}}
-   */
-  Drupal.behaviors.createToggleFilters = {
-    attach: function () {
-      var $categoryWrapper = $('#edit-field-category-tid-wrapper'),
-        $categoryFilters = $categoryWrapper.find('.form-type-bef-link'),
-        $activeFilter = $categoryFilters.find('>a.active'),
-        $categoryReset = $categoryWrapper.find('.form-item-edit-field-category-tid-all'),
-        categoryResetLink = $categoryReset.find('>a').attr('href');
-
-      //
-      // hide reset filter and make active filter a toggle filter
-      $categoryReset.hide();
-
-      if ($activeFilter) {
-        $activeFilter.attr('href', categoryResetLink);
-      }
-    }
-  };
-
-  /**
-   * Implements the sort button as toggle button.
-   * @type {{attach: Drupal.behaviors.createToggleSort.attach}}
-   */
-  Drupal.behaviors.createToggleSort = {
-    attach: function () {
-      var $sortWrapper = $('.views-widget-sort-by'),
-        $sortItems = $sortWrapper.find('.form-type-bef-link'),
-        $activeSort = $sortItems.find('>a.active'),
-        $sortReset = $sortWrapper.find('.form-item-edit-sort-by-created'),
-        sortResetLink = $sortReset.find('>a').attr('href');
-
-      //
-      // hide reset filter and make active filter a toggle filter
-      $sortReset.hide();
-
-      if ($activeSort) {
-        $activeSort.attr('href', sortResetLink);
-      }
-    }
-  };
 
   /**
    * Implements the reset behavior of all buttons, e.g. de/activation of reset button

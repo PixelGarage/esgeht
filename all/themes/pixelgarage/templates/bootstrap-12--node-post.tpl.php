@@ -16,11 +16,16 @@ $shariff_attrs = array(
 );
 
 //
+// get logo
+$img_path = drupal_get_path('theme', 'pixelgarage') . '/images/';
+$icon_path = file_create_url($img_path . 'zweimal-ja_banner.png');
+
+//
 // set language dependent heading
 $content = $variables['content'];
 $post_title = t('Support campaign!');
 $post_heading = t('Share this post with your friends and family members!');
-$post_claim = t('#EsGeht');
+$post_claim = null;
 ?>
 
 
@@ -47,15 +52,15 @@ $post_claim = t('#EsGeht');
   <div class="row">
     <<?php print $central_wrapper; ?> class="col-sm-12 <?php print $central_classes; ?>">
       <?php print render($content['field_image']); ?>
-      <?php if (!empty($post_claim)): ?>
-        <div class="quote-wrapper">
-          <?php print render($content['field_quote']); ?>
-          <span class="post-claim"><?php print $post_claim; ?></span>
-        </div>
-      <?php else: ?>
-        <?php print render($content['field_quote']); ?>
-      <?php endif; ?>
+      <div class="logo-wrapper"><img class="icon-2x-ja" src="<?php print $icon_path; ?>"/></div>
       <?php print render($content['field_your_name']); ?>
+      <div class="profession-age-wrapper">
+        <?php print render($content['field_profession']); ?>
+        <?php print render($content['field_age']); ?>
+      </div>
+      <div class="quote-wrapper">
+        <?php print render($content['field_quote']); ?>
+      </div>
     </<?php print $central_wrapper; ?>>
   </div>
 </<?php print $layout_wrapper ?>>

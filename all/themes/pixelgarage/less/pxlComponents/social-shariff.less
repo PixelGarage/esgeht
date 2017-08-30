@@ -5,7 +5,7 @@
 // Variables
 // -------------------------
 @shariff-icon-size: 30px;
-@shariff-icon-color: #fff;
+@shariff-icon-color: @pxl-color-main;
 @shariff-icon-color-hover: @link-color-hover;
 
 // Mixins
@@ -13,7 +13,7 @@
 
 .shariff() {
   ul {
-    display: inline-block;
+    display: block;
     #pxl-mixins.no-list-style();
     padding: 10px;
 
@@ -74,11 +74,12 @@ body.front .shariff {
   .shariff();
 
   ul {
+    text-align: center;
     z-index: @zindex-modal;
 
     &.orientation-vertical {
       #pxl-mixins.center-vertically(fixed);
-      right: -10px;
+      right: -5px;
 
       li.shariff-button {
         display: block;
@@ -88,8 +89,7 @@ body.front .shariff {
     }
 
     &.orientation-horizontal {
-      #pxl-mixins.center-vertically(absolute);
-      right: 0;
+      #pxl-mixins.center-horizontally();
 
       li.shariff-button:not(:last-child) {
         width: 60px;
@@ -97,4 +97,8 @@ body.front .shariff {
       }
     }
   }
+}
+
+body.front.desktop .shariff ul li.shariff-button.whatsapp {
+  display:none;
 }

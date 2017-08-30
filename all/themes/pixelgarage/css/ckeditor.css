@@ -2348,21 +2348,26 @@
   clip: auto;
 }
 @font-face {
-  font-family: 'Catamaran-Light';
-  src: url('../fonts/CatamaranLight/CatamaranLight.eot');
-  src: url('../fonts/CatamaranLight/CatamaranLight.eot') format('embedded-opentype'), url('../fonts/CatamaranLight/CatamaranLight.woff2') format('woff2'), url('../fonts/CatamaranLight/CatamaranLight.woff') format('woff'), url('../fonts/CatamaranLight/CatamaranLight.ttf') format('truetype'), url('../fonts/CatamaranLight/CatamaranLight.svg#CatamaranLight') format('svg');
+  font-family: 'ProximaNovaLight';
+  src: url('../fonts/ProximaNovaLight/ProximaNovaLight.eot');
+  src: url('../fonts/ProximaNovaLight/ProximaNovaLight.eot') format('embedded-opentype'), url('../fonts/ProximaNovaLight/ProximaNovaLight.woff2') format('woff2'), url('../fonts/ProximaNovaLight/ProximaNovaLight.woff') format('woff'), url('../fonts/ProximaNovaLight/ProximaNovaLight.ttf') format('truetype'), url('../fonts/ProximaNovaLight/ProximaNovaLight.svg#ProximaNovaLight') format('svg');
 }
 @font-face {
-  font-family: 'Catamaran-ExtraBold';
-  src: url('../fonts/CatamaranExtraBold/CatamaranExtraBold.eot');
-  src: url('../fonts/CatamaranExtraBold/CatamaranExtraBold.eot') format('embedded-opentype'), url('../fonts/CatamaranExtraBold/CatamaranExtraBold.woff2') format('woff2'), url('../fonts/CatamaranExtraBold/CatamaranExtraBold.woff') format('woff'), url('../fonts/CatamaranExtraBold/CatamaranExtraBold.ttf') format('truetype'), url('../fonts/CatamaranExtraBold/CatamaranExtraBold.svg#CatamaranExtraBold') format('svg');
+  font-family: 'ProximaNovaRegular';
+  src: url('../fonts/ProximaNovaRegular/ProximaNovaRegular.eot');
+  src: url('../fonts/ProximaNovaRegular/ProximaNovaRegular.eot') format('embedded-opentype'), url('../fonts/ProximaNovaRegular/ProximaNovaRegular.woff2') format('woff2'), url('../fonts/ProximaNovaRegular/ProximaNovaRegular.woff') format('woff'), url('../fonts/ProximaNovaRegular/ProximaNovaRegular.ttf') format('truetype'), url('../fonts/ProximaNovaRegular/ProximaNovaRegular.svg#ProximaNovaRegular') format('svg');
+}
+@font-face {
+  font-family: 'ProximaNovaBold';
+  src: url('../fonts/ProximaNovaBold/ProximaNovaBold.eot');
+  src: url('../fonts/ProximaNovaBold/ProximaNovaBold.eot') format('embedded-opentype'), url('../fonts/ProximaNovaBold/ProximaNovaBold.woff2') format('woff2'), url('../fonts/ProximaNovaBold/ProximaNovaBold.woff') format('woff'), url('../fonts/ProximaNovaBold/ProximaNovaBold.ttf') format('truetype'), url('../fonts/ProximaNovaBold/ProximaNovaBold.svg#ProximaNovaBold') format('svg');
 }
 /*
  *  Text mixins
  * --------------------------------------------------*/
 .pxl-title {
   margin: 20px auto;
-  font-family: 'SohoGothicProBold';
+  font-family: 'ProximaNovaBold';
   font-size: 22px;
   letter-spacing: 0;
   line-height: 1;
@@ -2385,7 +2390,7 @@
   }
 }
 .pxl-subtitle {
-  font-family: 'SohoGothicProBold';
+  font-family: 'ProximaNovaBold';
   font-size: 18px;
   letter-spacing: 0;
   line-height: 1.14em;
@@ -2408,7 +2413,7 @@
   }
 }
 .pxl-normal {
-  font-family: 'Catamaran-ExtraBold', sans-serif;
+  font-family: 'ProximaNovaRegular', sans-serif;
   font-size: 15px;
   letter-spacing: 0;
   line-height: 1.14em;
@@ -2431,7 +2436,7 @@
   }
 }
 .pxl-subtext {
-  font-family: 'Catamaran-ExtraBold', sans-serif;
+  font-family: 'ProximaNovaRegular', sans-serif;
   font-size: 12px;
   letter-spacing: 0;
   line-height: 1.1667em;
@@ -2458,7 +2463,7 @@
   }
 }
 .pxl-quote {
-  font-family: 'SohoGothicProBold';
+  font-family: 'ProximaNovaBold';
   font-size: 22px;
   letter-spacing: 0;
   line-height: 1;

@@ -4,7 +4,7 @@
 
 // Variables
 // -------------------------
-@grid-gutter-dist: 3%;  // in %
+@grid-gutter-dist: 2%;  // in %
 
 
 // Mixins
@@ -19,6 +19,7 @@
   width: 100%;
 
   .views-exposed-form {
+    display: none;
     padding: 0;
     width: 100%;
 
@@ -148,118 +149,6 @@
             }
           }
         }
-        
-        &.views-widget-filter-field_category_tid {
-          .bef-select-as-links {
-            .form-type-bef-link {
-              display: inline-block;
-              margin: 0 -2px;
-              padding: 0 10px;
-
-              a {
-                display: block;
-                margin: 0;
-                padding: 0;
-                width: 28px;
-                height: 28px;
-                text-indent: -9999px;
-                border: none;
-
-                @media @narrow {
-                  width: 35px;
-                  height: 35px;
-                }
-                @media @normal {
-                  width: 43px;
-                  height: 43px;
-                }
-              }
-
-              // mobility
-              &.form-item-edit-field-category-tid-52 {
-                a {
-                  background: url(../images/icon-ferien.png) no-repeat center center / contain;
-
-                  &:hover, &.active {
-                    background-image: url(../images/icon-ferien-hover.png);
-                  }
-                }
-              }
-              // heat
-              &.form-item-edit-field-category-tid-53 {
-                a {
-                  background: url(../images/icon-dusche.png) no-repeat center center / contain;
-
-                  &:hover, &.active {
-                    background-image: url(../images/icon-dusche-hover.png);
-                  }
-                }
-              }
-              // food
-              &.form-item-edit-field-category-tid-54 {
-                a {
-                  background: url(../images/icon-cervelat.png) no-repeat center center / contain;
-
-                  &:hover, &.active {
-                    background-image: url(../images/icon-cervelat-hover.png);
-                  }
-                }
-              }
-              // tecPost
-              &.form-item-edit-field-category-tid-56 {
-                a {
-                  background: url(../images/icon-bulb.png) no-repeat center center / contain;
-
-                  &:hover, &.active {
-                    background-image: url(../images/icon-bulb-hover.png);
-                  }
-                }
-              }
-
-            }
-          }
-        }
-
-        &.views-widget-sort-by {
-          .bef-select-as-links {
-            .form-type-bef-link {
-              display: inline-block;
-              margin: 0 -2px;
-              padding: 0 10px;
-
-              a {
-                display: block;
-                margin: 0;
-                padding: 0;
-                width: 28px;
-                height: 28px;
-                text-indent: -9999px;
-                border: none;
-
-                @media @narrow {
-                  width: 35px;
-                  height: 35px;
-                }
-                @media @normal {
-                  width: 43px;
-                  height: 43px;
-                }
-              }
-
-              // sort by value type
-              &.form-item-edit-sort-by-value {
-                a {
-                  background: url(../images/icon-herz.png) no-repeat center center / contain;
-
-                  &:hover, &.active {
-                    background-image: url(../images/icon-herz-hover.png);
-                  }
-                }
-              }
-            }
-          }
-
-        }
 
         &.views-reset-button {
           button.btn {
@@ -291,7 +180,7 @@
   }
 
   .view-content {
-    padding: 30px 0 50px;
+    padding: 50px 0;
 
     > .pe-container {
       width: 100%;
@@ -316,21 +205,22 @@
 
       @media @tablet {
         .grid-sizer, .pe-item {
-          width: 31.3333333%;
+          width: (33.3333333% - 2*@grid-gutter-dist/3);
         }
       }
 
       @media @normal {
         .grid-sizer, .pe-item {
+          margin: 0 -2px 0 0;
           width: (25% - 3*@grid-gutter-dist/4);
         }
       }
 
       .pe-item {
         display: block;
-        overflow: hidden;
+        //overflow: hidden;
         margin: 0 0 @grid-gutter-dist !important;
-        opacity: 0.9;
+        opacity: 1.0;
         //#pxl-mixins.transition(opacity 1s);
 
         &.shown {

@@ -20,22 +20,18 @@
  */
 
 // Donate confirmation
-$current_tnid = $node->tnid ? $node->tnid : $node->nid;
-$delivery_tnid = 789;
-$donation_tnid = 808;
-$newsletter_tnid = 61;
+// load webform submission includes
+module_load_include('inc', 'webform', 'includes/webform.submissions');
 
-$title = t('Thank you,');
+$master = postcard_webform_master_form($node);
+$submission = webform_get_submission($master->nid, $sid);
 
-switch ($current_tnid) {
+$delivery_tnid = 18;
+$title = t('Thank you');
+
+switch ($master->nid) {
   case $delivery_tnid:
-    $message = t('for your investment into the green economy! We will send you the postcards in about a week!');
-    break;
-  case $donation_tnid:
-    $message = t('for your investment into the green economy!');
-    break;
-  case $newsletter_tnid:
-    $message = t('you have been successfully added to our newsletter.');
+    $message = t('for your investment into a safe AHV!');
     break;
   default:
     $message = $confirmation_message;

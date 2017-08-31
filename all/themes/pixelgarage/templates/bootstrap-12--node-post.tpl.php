@@ -8,8 +8,8 @@
 global $base_url;
 libraries_load('shariff', 'naked');
 $node_url = $base_url . '/node/' . $node->nid;
-$mail_subject = t("@title sagt zweimal JA zur AHV-Reform...", array('@title' => $node->title));
-$html_body =  $node->field_quote[LANGUAGE_NONE][0]['value'] . l("<p>Hier geht's zum Beitrag</p>", $node_url, array('html' => true));
+$mail_subject = t("@title sagt zweimal JA zur Rentenreform", array('@title' => $node->field_your_name[LANGUAGE_NONE][0]['value']));
+$html_body =  '... weil ' . $node->field_quote[LANGUAGE_NONE][0]['value'] .  l("<br><p>Hier geht's zum Beitrag</p>", $node_url, array('html' => true));
 $mail_descr = drupal_html_to_text($html_body);
 
 $shariff_attrs = array(
@@ -60,11 +60,11 @@ $post_claim = null;
     <<?php print $central_wrapper; ?> class="col-sm-12 <?php print $central_classes; ?>">
       <?php print render($content['field_image']); ?>
       <div class="logo-wrapper"><img class="icon-2x-ja" src="<?php print $icon_path; ?>"/></div>
-      <?php print render($content['field_your_name']); ?>
-      <div class="profession-age-wrapper">
-        <?php print render($content['field_profession']); ?>
+      <div class="name-age-wrapper">
+        <?php print render($content['field_your_name']); ?>
         <?php print render($content['field_age']); ?>
       </div>
+      <?php print render($content['field_profession']); ?>
       <div class="quote-wrapper">
         <?php print render($content['field_quote']); ?>
       </div>

@@ -10375,16 +10375,16 @@ body.desktop .node-post-page-wrapper .node-post-header .social-buttons .shariff 
 .node.node-post div.row div.col-sm-12 .logo-wrapper img {
   width: 100%;
 }
-.node.node-post div.row div.col-sm-12 .field-name-field-your-name,
-.node.node-post div.row div.col-sm-12 .profession-age-wrapper {
+.node.node-post div.row div.col-sm-12 .field-name-field-profession,
+.node.node-post div.row div.col-sm-12 .name-age-wrapper {
   position: absolute;
   padding: 0 10px;
   max-width: 80%;
   height: auto;
   line-height: 1.2;
 }
-.node.node-post div.row div.col-sm-12 .field-name-field-your-name .field-item,
-.node.node-post div.row div.col-sm-12 .profession-age-wrapper .field-item {
+.node.node-post div.row div.col-sm-12 .field-name-field-profession .field-item,
+.node.node-post div.row div.col-sm-12 .name-age-wrapper .field-item {
   overflow: hidden;
   font-family: 'ProximaNovaRegular', sans-serif;
   color: white;
@@ -10394,62 +10394,58 @@ body.desktop .node-post-page-wrapper .node-post-header .social-buttons .shariff 
   text-overflow: ellipsis;
 }
 @media screen and (max-width: 29.9375em) {
-  .node.node-post div.row div.col-sm-12 .field-name-field-your-name .field-item,
-  .node.node-post div.row div.col-sm-12 .profession-age-wrapper .field-item {
+  .node.node-post div.row div.col-sm-12 .field-name-field-profession .field-item,
+  .node.node-post div.row div.col-sm-12 .name-age-wrapper .field-item {
     font-size: 4.5vw;
   }
 }
 @media screen and (min-width: 48em) {
-  .node.node-post div.row div.col-sm-12 .field-name-field-your-name .field-item,
-  .node.node-post div.row div.col-sm-12 .profession-age-wrapper .field-item {
+  .node.node-post div.row div.col-sm-12 .field-name-field-profession .field-item,
+  .node.node-post div.row div.col-sm-12 .name-age-wrapper .field-item {
     font-size: 12px;
   }
 }
 @media screen and (min-width: 64em) {
-  .node.node-post div.row div.col-sm-12 .field-name-field-your-name .field-item,
-  .node.node-post div.row div.col-sm-12 .profession-age-wrapper .field-item {
+  .node.node-post div.row div.col-sm-12 .field-name-field-profession .field-item,
+  .node.node-post div.row div.col-sm-12 .name-age-wrapper .field-item {
     font-size: 16px;
   }
 }
 @media screen and (min-width: 80em) {
-  .node.node-post div.row div.col-sm-12 .field-name-field-your-name .field-item,
-  .node.node-post div.row div.col-sm-12 .profession-age-wrapper .field-item {
+  .node.node-post div.row div.col-sm-12 .field-name-field-profession .field-item,
+  .node.node-post div.row div.col-sm-12 .name-age-wrapper .field-item {
     font-size: 16px;
   }
 }
-.node.node-post div.row div.col-sm-12 .field-name-field-your-name {
+.node.node-post div.row div.col-sm-12 .name-age-wrapper {
   top: 52%;
   left: -2%;
   background-color: #06b5f4;
 }
-.node.node-post div.row div.col-sm-12 .profession-age-wrapper {
+.node.node-post div.row div.col-sm-12 .name-age-wrapper .field-name-field-your-name {
+  display: inline-block;
+}
+.node.node-post div.row div.col-sm-12 .name-age-wrapper .field-name-field-your-name .field-item {
+  white-space: nowrap;
+  line-height: 1;
+}
+.node.node-post div.row div.col-sm-12 .name-age-wrapper .field-name-field-your-name .field-item:after {
+  content: ', ';
+}
+.node.node-post div.row div.col-sm-12 .name-age-wrapper .field-name-field-age {
+  display: inline-block;
+  white-space: nowrap;
+}
+.node.node-post div.row div.col-sm-12 .name-age-wrapper .field-name-field-age .field-items {
+  display: inline-block;
+}
+.node.node-post div.row div.col-sm-12 .name-age-wrapper .field-name-field-age .field-items .field-item {
+  line-height: 1;
+}
+.node.node-post div.row div.col-sm-12 .field-name-field-profession {
   top: 58%;
   right: -2%;
   background-color: #f40f8d;
-}
-.node.node-post div.row div.col-sm-12 .profession-age-wrapper .field-name-field-profession {
-  max-width: 80%;
-  display: inline-block;
-}
-.node.node-post div.row div.col-sm-12 .profession-age-wrapper .field-name-field-profession .field-item {
-  white-space: nowrap;
-  line-height: 1;
-}
-.node.node-post div.row div.col-sm-12 .profession-age-wrapper .field-name-field-age {
-  display: inline-block;
-  white-space: nowrap;
-}
-.node.node-post div.row div.col-sm-12 .profession-age-wrapper .field-name-field-age .field-items {
-  display: inline-block;
-}
-.node.node-post div.row div.col-sm-12 .profession-age-wrapper .field-name-field-age .field-items .field-item {
-  line-height: 1;
-}
-.node.node-post div.row div.col-sm-12 .profession-age-wrapper .field-name-field-age .field-items .field-item:before {
-  content: '[';
-}
-.node.node-post div.row div.col-sm-12 .profession-age-wrapper .field-name-field-age .field-items .field-item:after {
-  content: ']';
 }
 .node.node-post div.row div.col-sm-12 .quote-wrapper {
   position: absolute;
@@ -12708,7 +12704,7 @@ body.desktop .node-post-page-wrapper .node-post-header .social-buttons .shariff 
   width: 100%;
 }
 .view-post-grid .views-exposed-form {
-  display: none;
+  display: inline-block;
   padding: 0;
   width: 100%;
 }
@@ -12741,7 +12737,7 @@ body.desktop .node-post-page-wrapper .node-post-header .social-buttons .shariff 
   }
 }
 .view-post-grid .views-exposed-form .views-exposed-widgets #toggle-filters-wrapper {
-  display: inline-block;
+  display: none;
   margin: 0 0 10px;
   width: 100%;
   text-align: center;
@@ -12882,7 +12878,7 @@ body.desktop .node-post-page-wrapper .node-post-header .social-buttons .shariff 
   }
 }
 .view-post-grid .view-content {
-  padding: 50px 0;
+  padding: 20px 0;
 }
 .view-post-grid .view-content > .pe-container {
   width: 100%;
@@ -14459,9 +14455,6 @@ header#navbar {
   margin: 0;
   border-bottom: none;
   background: white none;
-  -webkit-box-shadow: 0 4px 3px -4px gray;
-  -moz-box-shadow: 0 4px 3px -4px gray;
-  box-shadow: 0 4px 3px -4px gray;
 }
 header#navbar .navbar-top-container > .container {
   position: relative;
@@ -14605,7 +14598,7 @@ header#navbar .navbar-top-container > .container .navbar-collapse nav ul.menu > 
     bottom: 12px;
     right: 15px;
     padding: 0;
-    width: 75%;
+    width: 60%;
   }
   header#navbar .navbar-top-container > .container .navbar-collapse nav {
     text-align: right;

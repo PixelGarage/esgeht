@@ -114,8 +114,8 @@
         }
       }
 
-      .field-name-field-your-name,
-      .profession-age-wrapper {
+      .field-name-field-profession,
+      .name-age-wrapper {
         position: absolute;
         padding: 0 10px;
         max-width: 80%;
@@ -147,24 +147,22 @@
 
       }
 
-      .field-name-field-your-name {
+      .name-age-wrapper {
         top: 52%;
         left: -2%;
         background-color: @pxl-color-blue;
-      }
 
-      .profession-age-wrapper {
-        top: 58%;
-        right: -2%;
-        background-color: @pxl-color-magenta;
-
-        .field-name-field-profession {
-          max-width: 80%;
+        .field-name-field-your-name {
           display: inline-block;
 
           .field-item {
             white-space: nowrap;
             line-height: 1;
+
+            &:after {
+              content: ', ';
+            }
+
           }
         }
 
@@ -177,18 +175,17 @@
 
             .field-item {
               line-height: 1;
-
-              &:before {
-                content: '[';
-              }
-              &:after {
-                content: ']';
-              }
-
             }
           }
         }
       }
+
+      .field-name-field-profession {
+        top: 58%;
+        right: -2%;
+        background-color: @pxl-color-magenta;
+      }
+
 
       .quote-wrapper {
         position: absolute;

@@ -33,8 +33,8 @@ function pixelgarage_preprocess_page(&$vars) {
       'data-services' => '["twitter","facebook","mail","whatsapp"]',
       'data-orientation' => "horizontally",
       'data-mail-url' => "mailto:",
-      'data-mail-subject' => variable_get('shariff_mail_subject', t("Zweimal JA zur AHV-Reform...")),
-      'data-mail-body' => variable_get('shariff_mail_body', t("Zweimal JA zur AHV-Reform ...")),
+      'data-mail-subject' => variable_get('shariff_mail_subject', t("Zweimal JA zur Rentenreform...")),
+      'data-mail-body' => variable_get('shariff_mail_body', t("Alle grossen Frauenorganisationen haben sich zusammengeschlossen und einen Appell für 2x Ja zur Altersvorsorge 2020 lanciert. Bekenne auch du Farbe!")),
       'data-lang' => "de",
       'data-url' => "http://zweimal-ja.ch",
     );

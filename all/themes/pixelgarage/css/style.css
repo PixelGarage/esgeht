@@ -14493,24 +14493,24 @@ header#navbar .navbar-top-container > .container .navbar-header a.logo {
 }
 header#navbar .navbar-top-container > .container .navbar-header a.logo img {
   margin: 0;
-  width: 50px;
-  height: auto;
+  width: auto;
+  height: 30px;
   max-width: 100%;
   max-height: none;
 }
 @media screen and (min-width: 30em) {
   header#navbar .navbar-top-container > .container .navbar-header a.logo img {
-    width: 50px;
+    height: 30px;
   }
 }
 @media screen and (min-width: 48em) {
   header#navbar .navbar-top-container > .container .navbar-header a.logo img {
-    width: 80px;
+    height: 45px;
   }
 }
 @media screen and (min-width: 64em) {
   header#navbar .navbar-top-container > .container .navbar-header a.logo img {
-    width: 100px;
+    height: 60px;
   }
 }
 header#navbar .navbar-top-container > .container .navbar-header .navbar-toggle {
@@ -14533,7 +14533,7 @@ header#navbar .navbar-top-container > .container .navbar-header .navbar-toggle:h
 }
 header#navbar .navbar-top-container > .container .navbar-collapse {
   padding: 5px 0;
-  background: white;
+  background: none;
 }
 header#navbar .navbar-top-container > .container .navbar-collapse nav {
   text-align: center;
@@ -14602,7 +14602,7 @@ header#navbar .navbar-top-container > .container .navbar-collapse nav ul.menu > 
 @media screen and (min-width: 48em) {
   header#navbar .navbar-top-container > .container .navbar-collapse {
     position: absolute;
-    bottom: 10px;
+    bottom: 12px;
     right: 15px;
     padding: 0;
     width: 75%;
@@ -14630,6 +14630,9 @@ header#navbar .navbar-top-container > .container .navbar-collapse nav ul.menu > 
   }
 }
 @media screen and (min-width: 64em) {
+  header#navbar .navbar-top-container > .container .navbar-collapse {
+    bottom: 15px;
+  }
   header#navbar .navbar-top-container > .container .navbar-collapse nav ul.menu li a,
   header#navbar .navbar-top-container > .container .navbar-collapse nav ul.menu li span {
     padding: 3px 0;

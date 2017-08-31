@@ -85,25 +85,25 @@ header#navbar {
 
         img {
           margin: 0;
-          width: 50px;
-          height: auto;
+          width: auto;
+          height: 30px;
           max-width: 100%;
           max-height: none;
         }
 
         @media @narrow {
           img {
-            width: 50px;
+            height: 30px;
           }
         }
         @media @tablet {
           img {
-            width: 80px;
+            height: 45px;
           }
         }
         @media @normal {
           img {
-            width: 100px;
+            height: 60px;
           }
         }
       }
@@ -130,7 +130,7 @@ header#navbar {
     // mobile collapse part
     .navbar-collapse {
       padding: 5px 0;
-      background: white;
+      background: none;
 
       nav {
         text-align: center;
@@ -195,7 +195,7 @@ header#navbar {
       @media @tablet {
         //#pxl-mixins.center-vertically(absolute);
         position: absolute;
-        bottom: 10px;
+        bottom: 12px;
         right: @grid-gutter-width / 2;
         padding: 0;
         width: 75%;
@@ -226,6 +226,8 @@ header#navbar {
         }
       }
       @media @normal {
+        bottom: 15px;
+
         nav {
           ul.menu {
             li {

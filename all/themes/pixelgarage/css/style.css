@@ -10418,6 +10418,7 @@ body.desktop .node-post-page-wrapper .node-post-header .social-buttons .shariff 
   }
 }
 .node.node-post div.row div.col-sm-12 .name-age-wrapper {
+  padding-top: 3px;
   top: 52%;
   left: -2%;
   background-color: #06b5f4;

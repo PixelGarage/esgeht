@@ -25,6 +25,9 @@ function pixelgarage_preprocess_page(&$vars) {
 
   // replace logo with .svg
   //$vars['logo'] = str_replace('.jpg', '.svg', $vars['logo']);
+  $vars['title'] = '';
+  $messages = drupal_get_messages('warning');
+
 
   //
   // define shariff buttons

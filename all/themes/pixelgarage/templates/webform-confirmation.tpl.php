@@ -28,8 +28,6 @@ $post_nid = _webform_submission_value($master, 'post_nid', $submission);
 $post = node_load($post_nid);
 $rendered_post = node_view($post);
 
-$messages = drupal_get_messages();
-
 $title = t('Thank you');
 
 switch ($master->nid) {
@@ -44,10 +42,6 @@ switch ($master->nid) {
 $url = '/';
 ?>
 
-<div class="webform-confirmation">
-  <div class="confirmation-title"><?php print $title; ?></div>
-  <div class="confirmation-message"><?php print $message; ?></div>
-</div>
 <div class="rendered-node"><?php print render($rendered_post); ?></div>
 
 <div class="links">

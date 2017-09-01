@@ -24,8 +24,17 @@ $shariff_attrs = array(
 
 //
 // get logo
+global $language;
+
 $img_path = drupal_get_path('theme', 'pixelgarage') . '/images/';
-$icon_path = file_create_url($img_path . 'zweimal-ja_banner.png');
+switch ($language->language) {
+  case 'de':
+    $icon_path = file_create_url($img_path . 'zweimal-ja_banner.png');
+    break;
+  case 'fr':
+    $icon_path = file_create_url($img_path . 'zweimal-ja_banner_fr.png');
+    break;
+}
 
 //
 // set language dependent heading

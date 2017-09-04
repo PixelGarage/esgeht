@@ -41,6 +41,7 @@ switch ($language->language) {
 $content = $variables['content'];
 $post_title = t('Support campaign!');
 $post_heading = t('Share this post with your friends and family members!');
+$has_age = isset($content['field_age'][0]['#markup']) ? $content['field_age'][0]['#markup'] != '0' : false;
 $post_claim = null;
 ?>
 
@@ -70,8 +71,7 @@ $post_claim = null;
       <?php print render($content['field_image']); ?>
       <div class="logo-wrapper"><img class="icon-2x-ja" src="<?php print $icon_path; ?>"/></div>
       <div class="name-age-wrapper">
-        <?php print render($content['field_your_name']); ?>
-        <?php print render($content['field_age']); ?>
+        <?php print render($content['field_your_name']); ?><?php if ($has_age): print render($content['field_age']); endif; ?>
       </div>
       <?php print render($content['field_profession']); ?>
       <div class="quote-wrapper">

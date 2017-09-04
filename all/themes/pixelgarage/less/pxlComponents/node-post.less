@@ -159,11 +159,6 @@
           .field-item {
             white-space: nowrap;
             line-height: 1;
-
-            &:after {
-              content: ', ';
-            }
-
           }
         }
 
@@ -176,6 +171,11 @@
 
             .field-item {
               line-height: 1;
+
+              &:before {
+                content: ', ';
+              }
+
             }
           }
         }

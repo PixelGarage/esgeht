@@ -10430,9 +10430,6 @@ body.desktop .node-post-page-wrapper .node-post-header .social-buttons .shariff 
   white-space: nowrap;
   line-height: 1;
 }
-.node.node-post div.row div.col-sm-12 .name-age-wrapper .field-name-field-your-name .field-item:after {
-  content: ', ';
-}
 .node.node-post div.row div.col-sm-12 .name-age-wrapper .field-name-field-age {
   display: inline-block;
   white-space: nowrap;
@@ -10442,6 +10439,9 @@ body.desktop .node-post-page-wrapper .node-post-header .social-buttons .shariff 
 }
 .node.node-post div.row div.col-sm-12 .name-age-wrapper .field-name-field-age .field-items .field-item {
   line-height: 1;
+}
+.node.node-post div.row div.col-sm-12 .name-age-wrapper .field-name-field-age .field-items .field-item:before {
+  content: ', ';
 }
 .node.node-post div.row div.col-sm-12 .field-name-field-profession {
   top: 58%;

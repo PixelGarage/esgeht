@@ -5,9 +5,11 @@
  */
 //
 // shariff button definition
-global $base_url;
+global $base_url, $language;
+
 libraries_load('shariff', 'naked');
-$node_url = $base_url . '/node/' . $node->nid;
+$lang = '/' . $language->language;
+$node_url = $base_url . $lang . '/node/' . $node->nid;
 $mail_subject = t("@title sagt zweimal JA zur Rentenreform", array('@title' => $node->field_your_name[LANGUAGE_NONE][0]['value']));
 $html_body =  '... weil ' . $node->field_quote[LANGUAGE_NONE][0]['value'] .  l("<br><p>Hier geht's zum Beitrag</p>", $node_url, array('html' => true));
 $mail_descr = drupal_html_to_text($html_body);

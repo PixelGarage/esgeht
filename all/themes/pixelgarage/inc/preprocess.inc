@@ -32,14 +32,17 @@ function pixelgarage_preprocess_page(&$vars) {
   //
   // define shariff buttons
   if ($vars['is_front']) {
+    global $language;
+    $url = 'http://zweimal-ja.ch/' . $language->language;
+
     $shariff_attrs = array(
       'data-services' => '["twitter","facebook","mail","whatsapp"]',
       'data-orientation' => "horizontally",
       'data-mail-url' => "mailto:",
       'data-mail-subject' => variable_get('shariff_mail_subject', t("Zweimal JA zur Rentenreform...")),
-      'data-mail-body' => variable_get('shariff_mail_body', t("Alle grossen Frauenorganisationen haben sich zusammengeschlossen und einen Appell für 2x Ja zur Altersvorsorge 2020 lanciert. Bekenne auch du Farbe!")),
+      'data-mail-body' => variable_get('shariff_mail_body', t("Alle grossen Frauenorganisationen haben sich zusammengeschlossen und einen Appell für 2x Ja zur Altersvorsorge 2020 lanciert. Bekenne auch du Farbe! " . $url)),
       'data-lang' => "de",
-      'data-url' => "http://zweimal-ja.ch",
+      'data-url' => $url,
     );
     $vars['shariff_attributes'] = drupal_attributes($shariff_attrs);
 
